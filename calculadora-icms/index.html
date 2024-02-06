@@ -1,325 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
 
-    <title>Calculadora ICMS</title>
+    <!--MetaTags-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Calcule alíquotas de ICMS de forma simples e prática apenas indicando os estados de origem e destino.">
+    <meta property="og:locale" content="pt-br">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Calculadora de Alíquota de ICMS | Patrícia Ferreira">
+    <meta property="og:description" content="Calcule alíquotas de ICMS de forma simples e prática apenas indicando os estados de origem e destino.">
+    <meta property="og:url" content="http://expertfiscaltributario.com.br/calculadora-aliquota-icms/">
+    <meta property="og:site_name" content="Expert Fiscal Tributário">
+    <meta property="og:image" content="http://expertfiscaltributario.com.br/img/calculadora-icone.png">
+    <!--MetaTags-->
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/calculadora-icone.png">
+    <title>Calculadora de Alíquota de ICMS | Patrícia Ferreira</title>
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-    <script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/Chart.js"></script>
-	<script src="assets/js/modernizr.custom.js"></script>
-	
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '723027421794836');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=723027421794836&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
 
-	
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <!--Cascade Style Sheet -->
+    <link rel="stylesheet" id="optimizepress-page-style-css" href="css/style.min(1).css" type="text/css" media="all">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
+    <!--Font Awesome-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!--Header-->
+    <style>
+        header {
+            position: relative;
+            background-color: blueviolet;
+            min-height: 25rem;
+            width: 100%;
+            overflow: hidden;
+        }
 
-  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-		
-	
-	<!-- ========== HEADER SECTION ========== -->
-	<section id="home" name="home"></section>
-	<div id="headerwrap">
-		<div class="container">
-			<br>
-			<h1>Calculadora ICMS</h1>
-			<h2>Atualizada Estado a Estado</h2>			
-			<a class="btn btn-success btn-lg" href="https://pay.hotmart.com/T28487593E" role="button">QUERO A CALCULADORA DE ICMS</a>
-			<!--  -->
-			<div class="row">
-				<br>
-				<br>
-				<br>
-				<div class="col-lg-6 col-lg-offset-3">
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /headerwrap -->
-	
-	
-	<!-- ========== WHITE SECTION ========== -->
-	<div id="w">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-				<h3>WELCOME TO <bold>Calculadora ICMS</bold>. <bold>A FREE BOOTSTRAP 3</bold> THEME. CRAFTED WITH LOVE BY <bold>BLACKTIE.CO</bold>. <br/>
-					<bold>IDEAL FOR</bold> AGENCIES & FREELANCERS.
-				</h3>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /w -->
-	
-	<!-- ========== SERVICES - GREY SECTION ========== -->
-	<section id="services" name="services"></section>
-	<div id="g">
-		<div class="container">
-			<div class="row">
-				<h3>OUR SERVICES</h3>
-				<br>
-				<br>
-				<div class="col-lg-3">
-					<img src="assets/img/s1.png">
-					<h4>London</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/s2.png">
-					<h4>Berlin</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/s3.png">
-					<h4>Paris</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/s4.png">
-					<h4>Tokyo</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /g -->
-	
-	<!-- ========== CHARTS - DARK GREY SECTION ========== -->
-	<div id="dg">
-		<div class="container">
-			<div class="row">
-				<h3>SOME CHARTS</h3>
-				<br>
-				<br>
-				<div class="col-lg-4">
-					<canvas id="javascript" height="130" width="130"></canvas>
-					<br>
-					<h4>Javascript</h4>
-					<br>
-					<script>
-						var doughnutData = [
-								{
-									value: 70,
-									color:"#f85c37"
-								},
-								{
-									value : 30,
-									color : "#ecf0f1"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
-					</script>
+            header video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: auto;
+                width: auto;
+                height: auto;
+                z-index: 0;
+                -ms-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+            }
 
-				</div>
-				<div class="col-lg-4">
-					<canvas id="bootstrap" height="130" width="130"></canvas>
-					<br>
-					<h4>Bootstrap</h4>
-					<br>
-					<script>
-						var doughnutData = [
-								{
-									value: 90,
-									color:"#f85c37"
-								},
-								{
-									value : 10,
-									color : "#ecf0f1"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
-					</script>
-				</div>
-				<div class="col-lg-4">
-					<canvas id="wordpress" height="130" width="130"></canvas>
-					<br>
-					<h4>Wordpress</h4>
-					<br>
-					<script>
-						var doughnutData = [
-								{
-									value: 55,
-									color:"#f85c37"
-								},
-								{
-									value : 45,
-									color : "#ecf0f1"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
-					</script>
-				</div>
-			
-			</div>	
-		</div><!-- /container -->
-	</div><!-- /dg -->
-	
-	<section id="portfolio" name="portfolio"></section>
-	<div id="portfoliowrap">
-		<div class="container">
-			<div class="row">
-				<h3>COOL WORKS</h3>
-				<br>
-				<br>
-				<div class="col-lg-4 port-space">
-					<a href="item.html"><img src="assets/img/work1.png"></a>
-				</div>
-				<div class="col-lg-4 port-space">
-					<a href="item.html"><img src="assets/img/work2.png"></a>
-				</div>
-				<div class="col-lg-4 port-space">
-					<a href="item.html"><img src="assets/img/work3.png"></a>
-				</div>				
-			</div>	
-		</div><!-- /container -->
-	</div><!-- /portfoliowrap -->
-	
-	<!-- ========== WHITE SECTION ========== -->
-	<div id="w">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-				<h3>WE WORK HARD TO DELIVER A <bold>HIGH QUALITY SERVICE</bold>. OUR AIM IS YOUR COMPLETE <bold>SATISFACTION</bold>.
-				</h3>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /w -->
-	
-	<!-- ========== ABOUT - GREY SECTION ========== -->
-	<section id="about" name="about"></section>
-	<div id="g">
-		<div class="container">
-			<div class="row">
-				<h3>ABOUT US</h3>
-				<br>
-				<br>
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lectus elit, tincidunt nec turpis sed, accumsan iaculis ipsum. Nulla at augue auctor, tristique erat in, ultricies nunc. Mauris eget metus leo. Ut in mi lacinia, mattis nisl non, ultrices risus. Vestibulum aliquet aliquam ipsum ut ullamcorper. Pellentesque fringilla, massa vel rutrum consequat, nulla velit fermentum dolor, sed scelerisque.</p>
-				<br>
-				<br>
-				</div>
-				<div class="col-lg-2"></div>
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="assets/img/team01.jpg" height="90" width="90">
-					<h4>Liz Stewart</h4>
-					<h5><i>Product Manager</i></h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-twitter"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
+            header .container {
+                position: relative;
+                z-index: 2;
+            }
+    </style>
 
-					</p>
-				</div>
 
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="assets/img/team02.jpg" height="90" width="90">
-					<h4>Brad Casey</h4>
-					<h5><i>Front-end Developer</i></h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-twitter"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
+</head>
 
-					</p>
-				</div>
+<body>
+    <header>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="videos/video-obrigado.mp4" type="video/mp4">
+        </video>
+    </header>
 
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="assets/img/team03.jpg" height="90" width="90">
-					<h4>Pamela Chow</h4>
-					<h5><i>Web Designer</i></h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-twitter"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="col-md-12" style="text-align:center; ">
+                        <h1><strong style="color:blueviolet; ">E AGORA?...</strong></h1>
+                    </div>
+                    <br />
+                    <h2>Você deu importantes passos até aqui. Seguiu <strong style="color:blueviolet;"> <a style="color:blueviolet;" href="https://www.instagram.com/expertfiscaltributario/" target="_blank">meu perfil no instagram</a></strong>, baixou uma excelente ferramenta que concentra os portais web dos 26 Estados Brasileiros de forma única.</h2><br />
+                    <h2>Mas a pergunta que fica é : E Agora?</h2><br />
+                    <h2>Agora você vai <strong style="color:blueviolet;">continuar a jornada</strong>, não vai ser simples, não vai ser fácil mas... <strong style="color:blueviolet;">VAI VALER A PENA!!!</strong>.</h2><br />
+                    <h2>Estude e trabalhe enquanto "eles" se divertem, essa deve ser sua mentalidade para obter grandes conquistas nessa jornada.</h2><br />
+                    <h2>O que quero dizer com isso é que você precisa estar no <strong style="color:blueviolet;">pelotão de elite</strong>, junto daqueles que possuem o conhecimento e as <strong style="color:blueviolet;">ferramentas</strong> que permitem que eles tenham os <strong style="color:blueviolet;">melhores salários e cargos</strong>.</h2><br />
+                    <h2>A ferramenta que você recebeu no seu e-mail é uma dentre muitas que você precisará utilizar ao longo desta jornada rumo ao Expert Fiscal Tributário.</h2><br />
+                    <h2>Outra ferramenta <strong style="color:blueviolet;">MUITO IMPORTANTE</strong> nesta jornada está relacionada ao Cálculo de Alíquotas de ICMS, é importante citar aqui que o <strong style="color:blueviolet;">CÁLCULO INCORRETO</strong> de ICMS acarreta em <strong style="color:blueviolet;">MULTAS PARA A EMPRESA</strong>. </h2><br />
+                    <h2>As multas podem chegar a <strong style="color:blueviolet;">100% DO VALOR DA OPERAÇÃO</strong>, por isso minha preocupação neste tópico.</h2><br />
+                    <h2><strong style="color:blueviolet;">Eu já trilhei essa jornada e conheço os obstáculos</strong>, identifiquei os principais deles e desenvolvi ferramentas para supera-los, a Calculadora de Alíquotas de ICMS é mais uma delas.</h2><br />
+                    <h2>Infelizmente com essa ferramenta não posso fazer o mesmo que fiz com a anterior. </h2><br />
+                    <h2>Foram meses investidos e algumas centenas de reais em cursos de excel, por outro lado todo esse tempo e dinheiro investidos já me deram retorno durante o período que a utilizei.</h2><br />
+                    <h2>Então eu decidi disponibilizar a Calculadora de Alíquotas de ICMS <strong style="color:blueviolet;">POR UM PREÇO JUSTO</strong> que não ficará pesado para você e ao mesmo tempo em que ela <strong style="color:blueviolet;">SUPERA SUAS EXPECTATIVAS</strong> enquanto a utiliza.</h2><br />
+                </div>
+            </div>
+        </div>
+    </section>
 
-					</p>
-				</div>
+    <section class="my-5" style="background-color:blueviolet; padding-top: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card" style="background-color: blueviolet; width: 100%; height: auto; border:none;">
+                        <img src="img/LaptopTelaCalcICMS.png" class="card-img-top" alt="Calculadora">
 
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="assets/img/team04.jpg" height="90" width="90">
-					<h4>Tim Gates</h4>
-					<h5><i>Back-end Guru</i></h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-twitter"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
+                        <div class="card-body">
+                            <h1 class="card-title" style="color: white;">Calculadora de Alíquotas de ICMS</h1>
+                            <h3 class="card-text" style="color: white;">Talvez você seja como eu, minha inexperiência em excel impedia que fizesse esses cálculos com precisão e rapidez.</h3>
+                            <br />
+                            <h3 class="card-text" style="color: white;">Na época eu não tive essa oportunidade que você tem então, aproveite e  agilize o Cálculo de suas Alíquotas de ICMS evitando Riscos Desnecessários.</h3>
+                        </div>
+                        <img src="img/calcicms-preco.png" class="card-img-top" alt="Calculadora">
+                        <br />
+                        <a href="https://go.hotmart.com/T28487593E" class="btn btn-warning btn-lg btn-block active">Baixar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					</p>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /g -->
-	
-	<!-- ========== FOOTER SECTION ========== -->
-	<section id="contact" name="contact"></section>
-	<div id="f">
-		<div class="container">
-			<div class="row">
-					<h3><b>CONTACT US</b></h3>
-					<br>
-					<div class="col-lg-4">
-						<h3><b>Send Us A Message:</b></h3>
-						<h3>Calculadora ICMS@blacktie.co</h3>
-						<br>
-					</div>
-					
-					<div class="col-lg-4">	
-						<h3><b>Call Us:</b></h3>
-						<h3>+55 3984-4389</h3>
-						<br>
-					</div>
-					
-					<div class="col-lg-4">
-						<h3><b>We Are Social</b></h3>
-						<p>
-							<a href="index.html#"><i class="icon-facebook"></i></a>
-							<a href="index.html#"><i class="icon-twitter"></i></a>
-							<a href="index.html#"><i class="icon-envelope"></i></a>
-						</p>
-						<br>
-					</div>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /f -->
-	
-	<div id="c">
-		<div class="container">
-			<p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>
-		
-		</div>
-	</div>
-	
-	
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    <div class="col-12" style="text-align:center;">
+                        <h2><strong>VOCÊ CALCULA CENTENAS DE ALIQUOTAS DE ICMS.</strong></h2>
+                        <h3><strong style="color:blueviolet;">NÃO PERMITA QUE UM ERRO INVALIDE TODO SEU TRABALHO.</strong></h3>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-	<script src="assets/js/classie.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-	<script src="assets/js/main.js"></script>
+                        <div style="width:100%;margin: 0 auto;text-align:center;padding-top:30px;">
+                            <h2 style="font-size:17px;font-family:&quot;Montserrat&quot;, sans-serif;font-style:normal;font-weight:normal;color:#17001b;">Com esta ferramenta de cálculo de alíquotas de ICMS você tem as seguintes vantagens:</h2>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div style="text-align:center; font-size:40px;">
+                            <i class="fa fa-calculator"></i>
+                        </div>
+                        <div style="text-align:center;">
+                            <h2 style="font-size:14px;font-family:&quot;Montserrat&quot;, sans-serif;font-style:normal;font-weight:normal;color:#484848;">Certeza de que o cálculo está correto. O algoritmo utilizado na ferramenta garante que os estados (origem/destino) foram corretamente encontrados na tabela retornando a alíquota certa.</h2>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div style="text-align:center; font-size:40px;">
+                            <i class="fa fa-flash"></i>
+                        </div>
+                        <div style="text-align:center;">
+                            <h2 style="font-size:14px;font-family:&quot;Montserrat&quot;, sans-serif;font-style:normal;font-weight:normal;color:#484848;">Agilidade no processo pois, por mais habilidosos que sejamos nunca vamos superar a velicidade de cálculo de uma máquina.</h2>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div style="text-align:center; font-size:40px;">
+                            <i class="fa fa-copy"></i>
+                        </div>
+                        <div style="text-align:center;">
+                            <h2 style="font-size:14px;font-family:&quot;Montserrat&quot;, sans-serif;font-style:normal;font-weight:normal;color:#484848;">Evita multa. As infrações relativas ao pagamento do ICMS e suas respectivas penalidades estão previstas no artigo 527, caput, I do RICMS/2000-SP.</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-12" style="text-align:center;">
+                        <div style="width:100%;margin: 0 auto;text-align:center;padding-top:30px;">
+                            <h2><strong style="color:blueviolet;">Uma das penalidades previstas no artigo 527 é o pagamento de <strong>50% do valor total da operação</strong>, a infração relacionada é </strong></h2>
+                            <h2><strong style="color:blueviolet;"><small>'Falta de pagamento do imposto, quando,<b> indicado outro Estado </b>como destino da mercadoria, esta não tiver saído do território paulista'</small></strong></h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="col-md-12">
+        <div class="card bg-dark text-white">
+            <img src="img/bg-sobre-paty.png" class="card-img" alt="Sobre">
+            <div class="card-img-overlay">
+                <div class="col-md-10">
+                    <h1 class="card-title" style="color:white;">Patrícia Ferreira</h1>
+                    <p><strong style="color: orange; text-transform:uppercase;">Bacharel</strong> em Ciências Contábeis com <strong style="color: orange; text-transform:uppercase;">MBA</strong> em Gestão Tributária trabalhei em <strong style="color: orange; text-transform:uppercase;">multinacionais</strong> do setor químico e telefônico me especializando na <strong style="color: orange; text-transform:uppercase;">Área Fiscal Tributária</strong>. Sempre envolvida com análise e <strong style="color: orange; text-transform:uppercase;">implantação de novos processos</strong> e procedimentos fiscais acumulei <strong style="color: orange; text-transform:uppercase;">experiência</strong> em projetos regulatórios como NF-e, EFD (SPED Fiscal), Bloco G (CIAP) e Notas Técnicas</p>
+                    <p>Evangélica, Casada e Mãe de <strong style="color: orange; text-transform:uppercase;">dois filhos</strong> maravilhosos busco <strong style="color: orange; text-transform:uppercase;">conciliar</strong> minhas atividades profissionais e pessoais com muita <strong style="color: orange; text-transform:uppercase;">ponderação</strong>, ás vezes só com muita oração rsrsrs... </p>
+                    <p>Trabalhando com sistemas como SAP, TDF, Oracle EBS, Gemco, Single, Avalara, Easytrib, Synchro ,Mastersaf/DW e DPFISC ao longo desses <strong style="color: orange; text-transform:uppercase;">15 anos</strong> tive a oportunidade de <strong style="color: orange; text-transform:uppercase;">aplicar</strong> um <strong style="color: orange; text-transform:uppercase;">Treinamento</strong> de padronização dos processos fiscais no <strong style="color: orange; text-transform:uppercase;">Uruguai</strong> por duas vezes.</p>
+                </div>
+                    <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <section style="background-color: blueviolet; padding-top: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    <div class="col-4 my-auto">
+                        <h1 style="color: white;text-align: center;">Ainda não baixou sua Calculadora de Alíquotas de ICMS?<br />Aproveite.</h1>
+                    </div>
+                    <div class="col-8 my-auto">
+                        <img alt="Preço" src="img/calcicms-preco.png" style="width:100%; height:auto;">
+                        <br /><br />
+                        <a href="https://go.hotmart.com/T28487593E" class="btn btn-warning btn-lg btn-block active" role="button" aria-pressed="true">Baixar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8" style="text-align:center">
+                    <h3>Siga meu instagram</h3>
+                    <div class="footer-social-info">
+                        <a href="https://www.instagram.com/expertfiscaltributario/" data-toggle="tooltip" data-placement="top" title="instagram"><i class="fa fa-instagram" style="font-size:20px;" aria-hidden="true"></i> @expertfiscaltributario</a>
+                    </div>
+                    <p>
+                        Expert Fiscal Tributário &copy;2020 Todos os Direitos reservados
+                    </p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Scripts-->
+    <script type="text/javascript" src="js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 </body>
+
+
 </html>
