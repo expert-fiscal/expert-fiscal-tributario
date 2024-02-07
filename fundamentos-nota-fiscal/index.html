@@ -62,7 +62,7 @@
                                         <p>Com esses conhecimentos, você estará preparada(o) para atuar como Analista Fiscal, uma área da contabilidade com baixa concorrência e remuneração diferenciada, <a href="https://www.glassdoor.com.br/Sal%C3%A1rios/analista-fiscal-sal%C3%A1rio-SRCH_KO0,15.htm#:~:text=A%20m%C3%A9dia%20salarial%20de%20Analista,%24%201.450%20e%20R%24%208.010." target="_blank" rel="noopener noreferrer">em média R$ 7.000,00 segundo o site GlassDoor</a></p>
                                         <p>Não perca tempo e invista no seu futuro! Matricule-se agora no curso "Fundamentos da Nota Fiscal" e se torne um especialista nesse segmento tão promissor.</p>
                                     </div>
-                                    <a href="https://pay.hotmart.com/B76309836F?off=jt3ygsbb" class="btn btn-success btn-lg btn-block" target="_blank" rel="noopener noreferrer">QUERO ME INSCREVER</a>
+                                    <a onclick="return false;" href="https://pay.hotmart.com/B76309836F?checkoutMode=2&off=d3lla0a8" class="hotmart-fb hotmart__button-checkout btn-lg btn-block">Comprar Agora</a> 
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="https://pay.hotmart.com/B76309836F?off=jt3ygsbb" class="btn btn-success btn-lg btn-block" target="_blank" rel="noopener noreferrer">QUERO ME INSCREVER</a>
+                        <a onclick="return false;" href="https://pay.hotmart.com/B76309836F?checkoutMode=2&off=d3lla0a8" class="hotmart-fb hotmart__button-checkout btn-lg btn-block btn-lg btn-block">Comprar Agora</a> 
                     </div>
                 </div>
             </div> <!-- end row -->
@@ -204,7 +204,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="https://pay.hotmart.com/B76309836F?off=jt3ygsbb" class="btn btn-success btn-lg btn-block" target="_blank" rel="noopener noreferrer">QUERO ME INSCREVER</a>
+                    <a onclick="return false;" href="https://pay.hotmart.com/B76309836F?checkoutMode=2&off=d3lla0a8" class="hotmart-fb hotmart__button-checkout btn-lg btn-block">Comprar Agora</a> 
                 </div>
                 
             </div> <!-- end row -->
@@ -281,7 +281,35 @@
         <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
         <script src="assets/js/ebook-scripts.js"></script>
 
+        <!-- Hotmart -->
+        <script type="text/javascript">
+            function importHotmart(){ 
+                 var imported = document.createElement('script'); 
+                 imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+                 document.head.appendChild(imported); 
+                var link = document.createElement('link'); 
+                link.rel = 'stylesheet'; 
+                link.type = 'text/css'; 
+                link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+                document.head.appendChild(link);	} 
+             importHotmart(); 
+         </script> 
+
+
+        <!-- HOTMART - Upsell Widget -->
+        <div id="box_hotmart"></div>
+        <script src="https://pay.hotmart.com/assets/js/hotmart.upsell_checkout.js"></script>
+
+        <script>
+        opts = {
+        key: 'USL-133125-433809-a9440f03b79fa4847413846e6f8192cb',
+        width: '650' ,
+        height: '420'
+        };
+        Upsell.Widget.show(opts);
+        </script>
+        <!-- HOTMART - Upsell Widget [end] -->
+
     </body>
 
 </html>
-
