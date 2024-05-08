@@ -2,31 +2,31 @@
 <html lang="pt-br">
 <head>
     <!-- Notas Fiscais   | 
-		[29/04] Aula 01 - A Grande Oportunidade
-	    [01/05] Aula 02 - Os 4 Pilares da Nota Fiscal
-		[03/05] Aula 03 - O Roteiro Definitivo
-		[05/05] Aula 04 - O Plano Master
+		[27/05] Aula 01 - A Grande Oportunidade
+	    [29/05] Aula 02 - Os 4 Pilares da Nota Fiscal
+		[31/05] Aula 03 - O Roteiro Definitivo
+		[02/06] Aula 04 - O Plano Master
 	-->
     <meta charset="utf-8">
     <title>Mini Curso Nota Fiscal</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="[29/04 - 01/05 - 03/05 - 05/05] - Aulas 100% Online e Gratuitas (Com Certificado de Participação)" />
-    <meta name="keywords" content="Impostos, CFOP, NCM, CST,Fiscal, Tributário, Area Fiscal, Departamento Fiscal, Analista Fiscal, Assistente Fiscal, Nota Fiscal, NFe, NF" />
+    <meta name="description" content="[27/05 - 29/05 - 31/05 - 02/06] - Aulas 100% Online e Gratuitas (Com Certificado de Participação)" />
+    <meta name="keywords" content="Notas Fiscais, Contadora, Impostos, CFOP, NCM, CST, Código Fiscal de Operações, Nomenclatura Comum do Mercosul, Código de Situação Tributária, Fiscal, Tributario, Nota Fiscal, NF, NFe, NFS, NFSe" />
     <meta name="author" content="Patrícia Ferreira" />
 	
 	<!-- Favicons -->
-	<link href="assets/img/logo-grupo-whatsapp.png" rel="icon">
-	<link href="assets/img/logo-grupo-whatsapp.png" rel="apple-touch-icon">
+	<link href="assets/img/logo-grupo-whatsapp.webp" rel="icon">
+	<link href="assets/img/logo-grupo-whatsapp.webp" rel="apple-touch-icon">
 
     <!-- Facebook,Twitter and Whatsapp integration -->
     <meta property="og:title" content="Mini Curso Nota Fiscal" />
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="https://www.expertfiscaltributario.com.br/mini-curso-notafiscal/assets/img/logo-evento.png" />
+    <meta property="og:image" content="https://www.expertfiscaltributario.com.br/mini-curso-notafiscal/assets/img/logo-evento.webp" />
     <meta property="og:image:type" content="image/webp">
-    <meta property="og:url" content="https://www.expertfiscaltributario.com.br/mini-curso-notafiscal/inscrever/itp/" />
+    <meta property="og:url" content="https://www.expertfiscaltributario.com.br/mini-curso-notafiscal/" />
     <meta property="og:site_name" content="Mini Curso Nota Fiscal" />
-    <meta property="og:description" content="[29/04 - 01/05 - 03/05 - 05/05] - Aulas 100% Online e Gratuitas (Com Certificado de Participação)" />
+    <meta property="og:description" content="[27/05 - 29/05 - 31/05 - 02/06] - Aulas 100% Online e Gratuitas (Com Certificado de Participação)" />
     <meta property="fb:admins" content="expertfiscaltributario"/>
 
     <!-- Google fonts-->
@@ -54,23 +54,26 @@
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-T2HLTPZL');</script>
-        <!-- End Google Tag Manager -->    
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T2HLTPZL');</script>
+    <!-- End Google Tag Manager -->
+
 </head>
 <body id="page-top" style="background-color:black">
 	<script>fbq('track', 'ViewContent');</script>	
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2HLTPZL"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->  
+	<!-- End Google Tag Manager (noscript) -->
+		
+    <!-- Masthead-->
     <header class="masthead">
         <div class="container">
             <div class="row">
                 <div class="col-md-6" >
-                    <div style="background: url('../../assets/img/header-expert_600x600.webp') no-repeat center;
+                    <div style="background: url('assets/img/header-expert_600x600.webp') no-repeat center;
                         width: 100%; height: 300px;
                         background-size: contain;">
                     </div>
@@ -110,7 +113,7 @@
                         <br/>
                         <div style="text-align: left;">
                             <h5 style="color:white;">Evento online e gratuito, com Emissão de Certificado 
-                                <br/>Do dia <strong style="color:#FFC61B;">29 de Abril ao dia 05 de Maio</strong></h5>
+                                <br/>Do dia <strong style="color:#FFC61B;" id="datas_evento"></strong></h5>
                         </div>
                         <br/>                        
                         
@@ -139,7 +142,7 @@
                     </div>
 					<p style="color:white; text-align: left;">
                         Não precisa ter pós-gradução ou MBA em Gestão Tributária;
-                        <br/><br/>A realidade é que nós não tivemos disciplina sobre Notas Fiscais na faculdade! O Contador pouco entende de DANFE/NFE/DACTE/CTE/XML/Rejeições e são muuuitas as particularidades!;
+                        <br/><br/>A realidade é que nós não tivemos disciplina sobre Notas Fiscais na faculdade! A Contadora pouco entende de DANFE/NFE/DACTE/CTE/XML/Rejeições e são muuuitas as particularidades!;
                         <br/><br/>Não depende de ninguém ou dos parâmetros do sistema para ter uma Nota Fiscal correta Autorizada;
                         <br/><br/>Não é obrigado ter um CRC ativo;
                         <br/><br/>A CONTADORA que domina as Notas Fiscais tem Pouca concorrência.
@@ -278,8 +281,8 @@
 	<!-- Bootstrap core JS-->
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="assets/js/scripts.js"></script>
-
- 
+    <script src="../../assets/js/scripts.js"></script>
+    <!-- Dados Lcto  -->
+    <script src="assets/js/lcto.js"></script>
 </body>
 </html>
