@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Expert Fiscal Tributario - Dashboard</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Roboto" rel="stylesheet">
+  <link href="plugins/material/css/materialdesignicons.min.css" rel="stylesheet" />
+  <link href="plugins/simplebar/simplebar.css" rel="stylesheet" />
+
+  <!-- PLUGINS CSS STYLE -->
+  <link href="plugins/nprogress/nprogress.css" rel="stylesheet" />
+  
+  <!-- MONO CSS -->
+  <link id="main-css-href" rel="stylesheet" href="css/style.css" />
+
+  <!-- FAVICON -->
+  <link href="images/favicon.png" rel="shortcut icon" />
+
+  <script src="plugins/nprogress/nprogress.js"></script>
+</head>
+
+
+  <body class="navbar-fixed sidebar-fixed" id="body">
+    <script>
+      NProgress.configure({ showSpinner: false });
+      NProgress.start();
+    </script>
+
+    
+
+    <!-- ====================================
+    ——— WRAPPER
+    ===================================== -->
+    <div class="wrapper">
+      
+      
+        <!-- ====================================
+          ——— LEFT SIDEBAR WITH OUT FOOTER
+        ===================================== -->
+        <aside class="left-sidebar sidebar-dark" id="left-sidebar">
+          <div id="sidebar" class="sidebar sidebar-with-footer">
+            <!-- Aplication Brand -->
+            <div class="app-brand">
+              <a href="index.html">
+                <img src="images/logo.png" alt="Mono">
+                <span class="brand-name">Expert Fiscal</span>
+              </a>
+            </div>
+            <!-- begin sidebar scrollbar -->
+            <div class="sidebar-left" data-simplebar style="height: 100%;">
+              <!-- sidebar menu -->
+              <ul class="nav sidebar-inner" id="sidebar-menu">
+                  <li class="active"> 
+					<a class="sidenav-item-link" href="index.html">   <i class="mdi mdi-briefcase-account-outline"></i>   <span class="nav-text">Simulador de DANFE</span> </a>
+                  </li>
+				<!--                 
+					<li> 
+						<a class="sidenav-item-link" href="analytics.html">   <i class="mdi mdi-chart-line"></i>   <span class="nav-text">Analytics Dashboard</span> </a>
+					</li>
+				                 
+				  <li class="section-title">Apps</li>
+                  <li> <a class="sidenav-item-link" href="chat.html">   <i class="mdi mdi-wechat"></i>   <span class="nav-text">Chat</span> </a>
+                  </li>
+                  <li> <a class="sidenav-item-link" href="contacts.html">   <i class="mdi mdi-phone"></i>   <span class="nav-text">Contacts</span> </a>
+                  </li>
+                  <li> <a class="sidenav-item-link" href="team.html">   <i class="mdi mdi-account-group"></i>   <span class="nav-text">Team</span> </a>
+                  </li>
+                  <li> <a class="sidenav-item-link" href="calendar.html">   <i class="mdi mdi-calendar-check"></i>   <span class="nav-text">Calendar</span> </a>
+                  </li>
+                  <li  class="has-sub"> 
+					<a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#email"   aria-expanded="false" aria-controls="email">   <i class="mdi mdi-email"></i>   <span class="nav-text">email</span> <b class="caret"></b> </a> <ul  class="collapse"  id="email"   data-parent="#sidebar-menu">   <div class="sub-menu">                          <li >           <a class="sidenav-item-link" href="email-inbox.html">             <span class="nav-text">Email Inbox</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="email-details.html">             <span class="nav-text">Email Details</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="email-compose.html">             <span class="nav-text">Email Compose</span>                        </a>         </li>       </div> </ul>
+                  </li>
+                  <li class="section-title">UI Elements</li>
+                  <li  class="has-sub" > 
+					<a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#ui-elements"   aria-expanded="false" aria-controls="ui-elements">   <i class="mdi mdi-folder-outline"></i>   <span class="nav-text">UI Components</span> <b class="caret"></b> </a> <ul  class="collapse"  id="ui-elements"   data-parent="#sidebar-menu">   <div class="sub-menu">                          <li >           <a class="sidenav-item-link" href="alert.html">             <span class="nav-text">Alert</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="badge.html">             <span class="nav-text">Badge</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="breadcrumb.html">             <span class="nav-text">Breadcrumb</span>                        </a>         </li>              <li  class="has-sub" >       <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#buttons"         aria-expanded="false" aria-controls="buttons">         <span class="nav-text">Buttons</span> <b class="caret"></b>       </a>       <ul  class="collapse"  id="buttons">         <div class="sub-menu">                      <li >             <a href="button-default.html">Button Default</a>           </li>                      <li >             <a href="button-dropdown.html">Button Dropdown</a>           </li>                      <li >             <a href="button-group.html">Button Group</a>           </li>                      <li >             <a href="button-social.html">Button Social</a>           </li>                      <li >             <a href="button-loading.html">Button Loading</a>           </li>                    </div>       </ul>     </li>                  <li >           <a class="sidenav-item-link" href="card.html">             <span class="nav-text">Card</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="carousel.html">             <span class="nav-text">Carousel</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="collapse.html">             <span class="nav-text">Collapse</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="editor.html">             <span class="nav-text">Editor</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="list-group.html">             <span class="nav-text">List Group</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="modal.html">             <span class="nav-text">Modal</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="pagination.html">             <span class="nav-text">Pagination</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="popover-tooltip.html">             <span class="nav-text">Popover & Tooltip</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="progress-bar.html">             <span class="nav-text">Progress Bar</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="spinner.html">             <span class="nav-text">Spinner</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="switches.html">             <span class="nav-text">Switches</span>                        </a>         </li>              <li  class="has-sub" >       <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#tables"         aria-expanded="false" aria-controls="tables">         <span class="nav-text">Tables</span> <b class="caret"></b>       </a>       <ul  class="collapse"  id="tables">         <div class="sub-menu">                      <li >             <a href="bootstarp-tables.html">Bootstrap Tables</a>           </li>                      <li >             <a href="data-tables.html">Data Tables</a>           </li>                    </div>       </ul>     </li>                  <li >           <a class="sidenav-item-link" href="tab.html">             <span class="nav-text">Tab</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="toaster.html">             <span class="nav-text">Toaster</span>                        </a>         </li>              <li  class="has-sub" >       <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#icons"         aria-expanded="false" aria-controls="icons">         <span class="nav-text">Icons</span> <b class="caret"></b>       </a>       <ul  class="collapse"  id="icons">         <div class="sub-menu">                      <li >             <a href="material-icons.html">Material Icon</a>           </li>                      <li >             <a href="flag-icons.html">Flag Icon</a>           </li>                    </div>       </ul>     </li>       <li  class="has-sub" >       <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#forms"         aria-expanded="false" aria-controls="forms">         <span class="nav-text">Forms</span> <b class="caret"></b>       </a>       <ul  class="collapse"  id="forms">         <div class="sub-menu">                      <li >             <a href="basic-input.html">Basic Input</a>           </li>                      <li >             <a href="input-group.html">Input Group</a>           </li>                      <li >             <a href="checkbox-radio.html">Checkbox & Radio</a>           </li>                      <li >             <a href="form-validation.html">Form Validation</a>           </li>                      <li >             <a href="form-advance.html">Form Advance</a>           </li>                    </div>       </ul>     </li>       <li  class="has-sub" >       <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#maps"         aria-expanded="false" aria-controls="maps">         <span class="nav-text">Maps</span> <b class="caret"></b>       </a>       <ul  class="collapse"  id="maps">         <div class="sub-menu">                      <li >             <a href="google-maps.html">Google Map</a>           </li>                      <li >             <a href="vector-maps.html">Vector Map</a>           </li>                    </div>       </ul>     </li>       <li  class="has-sub" >       <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#widgets"         aria-expanded="false" aria-controls="widgets">         <span class="nav-text">Widgets</span> <b class="caret"></b>       </a>       <ul  class="collapse"  id="widgets">         <div class="sub-menu">                      <li >             <a href="widgets-general.html">General Widget</a>           </li>                      <li >             <a href="widgets-chart.html">Chart Widget</a>           </li>                    </div>       </ul>     </li></div> </ul>
+                  </li>
+
+                  <li  class="has-sub" > 
+					<a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#charts"   aria-expanded="false" aria-controls="charts">   <i class="mdi mdi-chart-pie"></i>   <span class="nav-text">Charts</span> <b class="caret"></b> </a> <ul  class="collapse"  id="charts"   data-parent="#sidebar-menu">   <div class="sub-menu">                          <li >           <a class="sidenav-item-link" href="apex-charts.html">             <span class="nav-text">Apex Charts</span>                        </a>         </li>       </div> </ul>
+                  </li>
+				-->
+                  <li class="section-title"> Documentos Fiscais</li>
+				<!--               
+				  <li  class="has-sub" > 
+					<a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#users"   aria-expanded="false" aria-controls="users">   <i class="mdi mdi-image-filter-none"></i>   <span class="nav-text">User</span> <b class="caret"></b> </a> <ul  class="collapse"  id="users"   data-parent="#sidebar-menu">   <div class="sub-menu">                          <li >           <a class="sidenav-item-link" href="user-profile.html">             <span class="nav-text">User Profile</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="user-activities.html">             <span class="nav-text">User Activities</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="user-profile-settings.html">             <span class="nav-text">User Profile Settings</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="user-account-settings.html">             <span class="nav-text">User Account Settings</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="user-planing-settings.html">             <span class="nav-text">User Planing Settings</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="user-billing.html">             <span class="nav-text">User billing</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="user-notify-settings.html">             <span class="nav-text">User Notify Settings</span>                        </a>         </li>       </div> </ul>
+                  </li>
+                  <li  class="has-sub" > 
+					<a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#authentication"   aria-expanded="false" aria-controls="authentication">   <i class="mdi mdi-account"></i>   <span class="nav-text">Authentication</span> <b class="caret"></b> </a> <ul  class="collapse"  id="authentication"   data-parent="#sidebar-menu">   <div class="sub-menu">                          <li >           <a class="sidenav-item-link" href="sign-in.html">             <span class="nav-text">Sign In</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="sign-up.html">             <span class="nav-text">Sign Up</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="reset-password.html">             <span class="nav-text">Reset Password</span>                        </a>         </li>       </div> </ul>
+                  </li>
+				-->
+                  <li  class="has-sub" > 
+					<a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#other-page"   aria-expanded="false" aria-controls="other-page">   
+					<i class="mdi mdi-file-multiple"></i>   <span class="nav-text">DANFE</span> <b class="caret"></b> </a> 
+						<ul  class="collapse"  id="other-page"   data-parent="#sidebar-menu">   
+							<div class="sub-menu">                          
+								<li ><a class="sidenav-item-link" href="index.html"><span class="nav-text">Doc. Aux. NF-e</span>                        </a>         </li>                         
+							<!--								
+								<li ><a class="sidenav-item-link" href="404.html">             <span class="nav-text">404 page</span>                        </a>         </li>                         
+								<li ><a class="sidenav-item-link" href="page-comingsoon.html">             <span class="nav-text">Coming Soon</span>                        </a>         </li>                         
+								<li ><a class="sidenav-item-link" href="page-maintenance.html">             <span class="nav-text">Maintenance</span>                        </a>         </li>
+							-->							
+							</div> 
+						</ul>
+                  </li>
+				<!--
+                  <li class="section-title">Documentation</li>
+                  <li> <a class="sidenav-item-link" href="getting-started.html">   
+					<i class="mdi mdi-airplane"></i>   <span class="nav-text">Getting Started</span> </a>
+                  </li>
+                  <li  class="has-sub" > 
+					<a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#customization"   aria-expanded="false" aria-controls="customization">   <i class="mdi mdi-square-edit-outline"></i>   <span class="nav-text">Customization</span> <b class="caret"></b> </a> <ul  class="collapse"  id="customization"   data-parent="#sidebar-menu">   <div class="sub-menu">                          <li >           <a class="sidenav-item-link" href="navbar-customization.html">             <span class="nav-text">Navbar</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="sidebar-customization.html">             <span class="nav-text">Sidebar</span>                        </a>         </li>                         <li >           <a class="sidenav-item-link" href="styling.html">             <span class="nav-text">Styling</span>                        </a>         </li>       </div> </ul>
+                  </li>
+				-->
+              </ul>
+
+            </div>
+
+            <!-- <div class="sidebar-footer">
+              <div class="sidebar-footer-content">
+                <ul class="d-flex">
+                  <li> <a href="user-account-settings.html" data-toggle="tooltip" title="Profile settings"><i class="mdi mdi-settings"></i></a></li>
+                  <li> <a href="#" data-toggle="tooltip" title="No chat messages"><i class="mdi mdi-chat-processing"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div> -->
+          </div>
+        </aside>
+
+      
+
+      <!-- ====================================
+      ——— PAGE WRAPPER
+      ===================================== -->
+      <div class="page-wrapper">
+        
+          <!-- Header -->
+          <header class="main-header" id="header">
+            <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+              <!-- Sidebar toggle button -->
+              <button id="sidebar-toggler" class="sidebar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+
+              <span class="page-title">D.A.N.F.E</span>
+
+              <div class="navbar-right ">
+
+                              
+              </div>
+            </nav>
+
+
+          </header>
+
+        <!-- ====================================
+        ——— CONTENT WRAPPER
+        ===================================== -->
+        <div class="content-wrapper">
+          <div class="content">					
+			<div class="invoice-wrapper rounded border bg-white py-5 px-3 px-md-4 px-lg-5 mb-6">
+			
+    <!-- Bordered Table -->
+    <div class="card card-default">
+      <div class="card-header">
+        <h2>LAYOUT - DANFE</h2>
+		<button class="btn btn-sm btn-secondary" onclick="window.print();return false;">
+			<i class="mdi mdi-printer"></i> Print
+		</button>
+      </div>
+      <div class="card-body">
+<style>
+.danfe_pagina{ font-size:10px;font-family:Arial,Helvetica;margin:0px;padding:1px }
+.danfe_pagina2{ margin:1px;padding:0 }
+.danfe_linha_tracejada{ width:100%;border-bottom:#000 1px dashed;margin:10px 0 10px 0 }
+
+.danfe_tabelas{ border-collapse:collapse;width:100%;margin:0;padding:0 }
+.danfe_celula_bordas{ border:1px solid black; vertical-align:top }
+.danfe_celula_titulo{ margin:0;font-size:7pt;padding:0 2px 0px 2px }
+.danfe_celula_valor{ margin:0;font-size:8pt;padding-left:4px }
+
+.danfe_canhoto_bordas{ font-size:7pt;border:1px solid #000;margin:0px;padding:0;margin:0 1px 0 1px;min-height:30px }
+.danfe_canhoto_texto{ font-size:6pt;margin:0;font-weight:normal;padding:0 2px 1px 2px }
+
+.danfe_cabecalho_danfe{ font-size:13px;font-weight:bold;margin:0;text-align:center }
+.danfe_cabecalho_danfe_texto{ font-size:7pt;padding:0;margin:0 1px 0 1px;text-align:center }
+.danfe_cabecalho_numero{ font-size:13px;font-weight:bold;margin:0;text-align:center }
+.danfe_cabecalho_entrada_saida{ font-size:7pt; }
+.danfe_cabecalho_entrada_saida_quadrado{ font-size:13pt;border:1px solid #000000;padding:0;margin:0;width:100px;text-align:center;float:none;min-width:30px }
+
+.danfe_titulo_externo{ font-size:8pt;margin:4px 0 0 0;font-weight:bold }
+
+.danfe_item{ border:1px black solid;border-top:none;border-bottom:dotted 1pt #dedede; font-size:8pt; text-align: right; }
+.danfe_item_ultimo{ border:1px black solid;border-top:none;margin:0px;padding:0;font-size:1px }
+.danfe_item_cabecalho{ border:1px solid #000;text-align:left;font-size:7pt }
+.danfe_item_cabecalho_tabela{ border-collapse:collapse;width:100%;margin:0;padding:0;border:1px solid #000 }
+</style>
+<div class="danfe_pagina">
+<div class="danfe_pagina2">
+<table class="danfe_tabelas">
+<tr>
+<td>
+<table class="danfe_tabelas" style="min-height:60px;">
+	<tr>
+		<td class="danfe_celula_bordas" colspan="2">
+			<p class="danfe_canhoto_texto">RECEBEMOS DE <input type="text" style="width:30%;"/> OS PRODUTOS CONSTANTES DA NOTA FISCAL INDICADA AO LADO</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="danfe_canhoto_bordas">
+			<p class="danfe_celula_titulo">Data de recebimento </p>
+			<p class="danfe_celula_valor">&nbsp;</p>
+		</td>
+		<td class="danfe_canhoto_bordas">
+			<p class="danfe_celula_titulo">Identifica&ccedil;&atilde;o e assinatura do recebedor</p>
+			<p class="danfe_celula_valor">&nbsp;</p>
+		</td>
+	</tr>
+</table>
+</td>
+<td>&nbsp;</td>
+<td>
+<table class="danfe_tabelas" style="min-height:60px">
+	<tr>
+		<td class="danfe_celula_bordas" align='center'>
+			<strong>NF-e</strong>
+			<h2 class="danfe_cabecalho_numero">N&ordm; <input type="text" style="width:50%;"/></h2>
+			<strong>S&eacute;rie 1</strong>
+		</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+<div class="danfe_linha_tracejada"></div>
+<table class="danfe_tabelas">
+<tr>
+	<td rowspan='3' class="danfe_celula_bordas" style="text-align:center;">
+		<img src="images/expert-fiscal-3k-mais.png" width="100px" height="auto" alt="Expert Fiscal 3K+">
+	</td>
+	<td rowspan='3' class="danfe_celula_bordas">
+		Identificação do Emitente
+		<br/><input type="text" style="width:100%;" placeholder="Nome Fantasia"/>
+		<br/><input type="text" style="width:100%;" placeholder="Endereço"/>
+	</td>
+	<td rowspan='3' class="danfe_celula_bordas" align='center'>
+		<p class="danfe_cabecalho_danfe">DANFE</p>
+		<p class="danfe_cabecalho_danfe_texto">Documento Auxiliar da <br>Nota Fiscal Eletr&ocirc;nica</p>
+		<table class="danfe_tabelas">
+		<tr>
+			<td nowrap class='danfe_cabecalho_entrada_saida'>
+			0-Entrada<br>
+			1-Sa&iacute;da</td>
+			<td class="danfe_cabecalho_entrada_saida_quadrado"><input type="text"placeholder="1" style="width:100%; text-align:center;"/></td>
+		</tr>
+		</table>
+		<p class="danfe_cabecalho_numero">N&ordm; <input type="text" style="width:50%;"/></p>
+		<p class="danfe_cabecalho_danfe_texto">SERIE: 1<br>P&aacute;gina: 1 de 1</p>
+	</td>
+	<td class="danfe_celula_bordas" align='center'>
+		<p class="danfe_celula_titulo">Controle do Fisco</p>
+		<img src="images/codigo-de-barras.png" width="200px" height="auto" alt="Codigo Barras">
+		
+	</td>
+</tr>
+<tr>
+	<td class="danfe_celula_bordas" align='center'>
+	<p class="danfe_celula_titulo">Chave de acesso</p>
+	<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+</tr>
+<tr>
+	<td class="danfe_celula_bordas" align='center'>
+	<p class="danfe_celula_titulo">Consulta de autenticidade no portal nacional da NF-e</p>
+	<p class="danfe_celula_valor">
+	<a href="http://www.nfe.fazenda.gov.br/portal" target="_blank">www.nfe.fazenda.gov.br/portal</a> 
+	ou no site da Sefaz autorizadora</p>
+	</td>
+</tr>
+<tr>
+	<td colspan='3' class="danfe_celula_bordas">
+	<p class="danfe_celula_titulo">Natureza da opera&ccedil;&atilde;o</p>
+	<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas" align='center'>
+	<p class="danfe_celula_titulo">N&uacute;mero de protocolo de autoriza&ccedil;&atilde;o de uso da NF-e</p>
+	<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+</tr>
+</table>
+<table class="danfe_tabelas">
+<tr>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Inscri&ccedil;&atilde;o Estadual</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Inscr.est. do subst.trib.</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">CNPJ</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+</tr>
+</table>
+
+
+<h3 class="danfe_titulo_externo">Destinat&aacute;rio/Remetente</h3>
+<table class="danfe_tabelas">
+<tr>
+	<td>
+		<table class="danfe_tabelas">
+			<tr>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">Nome / Raz&atilde;o Social</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">CNPJ/CPF</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">Inscri&ccedil;&atilde;o Estadual</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">Endere&ccedil;o</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">Bairro</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">CEP</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">Munic&iacute;pio</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">Fone/Fax</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+				<td class="danfe_celula_bordas">
+					<p class="danfe_celula_titulo">UF</p>
+					<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+				</td>
+			</tr>
+		</table>
+	</td>
+	<td width="10%">
+		<table class="danfe_tabelas">
+			<tr>
+				<td class="danfe_celula_bordas">
+				<p class="danfe_celula_titulo">Data emiss&atilde;o</p>
+				<p class="danfe_celula_valor"><input type="text" style="width:100%;" placeholder="__/__/____"/></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="danfe_celula_bordas">
+				<p class="danfe_celula_titulo">Data sa&iacute;da</p>
+				<p class="danfe_celula_valor"><input type="text" style="width:100%;" placeholder="__/__/____"/></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="danfe_celula_bordas">
+				<p class="danfe_celula_titulo">Hora sa&iacute;da</p>
+				<p class="danfe_celula_valor"><input type="text" style="width:100%;" placeholder="HH:MM"/></p>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<h3 class="danfe_titulo_externo">Faturas</h3>
+<table class="danfe_tabelas">
+<tr class='danfe_item_cabecalho_tabela' align='left'>
+	<th class="danfe_item_cabecalho">N&uacute;mero</th>
+	<th class="danfe_item_cabecalho">Vencimento</th>
+	<th class="danfe_item_cabecalho" style="text-align:right;">Valor</th>
+	<th class="danfe_item_cabecalho">N&uacute;mero</th>
+	<th class="danfe_item_cabecalho">Vencimento</th>
+	<th class="danfe_item_cabecalho" style="text-align:right;">Valor</th>
+	<th class="danfe_item_cabecalho">N&uacute;mero</th>
+	<th class="danfe_item_cabecalho">Vencimento</th>
+	<th class="danfe_item_cabecalho" style="text-align:right;">Valor</th>
+</tr>
+<tr class='danfe_item'>
+	<td align='left'><input type="text" style="width: 60px;" /></td>
+	<td align='left'><input type="text" style="width: 60px;" placeholder="__/__/____"/></td>
+	<td style='border-right:solid black 1px'><input type="text" style="width:100%;"/></td>
+	<td align='left'><input type="text" style="width: 60px;" /></td>
+	<td align='left'><input type="text" style="width: 60px;" placeholder="__/__/____"/></td>
+	<td style='border-right:solid black 1px'><input type="text" style="width:100%;"/></td>
+	<td align='left'><input type="text" style="width: 60px;" /></td>
+	<td align='left'><input type="text" style="width: 60px;" /></td>
+	<td style='border-right:solid black 1px'><input type="text" style="width: 60px;" /></td>
+</tr>
+<tr>
+	<td class="danfe_item_ultimo" colspan='9'>&nbsp;</td>
+</tr>
+</table>
+<h3 class="danfe_titulo_externo">C&aacute;lculo do imposto</h3>
+<table class="danfe_tabelas">
+<tr>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Base de c&aacute;lculo do ICMS</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor do ICMS</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Base de c&aacute;lculo do ICMS Subst.</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor do ICMS Subst.</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor total dos produtos</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+</tr>
+</table>
+<table class="danfe_tabelas">
+<tr>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor do frete</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor do seguro</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Desconto</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Outras despesas acess&oacute;rias</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor do IPI</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor total da nota</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+</tr>
+</table>
+<h3 class="danfe_titulo_externo">Transportador/Volumes transportados</h3>
+<table class="danfe_tabelas">
+<tr>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Nome</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Frete por conta</p>
+		<p class="danfe_celula_valor">
+      <select class="custom-select" id="inputGroupSelect01" style="font-size: 11px;height:15px;padding-top: 0px;border-top-width: 0px;padding-bottom: 0px;border-bottom-width: 0px;">
+        <option selected>Selecione</option>
+        <option value="1">0 - Remetente (CIF)	            </option>
+        <option value="2">1 - Destinatário (FOB)	        </option>
+        <option value="3">2 - Terceiros	                </option>
+        <option value="4">3 - Próprio p/conta Remetente	</option>
+        <option value="5">4 - Próprio p/conta Destinatário</option>
+        <option value="6">5 - Sem Ocorrência de Transporte</option>
+      </select>
+    </p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">C&oacute;digo ANTT</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Placa do ve&iacute;culo</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">UF</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">CNPJ/CPF</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+</tr>
+</table>
+<table class="danfe_tabelas">
+<tr>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Endere&ccedil;o</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Munic&iacute;pio</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">UF</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Inscri&ccedil;&atilde;o Estadual</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+</tr>
+</table>
+<table class="danfe_tabelas">
+<tr>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Quantidade</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Esp&eacute;cie</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Marca</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Numera&ccedil;&atilde;o</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Peso bruto</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Peso l&iacute;quido</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	
+</tr>
+</table>
+<h3 class="danfe_titulo_externo">Itens da nota fiscal</h3>
+<table class="danfe_item_cabecalho_tabela">
+<tr>
+	<th class="danfe_item_cabecalho" style="text-align:center;">C&oacute;digo</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">Descri&ccedil;&atilde;o do produto/servi&ccedil;o</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">NCM/SH</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">CST</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">CFOP</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">UN</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">Qtde</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">Vlr. Unitario</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">Vlr. total</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">BC ICMS</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">Vlr.ICMS</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">Vlr.IPI</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">%ICMS</th>
+	<th class="danfe_item_cabecalho" style="text-align:center;">%IPI</th>
+</tr>
+<tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr>
+<tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr>
+<tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr>
+<tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr><tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr>
+<tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr><tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr>
+<tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr><tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr>
+<tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+</tr>
+<tr>
+	<td class="danfe_item_ultimo" colspan='14'>&nbsp;</td>
+</tr>
+</table>
+<h3 class="danfe_titulo_externo">C&aacute;lculo do ISSQN</h3>
+<table class="danfe_tabelas">
+<tr>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Inscri&ccedil;&atilde;o Municipal</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor total dos servi&ccedil;os</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Base de c&aacute;lculo do ISSQN</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Valor do ISSQN</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+</tr>
+</table>
+
+<div class="danfe_titulo_externo">Dados adicionais</div>
+<table class="danfe_tabelas">
+<tr style="min-height:200px">
+	<td class="danfe_celula_bordas" width="70%">
+		<p class="danfe_celula_titulo">Observa&ccedil;&otilde;es</p>
+		<p class="danfe_celula_valor"><input type="text" rows="10" style="width:100%; height:100px;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">Reservado ao fisco</p>
+	</td>
+</tr>
+</table>
+</div>
+</div>
+	  </div>
+    </div>			
+			
+
+			
+		</div>
+</div>
+          
+        </div>
+        
+          <!-- Footer -->
+          <footer class="footer mt-auto">
+            <div class="copyright bg-white">
+              <p>&copy; <span id="copy-year"></span> Copyright Expert Fiscal Tributario.</p>
+            </div>
+            <script>
+                var d = new Date();
+                var year = d.getFullYear();
+                document.getElementById("copy-year").innerHTML = year;
+            </script>
+          </footer>
+
+      </div>
+    </div>
+    
+                    <!-- Card Offcanvas -->
+                    <div class="card card-offcanvas" id="contact-off" >
+                      <div class="card-header">
+                        <h2>Contacts</h2>
+                        <a href="#" class="btn btn-primary btn-pill px-4">Add New</a>
+                      </div>
+                      <div class="card-body">
+
+                        <div class="mb-4">
+                          <input type="text" class="form-control form-control-lg form-control-secondary rounded-0" placeholder="Search contacts...">
+                        </div>
+
+                        <div class="media media-sm">
+                          <div class="media-sm-wrapper">
+                            <a href="user-profile.html">
+                              <img src="images/user/user-sm-01.jpg" alt="User Image">
+                              <span class="active bg-primary"></span>
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <a href="user-profile.html">
+                              <span class="title">Selena Wagner</span>
+                              <span class="discribe">Designer</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="media media-sm">
+                          <div class="media-sm-wrapper">
+                            <a href="user-profile.html">
+                              <img src="images/user/user-sm-02.jpg" alt="User Image">
+                              <span class="active bg-primary"></span>
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <a href="user-profile.html">
+                              <span class="title">Walter Reuter</span>
+                              <span>Developer</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="media media-sm">
+                          <div class="media-sm-wrapper">
+                            <a href="user-profile.html">
+                              <img src="images/user/user-sm-03.jpg" alt="User Image">
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <a href="user-profile.html">
+                              <span class="title">Larissa Gebhardt</span>
+                              <span>Cyber Punk</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="media media-sm">
+                          <div class="media-sm-wrapper">
+                            <a href="user-profile.html">
+                              <img src="images/user/user-sm-04.jpg" alt="User Image">
+                            </a>
+
+                          </div>
+                          <div class="media-body">
+                            <a href="user-profile.html">
+                              <span class="title">Albrecht Straub</span>
+                              <span>Photographer</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="media media-sm">
+                          <div class="media-sm-wrapper">
+                            <a href="user-profile.html">
+                              <img src="images/user/user-sm-05.jpg" alt="User Image">
+                              <span class="active bg-danger"></span>
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <a href="user-profile.html">
+                              <span class="title">Leopold Ebert</span>
+                              <span>Fashion Designer</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="media media-sm">
+                          <div class="media-sm-wrapper">
+                            <a href="user-profile.html">
+                              <img src="images/user/user-sm-06.jpg" alt="User Image">
+                              <span class="active bg-primary"></span>
+                            </a>
+                          </div>
+                          <div class="media-body">
+                            <a href="user-profile.html">
+                              <span class="title">Selena Wagner</span>
+                              <span>Photographer</span>
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+
+    
+                    <script src="plugins/jquery/jquery.min.js"></script>
+                    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+                    <script src="plugins/simplebar/simplebar.min.js"></script>
+                    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+
+                    
+                    <script src="js/mono.js"></script>
+                    <script src="js/chart.js"></script>
+                    <script src="js/map.js"></script>
+                    <script src="js/custom.js"></script>
+
+                    
+
+
+                    <!--  -->
+
+
+  </body>
+</html>
