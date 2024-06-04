@@ -42,3 +42,27 @@ const lnkcpl4 = document.getElementById("link_cpl4")
 if (lnkcpl4) {
   lnkcpl4.src = lcto.lnk_cpl4;
 }
+
+//Data Aula 1 no menu 
+const dt_aula1 = document.getElementById("dta_aula1")
+if (dt_aula1) {
+  dt_aula1.innerHTML = lcto.dt_cpl1;
+}
+
+//Data Aula 2 no menu 
+const dt_aula2 = document.getElementById("dta_aula2")
+if (dt_aula2) {
+  dt_aula2.innerHTML = lcto.dt_cpl2;
+}
+
+//Data Aula 3 no menu 
+const dt_aula3 = document.getElementById("dta_aula3")
+if (dt_aula3) {
+  dt_aula3.innerHTML = lcto.dt_cpl3;
+}
+
+//Data Aula 4 no menu 
+const dt_aula4 = document.getElementById("dta_aula4")
+if (dt_aula4) {
+  dt_aula4.innerHTML = lcto.dt_cpl4;
+}
