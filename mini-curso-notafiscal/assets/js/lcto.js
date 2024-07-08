@@ -1,22 +1,25 @@
 const month_name = ["","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const lcto = {
-  dt_cpl1: "24/06",
-  dt_cpl2: "26/06",
-  dt_cpl3: "28/06",
-  dt_cpl4: "30/06",
-  dt_abertura: "01/07",
-  lnk_cpl1: "https://www.youtube.com/embed/BGYZrZJaG9w",
-  lnk_cpl2: "https://www.youtube.com/embed/fA1qNaHJ5g8",
-  lnk_cpl3: "https://www.youtube.com/embed/-pA90qWb1DA",
-  lnk_cpl4: "https://www.youtube.com/embed/6SnOEvlukOY"
+  dt_cpl1: "22/07",
+  dt_cpl2: "24/07",
+  dt_cpl3: "26/07",
+  dt_cpl4: "28/07",
+  dt_abertura: "29/07",
+  lnk_cpl1: "https://www.youtube.com/embed/bgGTNPCVwAY",
+  lnk_cpl2: "https://www.youtube.com/embed/WAGBVnx6eAM",
+  lnk_cpl3: "https://www.youtube.com/embed/EkxAXvLitfo",
+  lnk_cpl4: "https://www.youtube.com/embed/MqARLBaUfKk",
+  lnk_whts: "https://chat.whatsapp.com/Cnx1360NfUr5uoVmuKvN64"
 };
 
 
-// Datas do Evento - Ex.: 29 de Abril ao dia 05 de Maio
 const dt_ev = document.getElementById("datas_evento")
-if (dt_ev) {
-    dt_ev.innerHTML = lcto.dt_cpl1.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl1.split("/")[1])] + " ao dia " +  lcto.dt_cpl4.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] ;
+if (dt_ev) {    
+    // Datas do Evento - Ex.: 29 de Abril ao dia 05 de Maio
+    // dt_ev.innerHTML = lcto.dt_cpl1.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl1.split("/")[1])] + " ao dia " +  lcto.dt_cpl4.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] ;
+    // Dias 24, 26 e 28 de Junho
+    dt_ev.innerHTML = "Dias " + lcto.dt_cpl1.split("/")[0] + ", " + lcto.dt_cpl2.split("/")[0] + " e " +  lcto.dt_cpl3.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] ;
 }
 
 //Inclusão do link da aula 1
@@ -65,4 +68,11 @@ if (dt_aula3) {
 const dt_aula4 = document.getElementById("dta_aula4")
 if (dt_aula4) {
   dt_aula4.innerHTML = lcto.dt_cpl4;
+}
+
+//Link do Grupo de WhatsApp
+//https://linktr.ee/minicurso_notafiscal
+const lnk_whts = document.getElementById("lnk_grupo_whatsapp")
+if (lnk_whts) {
+  lnk_whts.href = lcto.lnk_whts;
 }
