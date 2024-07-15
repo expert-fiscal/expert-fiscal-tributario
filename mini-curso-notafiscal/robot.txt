@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /wp-admin/
+
+Sitemap: https://www.expertfiscaltributario.com.br/sitemap-minicurso.xml

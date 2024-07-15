@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+
+Sitemap: https://www.expertfiscaltributario.com.br/sitemap.xml
