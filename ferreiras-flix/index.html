@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Catalogue</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Sen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            
+            <div class="logo-container"><h1 class="logo">Movie Cat</h1></div>
+            
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active-link">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trending</li>
+                </ul>
+            </div>
+            
+            <div class="profile-container">
+                <img src="img/profile.png" alt="profile pic" class="profile-picture">
+                <div class="profile-text">
+                    <span>Profile</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-item"></i>
+                    <i class="fa-solid fa-sun toggle-item"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+    <div class="sidebar">
+        <i class="fa-solid fa-magnifying-glass sidebar-item"></i>
+        <i class="fa-solid fa-house-chimney sidebar-item"></i>
+        <i class="fa-solid fa-users sidebar-item"></i>
+        <i class="fa-solid fa-bookmark sidebar-item"></i>
+        <i class="fa-solid fa-tv sidebar-item"></i>
+        <i class="fa-solid fa-hourglass-half sidebar-item"></i>
+        <i class="fa-solid fa-cart-shopping sidebar-item"></i>
+    </div>
+
+    <div class="container">
+        <div class="content-container">
+            
+            <div class="featured-content" 
+                style="background: linear-gradient(to bottom,rgba(0,0,0,0),#151515), url('img/f-1.jpg');">
+                <img class="featured-title" src="img/f-t-1.png">
+                <p class="featured-desc">
+                    With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi.
+                </p>
+                <button class="featured-button">Watch Now</button>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">TRENDING</h1>
+                
+                <div class="movie-list-wrapper">
+                    
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpeg">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/2.jpeg">
+                            <span class="movie-list-item-title">The Rise of Skywalker</span>
+                            <p class="movie-list-item-desc">The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi's legendary conflict with the Sith Lord comes to a head.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/3.jpg">
+                            <span class="movie-list-item-title">Storm-Letter of Fire</span>
+                            <p class="movie-list-item-desc">During the Reformation, Klaas Voeten, a printer of forbidden literature, is caught by the Inquisition for printing a letter written by Martin Luther. His son Falko is unwittingly propelled into helping his father and into searching for the letter.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg">
+                            <span class="movie-list-item-title">1917</span>
+                            <p class="movie-list-item-desc">Two soldiers, assigned the task of delivering a critical message to another battalion, risk their lives for the job in order to prevent them from stepping right into a deadly ambush.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/5.jpg">
+                            <span class="movie-list-item-title">The Avengers</span>
+                            <p class="movie-list-item-desc">Nick Fury is compelled to launch the Avengers Initiative when Loki poses a threat to planet Earth. His squad of superheroes put their minds together to accomplish the task.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/6.jpg">
+                            <span class="movie-list-item-title">Rampage</span>
+                            <p class="movie-list-item-desc">Primatologist Davis Okoye teams up with a geneticist, Dr Kate Caldwell, and tries to save George, an albino gorilla, and prevent two giant mutated animals from wreaking havoc in Chicago.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/7.jpg">
+                            <span class="movie-list-item-title">Ender's Game</span>
+                            <p class="movie-list-item-desc">Ender Wiggin, a brilliant young strategist, is recruited by the International Military to lead the force defending Earth from a genocidal alien race bent on annihilating humankind.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/8.jpg">
+                            <span class="movie-list-item-title">Oblivion</span>
+                            <p class="movie-list-item-desc">A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-left left-arrow"></i>
+                    <i class="fa-solid fa-chevron-right right-arrow"></i>
+                </div>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASE</h1>
+                
+                <div class="movie-list-wrapper">
+                    
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/9.jpg">
+                            <span class="movie-list-item-title">The Hobbit</span>
+                            <p class="movie-list-item-desc">A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/10.jpg">
+                            <span class="movie-list-item-title">Due Date</span>
+                            <p class="movie-list-item-desc">High-strung father-to-be Peter Highman is forced to hitch a ride with aspiring actor Ethan Tremblay on a road trip in order to make it to his child's birth on time.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/11.jpg">
+                            <span class="movie-list-item-title">Kick-Ass 2</span>
+                            <p class="movie-list-item-desc">Following Kick-Ass' heroics, other citizens are inspired to become masked crusaders. But Red Mist leads his own group of evil supervillains to get revenge, kill Kick-Ass and destroy everything he stands for.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/12.jpg">
+                            <span class="movie-list-item-title">The Emoji Movie</span>
+                            <p class="movie-list-item-desc">In Textopolis, where the emojis are expected to display just one emotion, Gene's multiple expressions are a problem. His solution: become "normal."</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/13.jpg">
+                            <span class="movie-list-item-title">1920</span>
+                            <p class="movie-list-item-desc">After forsaking his family and religion, a husband finds his wife is demoniacally possessed.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/14.jpg">
+                            <span class="movie-list-item-title">Paths of Glory</span>
+                            <p class="movie-list-item-desc">After refusing to attack an enemy position, a general accuses the soldiers of cowardice and their commanding officer must defend them.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/15.jpg">
+                            <span class="movie-list-item-title">The Lego Movie</span>
+                            <p class="movie-list-item-desc">An ordinary LEGO construction worker, thought to be the prophesied as "special", is recruited to join a quest to stop an evil tyrant from gluing the LEGO universe into eternal stasis.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/16.jpg">
+                            <span class="movie-list-item-title">1920 London</span>
+                            <p class="movie-list-item-desc">After her husband is possessed by an evil spirit, a woman turns to her former lover to perform an exorcism.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-left left-arrow"></i>
+                    <i class="fa-solid fa-chevron-right right-arrow"></i>
+                </div>
+            </div>
+
+            <div class="featured-content" 
+                style="background: linear-gradient(to bottom,rgba(0,0,0,0),#151515), url('img/f-2.jpg');">
+                <img class="featured-title" src="img/f-t-2.png">
+                <p class="featured-desc">
+                    A missing child sets four families on a frantic hunt for answers as they unearth a mind-bending mystery that spans three generations.</p>
+                <button class="featured-button">Watch Now</button>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">POPULAR</h1>
+                
+                <div class="movie-list-wrapper">
+                    
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/17.jpg">
+                            <span class="movie-list-item-title">Aquaman</span>
+                            <p class="movie-list-item-desc">Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/18.jpg">
+                            <span class="movie-list-item-title">Fairy Tail: Dragon Cry</span>
+                            <p class="movie-list-item-desc">In the new film, based on the Hiro Mashima's manga, Natsu Dragneel and his friends travel to the island Kingdom of Stella, where they will reveal dark secrets, fight the new enemies and once again save the world from destruction.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/19.jpg">
+                            <span class="movie-list-item-title">The Amazing Spider-man</span>
+                            <p class="movie-list-item-desc">After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpeg">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg">
+                            <span class="movie-list-item-title">1971</span>
+                            <p class="movie-list-item-desc">Two soldiers, assigned the task of delivering a critical message to another battalion, risk their lives for the job in order to prevent them from stepping right into a deadly ambush.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/7.jpg">
+                            <span class="movie-list-item-title">Ender's Game</span>
+                            <p class="movie-list-item-desc">Ender Wiggin, a brilliant young strategist, is recruited by the International Military to lead the force defending Earth from a genocidal alien race bent on annihilating humankind.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/2.jpeg">
+                            <span class="movie-list-item-title">The Rise of Skywalker</span>
+                            <p class="movie-list-item-desc">The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi's legendary conflict with the Sith Lord comes to a head.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/10.jpg">
+                            <span class="movie-list-item-title">Due Date</span>
+                            <p class="movie-list-item-desc">High-strung father-to-be Peter Highman is forced to hitch a ride with aspiring actor Ethan Tremblay on a road trip in order to make it to his child's birth on time.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-left left-arrow"></i>
+                    <i class="fa-solid fa-chevron-right right-arrow"></i>
+                </div>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">TOP RATED</h1>
+                
+                <div class="movie-list-wrapper">
+                    
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/5.jpg">
+                            <span class="movie-list-item-title">The Avengers</span>
+                            <p class="movie-list-item-desc">Nick Fury is compelled to launch the Avengers Initiative when Loki poses a threat to planet Earth. His squad of superheroes put their minds together to accomplish the task.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpeg">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/14.jpg">
+                            <span class="movie-list-item-title">Paths of Glory</span>
+                            <p class="movie-list-item-desc">After refusing to attack an enemy position, a general accuses the soldiers of cowardice and their commanding officer must defend them.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/17.jpg">
+                            <span class="movie-list-item-title">Aquaman</span>
+                            <p class="movie-list-item-desc">Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/19.jpg">
+                            <span class="movie-list-item-title">The Amazing Spider-man</span>
+                            <p class="movie-list-item-desc">After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg">
+                            <span class="movie-list-item-title"></span>
+                            <p class="movie-list-item-desc">Two soldiers, assigned the task of delivering a critical message to another battalion, risk their lives for the job in order to prevent them from stepping right into a deadly ambush.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/8.jpg">
+                            <span class="movie-list-item-title">Oblivion</span>
+                            <p class="movie-list-item-desc">A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/9.jpg">
+                            <span class="movie-list-item-title">The Hobbit</span>
+                            <p class="movie-list-item-desc">A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-left left-arrow"></i>
+                    <i class="fa-solid fa-chevron-right right-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
