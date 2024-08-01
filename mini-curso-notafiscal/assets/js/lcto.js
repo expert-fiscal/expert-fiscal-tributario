@@ -1,16 +1,16 @@
 const month_name = ["","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const lcto = {
-  dt_cpl1: "22/07",
-  dt_cpl2: "24/07",
-  dt_cpl3: "26/07",
-  dt_cpl4: "28/07",
+  dt_cpl1: "26/08",
+  dt_cpl2: "28/08",
+  dt_cpl3: "30/08",
+  dt_cpl4: "01/09",
   dt_abertura: "29/07",
   lnk_cpl1: "https://www.youtube.com/embed/bgGTNPCVwAY",
   lnk_cpl2: "https://www.youtube.com/embed/SG01i4Qcuu4",
   lnk_cpl3: "https://www.youtube.com/embed/fqqw8FPPWQ4",
   lnk_cpl4: "https://www.youtube.com/embed/pEFUKhPHDAU",
-  lnk_whts: "https://chat.whatsapp.com/J1VdopDUysTCdFxkFAusRT"
+  lnk_whts: "https://chat.whatsapp.com/DtXm6QtAYUHBRNPcj92MRe"
 };
 
 
@@ -19,7 +19,7 @@ if (dt_ev) {
     // Datas do Evento - Ex.: 29 de Abril ao dia 05 de Maio
     // dt_ev.innerHTML = lcto.dt_cpl1.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl1.split("/")[1])] + " ao dia " +  lcto.dt_cpl4.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] ;
     // Dias 24, 26 e 28 de Junho
-    dt_ev.innerHTML = "Dias " + lcto.dt_cpl1.split("/")[0] + ", " + lcto.dt_cpl2.split("/")[0] + " e " +  lcto.dt_cpl3.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] ;
+    dt_ev.innerHTML = "Dias " + lcto.dt_cpl1.split("/")[0] + ", " + lcto.dt_cpl2.split("/")[0] + " e " +  lcto.dt_cpl3.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl3.split("/")[1])] ;
 }
 
 //Inclusão do link da aula 1
