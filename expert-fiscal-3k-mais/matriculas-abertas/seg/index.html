@@ -440,7 +440,8 @@
 		[type=submit],
 		button {
 			width: auto;
-			-webkit-appearance: button
+			-webkit-appearance: button;
+			appearance: button
 		}
 
 		[type=button]::-moz-focus-inner,
@@ -535,6 +536,7 @@
 
 		[type=search] {
 			-webkit-appearance: textfield;
+			appearance: textfield;
 			outline-offset: -2px
 		}
 
@@ -1372,13 +1374,13 @@
 			}
 		}
 
-		@media (min-width:-1) {
+		@media (min-width:0px) {
 			#elementor-device-mode:after {
 				content: "widescreen"
 			}
 		}
 
-		@media (max-width:-1) {
+		@media (max-width:0px) {
 			#elementor-device-mode:after {
 				content: "laptop";
 				content: "tablet_extra"
@@ -1391,7 +1393,7 @@
 			}
 		}
 
-		@media (max-width:-1) {
+		@media (max-width:0px) {
 			#elementor-device-mode:after {
 				content: "mobile_extra"
 			}
@@ -5517,7 +5519,7 @@
 			right: 0
 		}
 
-		@media (min-width:-1) {
+		@media (min-width:0px) {
 			.elementor-widget:not(.elementor-widescreen-align-right) .elementor-icon-list-item:after {
 				left: 0
 			}
@@ -5537,7 +5539,7 @@
 			}
 		}
 
-		@media (max-width:-1) {
+		@media (max-width:0px) {
 			.elementor-widget:not(.elementor-laptop-align-right) .elementor-icon-list-item:after {
 				left: 0
 			}
@@ -6043,10 +6045,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="elementor-element elementor-element-e81a20d e-con-full e-flex e-con" data-id="e81a20d"
-			data-element_type="container"
-			data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-element elementor-element-ecc58a6 e-flex e-con-boxed e-con" data-id="ecc58a6" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+		<div class="elementor-element elementor-element-ecc58a6 e-flex e-con-boxed e-con" data-id="ecc58a6" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
 			<div class="e-con-inner">
 				<div class="elementor-element elementor-element-a5ce5ed elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="a5ce5ed" data-element_type="widget" data-widget_type="heading.default">
 					<div class="elementor-widget-container">
@@ -6258,12 +6257,12 @@
 				</div>				
 			</div>
 		</div>
-			<div class="elementor-element elementor-element-ad21126 elementor-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button"
+		<div class="elementor-element elementor-element-ad21126 elementor-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button"
 				data-id="ad21126" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
 						<a class="elementor-button elementor-button-link elementor-size-sm"
-							style="background:green; color: white;" 	
+						style="background:green; color: white;" 
 							href="https://pay.hotmart.com/M55213680A?off=ivxsg0fm" target="_blank">
 							<span class="elementor-button-content-wrapper">
 								<span class="elementor-button-text">SIM, QUERO SER EXPERT FISCAL</span>
@@ -7649,11 +7648,11 @@
 				}());
 			</script>
 
-		<script id="elementor-webpack-runtime-js"			src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/webpack.runtime.min.js?ver=3.14.1"			data-rocket-status="executed">		</script>
-		<script id="elementor-frontend-modules-js"			src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/frontend-modules.min.js?ver=3.14.1"			data-rocket-status="executed">		</script>
-		<script id="jquery-ui-core-js" src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/core.min.js?ver=1.13.2"			data-rocket-status="executed">		</script>
-		<script id="elementor-frontend-js-before"			src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/elementor-frontend-js-before.js"			data-rocket-status="executed"></script>
-		<script id="elementor-frontend-js"			src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/frontend.min.js?ver=3.14.1"			data-rocket-status="executed">		</script>
+		<script id="elementor-webpack-runtime-js"	src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/webpack.runtime.min.js?ver=3.14.1"		data-rocket-status="executed"></script>
+		<script id="elementor-frontend-modules-js"	src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/frontend-modules.min.js?ver=3.14.1"	data-rocket-status="executed"></script>
+		<script id="jquery-ui-core-js" 				src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/core.min.js?ver=1.13.2"				data-rocket-status="executed"></script>
+		<script id="elementor-frontend-js-before"	src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/elementor-frontend-js-before.js"		data-rocket-status="executed"></script>
+		<script id="elementor-frontend-js"			src="/expert-fiscal-3k-mais/matriculas-abertas/assets/js/frontend.min.js?ver=3.14.1"			data-rocket-status="executed"></script>
 
 		<script>
 			window.lazyLoadOptions = [{ elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }, { elements_selector: ".rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, }]; window.addEventListener('LazyLoad::Initialized', function (e) {
