@@ -124,7 +124,21 @@
             <a class="right carousel-control" href="#heroSlider" data-slide="next">›</a>
           </div>
         </div>
-        <a onclick="return false;" href="https://pay.hotmart.com/J83329396P?checkoutMode=2&off=kz25apv7" class="hotmart-fb hotmart__button-checkout btn-lg btn-block">Comprar Agora</a> 
+
+        <!-- HOTMART - Upsell Widget -->
+        <div id="box_hotmart"></div>
+        <script src="https://pay.hotmart.com/assets/js/hotmart.upsell_checkout.js"></script>
+
+        <script>
+        opts = {
+        key: 'USL-162360-572265-0ce9aa61994128ec15a06eebff1668e2',
+        width: '650' ,
+        height: '420'
+        };
+        Upsell.Widget.show(opts);
+        </script>
+        <!-- HOTMART - Upsell Widget [end] -->
+
       </div>
       <!-- End: slider -->
       <!-- Start: PRODUCT LIST -->
