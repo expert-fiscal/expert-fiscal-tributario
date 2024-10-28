@@ -10,8 +10,9 @@
     <meta name="author" content="Patrícia Ferreira" />
 	
 	<!-- Favicons -->
-	<link href="assets/img/logo-grupo-whatsapp.png" rel="icon">
-	<link href="assets/img/logo-grupo-whatsapp.png" rel="apple-touch-icon">	
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" sizes="180x180"/>
+    <link rel="icon" href="../assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../assets/img/favicon-16x16.png" sizes="16x16" />
 
     <!-- Facebook,Twitter and Whatsapp integration -->
     <meta property="og:title" content="Mini Curso Nota Fiscal" />
@@ -125,6 +126,9 @@
                     <a style="background-color: #212529; color:white;" href="https://expertfiscaltributario.com.br/termos_uso.html">Termos de Uso</a>
                 </div>
             </div>
+            <div>
+                <p>Já somos <strong id="visit"></strong> inscritos.</p>
+            </div>
         </div>
     </footer>   
     <!-- Bootstrap core JS-->
@@ -132,5 +136,22 @@
     <!-- Core theme JS-->
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/lcto.js" type="text/javascript"></script>
+
+    <script>
+        //Contador de Visitantes - Pagina de Obrigado
+    var numberOfVisits = localStorage.getItem("numberOfVisits");
+
+    if (!numberOfVisits) {
+        numberOfVisits = 8977;
+    }
+    else {
+        numberOfVisits = +numberOfVisits + 1; 
+        localStorage.setItem("numberOfVisits", numberOfVisits);    
+    }
+
+    document.getElementById("visit").innerHTML = numberOfVisits;
+    </script>
+
+
 </body>
 </html>
