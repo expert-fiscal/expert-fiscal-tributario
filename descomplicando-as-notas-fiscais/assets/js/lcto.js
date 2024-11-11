@@ -6,7 +6,7 @@ const lcto = {
   dt_cpl3: "15/11",
   dt_cpl4: "17/11",
   dt_abertura: "04/11",
-  lnk_cpl1: "https://www.youtube.com/embed/nQbJ5rD3Jkg",
+  lnk_cpl1: "https://www.youtube.com/embed/yN4a3fsEwo4",
   lnk_cpl2: "https://www.youtube.com/embed/zeUfhOobsrU",
   lnk_cpl3: "https://www.youtube.com/embed/NauMxqZv9Xo",
   lnk_cpl4: "https://www.youtube.com/embed/EYH16JsV9ck",
