@@ -13,7 +13,6 @@ const lcto = {
   lnk_whts: "https://chat.whatsapp.com/HbdQgh86mhT25Wm7xaz94B"
 };
 
-
 const dt_ev = document.getElementById("datas_evento")
 if (dt_ev) {    
     // Datas do Evento - Ex.: 29 de Abril ao dia 05 de Maio
