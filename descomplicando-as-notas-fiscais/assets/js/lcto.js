@@ -9,7 +9,7 @@ const lcto = {
   lnk_cpl1: "https://www.youtube.com/embed/yN4a3fsEwo4",
   lnk_cpl2: "https://www.youtube.com/embed/poi5jWyb1Kw",
   lnk_cpl3: "https://www.youtube.com/embed/eq2sGWYxoBM",
-  lnk_cpl4: "https://www.youtube.com/embed/EYH16JsV9ck",
+  lnk_cpl4: "https://www.youtube.com/embed/dunKrp3J_J0",
   lnk_whts: "https://chat.whatsapp.com/HbdQgh86mhT25Wm7xaz94B"
 };
 
