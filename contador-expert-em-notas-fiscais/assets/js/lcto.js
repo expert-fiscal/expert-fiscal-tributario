@@ -10,7 +10,11 @@ const lcto = {
   lnk_cpl2: "https://www.youtube.com/embed/poi5jWyb1Kw", 
   lnk_cpl3: "https://www.youtube.com/embed/eq2sGWYxoBM", 
   lnk_cpl4: "https://www.youtube.com/embed/dunKrp3J_J0", 
-  lnk_whts: "https://chat.whatsapp.com/CDszHHRDquRJBjBQ7Bt6Uc"
+  lnk_whts: "https://chat.whatsapp.com/CDszHHRDquRJBjBQ7Bt6Uc",
+  tit_cpl1: "A Grande Oportunidade no Universo das Notas Fiscais",
+  tit_cpl2: "Simplificando e Eliminando Erros nas Notas Fiscais de qualquer Tipo de Empresa",
+  tit_cpl3: "O Método que te Permite Construir uma Carreira Sólida em Notas Fiscais",
+  tit_cpl4: "O Passo mais Importante para ser Expert em Notas Fiscais",  
 };
 
 const dt_ev = document.getElementById("datas_evento")
@@ -77,6 +81,29 @@ if (lnk_whts) {
   lnk_whts.href = lcto.lnk_whts;
 }
 
+//Tema da Aula 01
+const tema_cpl1 = document.getElementById("tema_cpl1")
+if (tema_cpl1) {
+  tema_cpl1.innerHTML = lcto.tit_cpl1;
+}
+
+//Tema da Aula 02
+const tema_cpl2 = document.getElementById("tema_cpl2")
+if (tema_cpl2) {
+  tema_cpl2.innerHTML = lcto.tit_cpl2;
+}
+
+//Tema da Aula 03
+const tema_cpl3 = document.getElementById("tema_cpl3")
+if (tema_cpl3) {
+  tema_cpl3.innerHTML = lcto.tit_cpl3;
+}
+
+//Tema da Aula 04
+const tema_cpl4 = document.getElementById("tema_cpl4")
+if (tema_cpl4) {
+  tema_cpl4.innerHTML = lcto.tit_cpl4;
+}
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
