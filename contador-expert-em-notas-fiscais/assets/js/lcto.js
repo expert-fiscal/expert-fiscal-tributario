@@ -11,10 +11,10 @@ const lcto = {
   lnk_cpl3: "https://www.youtube.com/embed/eq2sGWYxoBM", 
   lnk_cpl4: "https://www.youtube.com/embed/dunKrp3J_J0", 
   lnk_whts: "https://chat.whatsapp.com/CDszHHRDquRJBjBQ7Bt6Uc",
-  tit_cpl1: "A Grande Oportunidade no Universo das Notas Fiscais",
-  tit_cpl2: "Simplificando e Eliminando Erros nas Notas Fiscais de qualquer Tipo de Empresa",
-  tit_cpl3: "O Método que te Permite Construir uma Carreira Sólida em Notas Fiscais",
-  tit_cpl4: "O Passo mais Importante para ser Expert em Notas Fiscais",  
+  tit_cpl1: "Notas Fiscais do Papel à Era Digital: Como a Reforma Tributária Está Transformando a Profissão Contábil",
+  tit_cpl2: "O Método Passo a Passo para Aplicar em suas Notas Fiscais e Navegar nas Ondas da Reforma Tributária sem Erros",
+  tit_cpl3: "Estudo de Caso: Como Dominar Notas Fiscais e Ficar um Passo à Frente na Reforma Tributária",
+  tit_cpl4: "O Próximo Nível: O Método Avançado para se tornar um Especialista em Notas Fiscais atualizado com a Reforma Tributária" 
 };
 
 const dt_ev = document.getElementById("datas_evento")
