@@ -11,10 +11,11 @@ const lcto = {
   lnk_cpl3: "https://www.youtube.com/embed/eq2sGWYxoBM", 
   lnk_cpl4: "https://www.youtube.com/embed/dunKrp3J_J0", 
   lnk_whts: "https://chat.whatsapp.com/CDszHHRDquRJBjBQ7Bt6Uc",
-  tit_cpl1: "Notas Fiscais do Papel à Era Digital: Como a Reforma Tributária Está Transformando a Profissão Contábil",
-  tit_cpl2: "O Método Passo a Passo para Aplicar em suas Notas Fiscais e Navegar nas Ondas da Reforma Tributária sem Erros",
-  tit_cpl3: "Estudo de Caso: Como Dominar Notas Fiscais e Ficar um Passo à Frente na Reforma Tributária",
-  tit_cpl4: "O Próximo Nível: O Método Avançado para se tornar um Especialista em Notas Fiscais atualizado com a Reforma Tributária" 
+  tit_roma: "Ensino Contadores a <span style='color: #A9F62A;'>Dominarem </span> as <span style='color: #A9F62A;'>Notas Fiscais </span> com <span style='color: #A9F62A;'>Segurança </span> e estarem  <span style='color: #A9F62A;'>Prontos </span> para a <span style='color: #A9F62A;'>Reforma Tributária </span>",
+  tit_cpl1: "Como a Reforma Tributária está Transformando a Profissão Contábil/Fiscal",
+  tit_cpl2: "O Método simplificado das Notas Fiscais para navegar nas Ondas da Reforma Tributária sem Erro",
+  tit_cpl3: "Como Dominar Notas Fiscais e ficar um passo à Frente na Reforma Tributária",
+  tit_cpl4: "Acesse o método avançado e torne-se Expert em Notas Fiscais atualizado com a Reforma Tributária" 
 };
 
 const dt_ev = document.getElementById("datas_evento")
@@ -79,6 +80,12 @@ if (dt_aula4) {
 const lnk_whts = document.getElementById("lnk_grupo_whatsapp")
 if (lnk_whts) {
   lnk_whts.href = lcto.lnk_whts;
+}
+
+//Roma / Promessa do Evento
+const roma = document.getElementById("roma_promessa")
+if (roma) {
+  roma_promessa.innerHTML = lcto.tit_roma;
 }
 
 //Tema da Aula 01
