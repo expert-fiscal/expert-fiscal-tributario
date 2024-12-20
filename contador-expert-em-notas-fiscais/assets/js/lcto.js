@@ -1,16 +1,16 @@
 const month_name = ["","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const lcto = {
-  dt_cpl1: "11/11",
-  dt_cpl2: "13/11",
-  dt_cpl3: "15/11",
-  dt_cpl4: "17/11",
+  dt_cpl1: "20/01",
+  dt_cpl2: "22/01",
+  dt_cpl3: "24/01",
+  dt_cpl4: "26/01",
   dt_abertura: "04/11",
   lnk_cpl1: "https://www.youtube.com/embed/yN4a3fsEwo4", 
   lnk_cpl2: "https://www.youtube.com/embed/poi5jWyb1Kw", 
   lnk_cpl3: "https://www.youtube.com/embed/eq2sGWYxoBM", 
   lnk_cpl4: "https://www.youtube.com/embed/dunKrp3J_J0", 
-  lnk_whts: "https://chat.whatsapp.com/HbdQgh86mhT25Wm7xaz94B"
+  lnk_whts: "https://chat.whatsapp.com/CDszHHRDquRJBjBQ7Bt6Uc"
 };
 
 const dt_ev = document.getElementById("datas_evento")
