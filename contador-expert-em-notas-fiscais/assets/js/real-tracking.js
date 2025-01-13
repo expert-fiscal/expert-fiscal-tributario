@@ -1,6 +1,6 @@
 const SPREADSHEET_ID = atob('MW9odGlld3JiaUxvRE9SeXNUUXpsa2lQTTJ4QVgxWGpRcmtESzdXaHJfbG8=');
-const api_Key =  atob('QUl6YVN5QnNHUUZRS21Ud1BOSHlUelhsdGt6Q19zWktwenNVLUZr'),
-const client_Id =  atob('NDAzODgyMjgzODkyLTl2Ym5qYXVjZGhwZGdhaHJ0aGNiMGY0Zm9wMzg4a2s0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29t'),
+const api_Key =  atob('QUl6YVN5QnNHUUZRS21Ud1BOSHlUelhsdGt6Q19zWktwenNVLUZr');
+const client_Id =  atob('NDAzODgyMjgzODkyLTl2Ym5qYXVjZGhwZGdhaHJ0aGNiMGY0Zm9wMzg4a2s0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29t');
 
 // Função para carregar a API do cliente do Google
 function handleClientLoad() {
