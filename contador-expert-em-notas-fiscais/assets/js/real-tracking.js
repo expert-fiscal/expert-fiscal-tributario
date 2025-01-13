@@ -53,5 +53,10 @@
 
  function handleFormSubmit(event) {
     event.preventDefault(); // Impede o envio do formulário imediatamente
-    handleClientLoad();     // Chama a função que lida com a autenticação e inserção de dados    
+    handleClientLoad();     // Chama a função que lida com a autenticação e inserção de dados
+    
+    // Envia o formulário independente do sucesso ou falha da API
+    document.getElementById('_form_6531_').submit();
+  
+    return false; // Impede o envio do formulário novamente
   }
