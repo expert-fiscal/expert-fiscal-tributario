@@ -1,6 +1,20 @@
  // ID da Planilha Google (pode ser obtido na URL da planilha)
  const SPREADSHEET_ID = atob('MW9odGlld3JiaUxvRE9SeXNUUXpsa2lQTTJ4QVgxWGpRcmtESzdXaHJfbG8=');
  
+    // Função chamada após o login ser bem-sucedido
+    function handleCredentialResponse(response) {
+        // O token de ID obtido após login
+        const id_token = response.credential;
+    
+        // Inicializa o cliente da API Google Sheets com o token obtido
+        gapi.auth2.getAuthInstance().signIn({
+        prompt: "select_account"
+        }).then(function () {
+        // Chama a função para enviar o e-mail e a URL à planilha
+        appendEmailAndUrlToSheet();
+        });
+    }
+
  // Função para carregar a API do cliente do Google
  function handleClientLoad() {
    gapi.load('client:auth2', initClient);
