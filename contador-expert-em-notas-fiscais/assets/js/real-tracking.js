@@ -1,7 +1,6 @@
  // ID da Planilha Google (pode ser obtido na URL da planilha)
  const SPREADSHEET_ID = atob('MW9odGlld3JiaUxvRE9SeXNUUXpsa2lQTTJ4QVgxWGpRcmtESzdXaHJfbG8=');
- const RANGE = 'A2'; // Defina a célula inicial que você deseja adicionar o email (por exemplo, A1)
-
+ 
  // Função para carregar a API do cliente do Google
  function handleClientLoad() {
    gapi.load('client:auth2', initClient);
@@ -26,24 +25,39 @@
 
  // Função para adicionar o e-mail e a URL à planilha
  function appendEmailAndUrlToSheet() {
-   const email = document.getElementById("email"); // E-mail a ser adicionado
+   const email = document.getElementById("email").value; // E-mail a ser adicionado
    const url = window.location.href;   // URL da página atual
 
-   // Prepara os dados para serem inseridos na planilha
-   const values = [
-     [email, url]  // Adiciona o e-mail na coluna A e a URL na coluna B
-   ];
-
-   const body = {
-     values: values
-   };
+    // Prepara a lista de ações para o batchUpdate
+    const requests = [
+        {
+        updateCells: {
+            range: {
+            sheetId: 0,  // Substitua com o ID da aba da sua planilha
+            startRowIndex: 1, // A primeira linha onde os dados serão inseridos
+            startColumnIndex: 0, // A primeira coluna (A)
+            },
+            rows: [{
+            values: [
+                {
+                userEnteredValue: { stringValue: email } // Coluna A (Email)
+                },
+                {
+                userEnteredValue: { stringValue: url } // Coluna B (URL)
+                }
+            ]
+            }],
+            fields: "userEnteredValue"
+        }
+        }
+    ];
 
    // Faz a chamada à API para adicionar os dados na planilha
-   gapi.client.sheets.spreadsheets.values.append({
+   gapi.client.sheets.spreadsheets.batchUpdate({
      spreadsheetId: SPREADSHEET_ID,
-     range: RANGE,
-     valueInputOption: "RAW",
-     resource: body
+     resource: {
+        requests: requests
+      }
    }).then((response) => {
      console.log('Email e URL adicionados com sucesso:', response);
    }).catch((error) => {
