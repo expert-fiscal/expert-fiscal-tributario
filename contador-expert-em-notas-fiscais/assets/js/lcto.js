@@ -9,7 +9,7 @@ const lcto = {
   lnk_cpl1: "https://www.youtube.com/embed/jKcs8JEwdlg", 
   lnk_cpl2: "https://www.youtube.com/embed/6guf-Pe-ack", 
   lnk_cpl3: "https://www.youtube.com/embed/DxPRS_ejVTI", 
-  lnk_cpl4: "https://www.youtube.com/embed/dunKrp3J_J0", 
+  lnk_cpl4: "https://www.youtube.com/embed/8QMxr7WAgCM", 
   lnk_whts: "https://chat.whatsapp.com/DLLJjYPkpU0B2ddTGrVfGb",
   tit_roma: "Ensino Contadores a <span style='color: #A9F62A;'>Dominarem </span> as <span style='color: #A9F62A;'>Notas Fiscais </span> com <span style='color: #A9F62A;'>Segurança </span> e estarem  <span style='color: #A9F62A;'>Prontos </span> para a <span style='color: #A9F62A;'>Reforma Tributária </span>",
   tit_cpl1: "Como a Reforma Tributária está Transformando a Profissão Contábil/Fiscal",
