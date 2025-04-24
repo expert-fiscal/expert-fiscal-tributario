@@ -100,12 +100,7 @@
 						<ul  class="collapse"  id="other-page"   data-parent="#sidebar-menu">   
 							<div class="sub-menu">                          
 								<li ><a class="sidenav-item-link" href="index.html"><span class="nav-text">Doc. Aux. NF-e</span></a></li>
-								<li ><a class="sidenav-item-link" href="danfe-rf.html"><span class="nav-text">Doc. Aux. NF-e - R.F</span></a></li>
-							<!--								
-								<li ><a class="sidenav-item-link" href="404.html">             <span class="nav-text">404 page</span>                        </a>         </li>                         
-								<li ><a class="sidenav-item-link" href="page-comingsoon.html">             <span class="nav-text">Coming Soon</span>                        </a>         </li>                         
-								<li ><a class="sidenav-item-link" href="page-maintenance.html">             <span class="nav-text">Maintenance</span>                        </a>         </li>
-							-->							
+								<li ><a class="sidenav-item-link" href="danfe-rf.html"><span class="nav-text">Doc. Aux. NF-e - R.F</span></a></li>	
 							</div> 
 						</ul>
                   </li>
@@ -243,7 +238,7 @@
 <table class="danfe_tabelas">
 <tr>
 	<td rowspan='3' class="danfe_celula_bordas" style="text-align:center;">
-		<img src="images/expert-fiscal-3k-mais.png" width="100px" height="auto" alt="Expert Fiscal 3K+">
+		<img src="images/contador-expert-notas-fiscais.png" width="100px" height="auto" alt="Expert Fiscal 3K+">
 	</td>
 	<td rowspan='3' class="danfe_celula_bordas">
 		Identificação do Emitente
@@ -436,10 +431,10 @@
 	<td class="danfe_celula_bordas">
 		<p class="danfe_celula_titulo">Valor total dos produtos</p>
 		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+		&nbsp;
 	</td>
 </tr>
-</table>
-<table class="danfe_tabelas">
+
 <tr>
 	<td class="danfe_celula_bordas">
 		<p class="danfe_celula_titulo">Valor do frete</p>
@@ -460,10 +455,30 @@
 	<td class="danfe_celula_bordas">
 		<p class="danfe_celula_titulo">Valor do IPI</p>
 		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+		&nbsp;
+	</td>	
+</tr>
+<tr style="background-color: lightgray;">
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">VALOR DO IBS DA UF</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
 	</td>
 	<td class="danfe_celula_bordas">
-		<p class="danfe_celula_titulo">Valor total da nota</p>
+		<p class="danfe_celula_titulo">VALOR DO IBS DO MUNICÍPIO</p>
 		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">VALOR DO IMPOSTO SELETIVO</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">VALOR APROX. DOS TRIBUTOS</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+	</td>
+	<td class="danfe_celula_bordas">
+		<p class="danfe_celula_titulo">VALOR TOTAL DA NOTA</p>
+		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
+		&nbsp;
 	</td>
 </tr>
 </table>
@@ -569,7 +584,7 @@
 	<th class="danfe_item_cabecalho" style="text-align:center;">Vlr. total</th>
 	<th class="danfe_item_cabecalho" style="text-align:center;">BC ICMS</th>
 	<th class="danfe_item_cabecalho" style="text-align:center;">Vlr.ICMS</th>
-	<th class="danfe_item_cabecalho" style="text-align:center;">Vlr.IPI</th>
+	<!-- <th class="danfe_item_cabecalho" style="text-align:center;">Vlr.IPI</th> -->
 	<th class="danfe_item_cabecalho" style="text-align:center;">%ICMS</th>
 	<th class="danfe_item_cabecalho" style="text-align:center;">%IPI</th>
 </tr>
@@ -584,8 +599,22 @@
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>	
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
+</tr>
+<tr class="danfe_item">
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td align='left'><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>
+	<td><input type="text" style="width:100%;" /></td>	
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 </tr>
@@ -603,28 +632,10 @@
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
 </tr>
 <tr class="danfe_item">
 	<td align='left'><input type="text" style="width:100%;" /></td>
 	<td align='left'><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
-</tr>
-<tr class="danfe_item">
-	<td align='left'><input type="text" style="width:100%;" /></td>
-	<td align='left'><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
@@ -650,12 +661,10 @@
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
 </tr>
 <tr class="danfe_item">
 	<td align='left'><input type="text" style="width:100%;" /></td>
 	<td align='left'><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
@@ -681,12 +690,10 @@
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
 </tr>
 <tr class="danfe_item">
 	<td align='left'><input type="text" style="width:100%;" /></td>
 	<td align='left'><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
@@ -712,12 +719,10 @@
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
 </tr>
 <tr class="danfe_item">
 	<td align='left'><input type="text" style="width:100%;" /></td>
 	<td align='left'><input type="text" style="width:100%;" /></td>
-	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
 	<td><input type="text" style="width:100%;" /></td>
@@ -734,7 +739,7 @@
 	<td class="danfe_item_ultimo" colspan='14'>&nbsp;</td>
 </tr>
 </table>
-<h3 class="danfe_titulo_externo">C&aacute;lculo do ISSQN</h3>
+<!-- <h3 class="danfe_titulo_externo">C&aacute;lculo do ISSQN</h3>
 <table class="danfe_tabelas">
 <tr>
 	<td class="danfe_celula_bordas">
@@ -754,7 +759,7 @@
 		<p class="danfe_celula_valor"><input type="text" style="width:100%;"/></p>
 	</td>
 </tr>
-</table>
+</table> -->
 
 <div class="danfe_titulo_externo">Dados adicionais</div>
 <table class="danfe_tabelas">
