@@ -9,7 +9,7 @@ const lcto = {
   lnk_cpl1: "https://www.youtube.com/embed/Ts09R4hosnY", 
   lnk_cpl2: "https://www.youtube.com/embed/JTwWbU1rxO0", 
   lnk_cpl3: "https://www.youtube.com/embed/_GkF8hScT2A", 
-  lnk_cpl4: "https://www.youtube.com/embed/8QMxr7WAgCM", 
+  lnk_cpl4: "https://www.youtube.com/live/KCAZ1qeLDb8?si=DOSBRv6vi_OGCw1i", 
   lnk_whts: "https://chat.whatsapp.com/KrCp55NB0qR8QZirQK1PBm",
   lnk_tabela_pilares: "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-02/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx",
   tit_roma: "Ensino Contadores a <span style='color: #A9F62A;'>Dominarem </span> as <span style='color: #A9F62A;'>Notas Fiscais </span> com <span style='color: #A9F62A;'>Segurança </span> e estarem  <span style='color: #A9F62A;'>Prontos </span> para a <span style='color: #A9F62A;'>Reforma Tributária </span>",
