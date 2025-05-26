@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Inscrição</title>
+    <style>
+        body {
+            background-color: #005A34;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .card {
+            background-color: #F9F9F9;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .titulo {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            color: #005A34;
+            margin-top: 0;
+        }
+
+        .badge {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #003366;
+            margin: 20px 0;
+        }
+
+        .nome {
+            font-size: 1.8em;
+            color: #003366;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .info {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+
+        .qrcode {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 class="titulo">Imersão Notas Fiscais na Reforma Tributária</h1>
+        <h2 class="subtitulo">Quem Domina, Lidera</h2>
+
+        <div class="badge">
+            <div class="nome" id="nomeParticipante">Participante</div>
+            <div class="info" id="emailParticipante">E-mail:</div>
+            <div class="info" id="whatsParticipante">Whatsapp:</div>
+            <div class="qrcode">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=Inscrição Confirmada" alt="QR Code">
+            </div>
+        </div>
+
+        <p>Parabéns! Sua inscrição foi confirmada com sucesso.<br>Apresente esta credencial no dia do evento.</p>
+    </div>
+
+    <script>
+        function obterParametro(nome) {
+            const url = new URL(window.location.href);
+            const valor = url.searchParams.get(nome);
+            return valor ? decodeURIComponent(valor.replace(/\+/g, ' ')) : '';
+        }
+
+        const dados = obterParametro('participante');
+
+        if(dados){
+            const [nome, email, whatsapp] = dados.split('|');
+
+            document.getElementById('nomeParticipante').innerText = nome || 'Participante';
+            document.getElementById('emailParticipante').innerText = 'E-mail: ' + (email || '');
+            document.getElementById('whatsParticipante').innerText = 'Whatsapp: ' + (whatsapp || '');
+        }
+    </script>
+</body>
+</html>
