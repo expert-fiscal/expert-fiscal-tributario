@@ -41,7 +41,7 @@ const evento = {
     pilar4_titulo: "IMPOSTOS",
     pilar4_descricao: "ICMS, IPI, PIS, COFINS, ISS e IR para se tornar um especialista em Notas Fiscais e se destacar no mercado.",
     pilar_cta_botao: "Clique no <strong>botão abaixo</strong> para <strong>dominar os 4 pilares</strong> e se tornar uma referência em agronegócio na sua região.",
-    imagine_headline: "FALTAM CONTADORES PARA ATENDER TODA A DEMANDA DO AGRONEGÓCIO",
+    imagine_headline: "FALTAM CONTADORES PARA ATENDER TODA A DEMANDA DA REFORMA TRIBUTÁRIA",
     imagine_descricao: "Imagine se tornar o profissional que domina as mudanças que a Reforma Tributária traz para as Notas Fiscais e ser valorizado e melhor remunerado, além disso:",
     imagine_item1: "Não precisando brigar por honorários",
     imagine_item2: "Tendo mais tempo livre para você e sua família",
@@ -50,7 +50,7 @@ const evento = {
     imagine_item5: "Tendo mais segurança e confiança no seu trabalho",
     imagine_item6: "Contribuindo para o desenvolvimento do agronegócio brasileiro",
     imagine_cta: "Essa pode ser a sua realidade dentro de poucos meses ou até mesmo semanas se você tomar a decisão que você sabe que precisa tomar agora!",
-    ingresso_headline: "Garanta seu ingresso para o 1º Congresso Nacional de Contabilidade e Tributação do Agronegócio",
+    ingresso_headline: "Garanta seu ingresso para o 1º Congresso Nacional de Contabilidade e Tributação do Agronegócio",   
     lnk_cpl1: "https://www.youtube.com/embed/Ts09R4hosnY", 
     lnk_whts: "https://chat.whatsapp.com/KrCp55NB0qR8QZirQK1PBm"  
 };
