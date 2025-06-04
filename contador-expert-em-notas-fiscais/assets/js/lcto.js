@@ -158,7 +158,7 @@ const responseMessage = document.getElementById('response-message');
       };
 
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzeC0KTeID9VB9lVP15nZG2r1QbHG47lGf7pPsk_HJwgpfQgHW1OOIg97qaHZsxeqZt/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzuUyiU8XVzxPBqrjnQCrrOxrV_AH8URcU80L4oziaTm_ywMIb4-BMybosEhd6uvxk8/exec', {
           method: 'POST',
           body: JSON.stringify(formData)
         });
