@@ -10,7 +10,7 @@ const lcto = {
   lnk_cpl2: "https://www.youtube.com/embed/ICTn7FGjmS0",
   lnk_cpl3: "https://www.youtube.com/embed/bzfyzBh4Hsk",
   lnk_cpl4: "https://www.youtube.com/embed/KCAZ1qeLDb8", 
-  lnk_whts: "https://chat.whatsapp.com/KrCp55NB0qR8QZirQK1PBm",
+  lnk_whts: "https://chat.whatsapp.com/IeL5I8jd7rX3lVPfGmLXY9",
   lnk_tabela_pilares: "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-02/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx",
   tit_roma: "Ensino Contadores a <span style='color: #A9F62A;'>Dominarem </span> as <span style='color: #A9F62A;'>Notas Fiscais </span> com <span style='color: #A9F62A;'>Segurança </span> e estarem  <span style='color: #A9F62A;'>Prontos </span> para a <span style='color: #A9F62A;'>Reforma Tributária </span>",
   tit_cpl1: "Como a Reforma Tributária está Transformando a Profissão Contábil/Fiscal",
