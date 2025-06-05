@@ -164,9 +164,11 @@ const responseMessage = document.getElementById('response-message');
         });
 
         if (response.ok) {
-          window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/org/";
-          //responseMessage.textContent = 'Thank you! Your message has been sent.';
-          //form.reset();
+          if (formData.tag === '202506-VIP') {
+            window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/vip/";
+          }else {
+            window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/org/";
+          }
         } else {
           responseMessage.textContent = 'Erro ao enviar a mensagem. Por favor, tente novamente.';
         }
