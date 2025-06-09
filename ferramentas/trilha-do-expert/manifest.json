@@ -1,0 +1,21 @@
+{
+    "name": "Plataforma de Aprendizado Espaçado",
+    "short_name": "LearnApp",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#f8f9fa",
+    "theme_color": "#7952B3",
+    "description": "Uma aplicação de aprendizado com repetição espaçada.",
+    "icons": [
+        {
+            "src": "assets/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

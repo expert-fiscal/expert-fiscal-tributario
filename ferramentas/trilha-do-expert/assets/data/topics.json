@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "JavaScript Básico: Variáveis e Tipos de Dados",
+        "cards": [
+            { "id": 101, "front": "O que é uma variável em JavaScript?", "back": "É um nome simbólico para um valor." },
+            { "id": 102, "front": "Quais são os 3 tipos de declaração de variável?", "back": "var, let e const." }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "CSS Flexbox: Alinhamento de Itens",
+        "cards": [
+            { "id": 201, "front": "Qual propriedade alinha itens no eixo principal?", "back": "justify-content" },
+            { "id": 202, "front": "Qual propriedade alinha itens no eixo transversal?", "back": "align-items" }
+        ]
+    }
+]
