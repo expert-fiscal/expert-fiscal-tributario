@@ -12,6 +12,7 @@ const lcto = {
   lnk_cpl4: "https://www.youtube.com/embed/KCAZ1qeLDb8", 
   lnk_whts: "https://chat.whatsapp.com/Gof4pSiolxb6ZQMAkMrYyc",
   lnk_tabela_pilares: "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-02/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx",
+  lnk_detalhes_curso_pdf:"../assets/files/Detalhes do Curso Expert Fiscal 3K+.pdf",
   tit_roma: "Ensino Contadores a <span style='color: #A9F62A;'>Dominarem </span> as <span style='color: #A9F62A;'>Notas Fiscais </span> com <span style='color: #A9F62A;'>Segurança </span> e estarem  <span style='color: #A9F62A;'>Prontos </span> para a <span style='color: #A9F62A;'>Reforma Tributária </span>",
   tit_cpl1: "Como a Reforma Tributária está Transformando a Profissão Contábil/Fiscal",
   tit_cpl2: "O Método simplificado das Notas Fiscais para navegar nas Ondas da Reforma Tributária sem Erro",
@@ -88,6 +89,10 @@ const lnk_pilares = document.getElementById("lnk_tabela_pilares")
 if (lnk_pilares) {
   lnk_pilares.href = lcto.lnk_tabela_pilares;
 }
+
+//Link do PDF com Detalhes do Curso
+const lnk_pdf = document.getElementById("lnk_detalhes_curso_pdf")
+lnk_pdf ? lnk_pdf.href = lcto.lnk_detalhes_curso_pdf : null;
 
 //Roma / Promessa do Evento
 const roma = document.getElementById("roma_promessa")
