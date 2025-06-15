@@ -9,7 +9,7 @@ const lcto = {
   lnk_cpl1: "https://www.youtube.com/embed/cHruTahJ4Sw",
   lnk_cpl2: "https://www.youtube.com/embed/ICTn7FGjmS0",
   lnk_cpl3: "https://www.youtube.com/embed/bzfyzBh4Hsk",
-  lnk_cpl4: "https://www.youtube.com/embed/KCAZ1qeLDb8", 
+  lnk_cpl4: "https://www.youtube.com/embed/X9Mvr57P7aE", 
   lnk_whts: "https://chat.whatsapp.com/Gof4pSiolxb6ZQMAkMrYyc",
   lnk_tabela_pilares: "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-02/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx",
   lnk_detalhes_curso_pdf:"../assets/files/Detalhes do Curso Expert Fiscal 3K+.pdf",
