@@ -17,7 +17,8 @@ const lcto = {
   tit_cpl1: "Como a Reforma Tributária está Transformando a Profissão Contábil/Fiscal",
   tit_cpl2: "O Método simplificado das Notas Fiscais para navegar nas Ondas da Reforma Tributária sem Erro",
   tit_cpl3: "Como Dominar Notas Fiscais e ficar um passo à Frente na Reforma Tributária",
-  tit_cpl4: "Acesse o método avançado e torne-se Expert em Notas Fiscais atualizado com a Reforma Tributária" 
+  tit_cpl4: "Acesse o método avançado e torne-se Expert em Notas Fiscais atualizado com a Reforma Tributária",
+  lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/expert-fiscal-3k-mais/matriculas-abertas/vip/';" 
 };
 
 const dt_ev = document.getElementById("datas_evento")
@@ -123,6 +124,10 @@ const tema_cpl4 = document.getElementById("tema_cpl4")
 if (tema_cpl4) {
   tema_cpl4.innerHTML = lcto.tit_cpl4;
 }
+
+//Link Redirect
+const lnk_redirect =  document.getElementById("lnk-redirect")
+lnk_redirect? lnk_redirect.innerHTML= lcto.lnk_redirect : "";
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
