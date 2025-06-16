@@ -23,10 +23,10 @@ const lcto = {
 
 const dt_ev = document.getElementById("datas_evento")
 // Datas do Evento - Ex.: 29 de Abril ao dia 05 de Maio
-//dt_env ? dt_ev.innerHTML = lcto.dt_cpl1.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl1.split("/")[1])] + " à " +  lcto.dt_cpl4.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] ; : "";
+//dt_ev ? dt_ev.innerHTML = lcto.dt_cpl1.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl1.split("/")[1])] + " à " +  lcto.dt_cpl4.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] ; : "";
 
 // Dias 24, 26 e 28 de Junho
-dt_env? dt_ev.innerHTML = "Dias " + lcto.dt_cpl1.split("/")[0] + ", " + lcto.dt_cpl2.split("/")[0] + ", " + lcto.dt_cpl3.split("/")[0] + " e " +  lcto.dt_cpl4.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl3.split("/")[1])] : "" ;
+dt_ev ? dt_ev.innerHTML = 'Dias ' + lcto.dt_cpl1.split('/')[0] + ', ' + lcto.dt_cpl2.split('/')[0] + ', ' + lcto.dt_cpl3.split('/')[0] + ' e ' +  lcto.dt_cpl4.split('/')[0] + ' de ' + month_name[parseInt(lcto.dt_cpl3.split('/')[1])] : "" ;
 
 //Inclusão do link da aula 1
 const lnkcpl1 = document.getElementById("link_cpl1")
