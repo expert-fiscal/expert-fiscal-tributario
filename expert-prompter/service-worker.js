@@ -1,13 +1,13 @@
 // Define um nome e versão para o cache
-const CACHE_NAME = 'teleprompter-pwa-v1';
+const CACHE_NAME = 'expert-prompter-v1';
 
 // Lista de arquivos essenciais para o funcionamento offline do app (o "App Shell")
 const URLS_TO_CACHE = [
     '/',
     '/index.html',
-    '/style.css',
-    '/script.js',
-    '/roteiros.json',
+    'assets/css/style.css',
+    'assets/js/script.js',
+    'assets/js/roteiros.json',    
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
     'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css',
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'
