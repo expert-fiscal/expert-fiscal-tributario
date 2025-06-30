@@ -1,0 +1,84 @@
+/* style.css */
+body {
+    background-color: #f0f2f5;
+}
+
+.view {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.d-none {
+    display: none !important;
+}
+
+/* Tela do Teleprompter */
+#teleprompter-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#camera-feed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Espelha a câmera frontal para uma experiência natural */
+    transform: scaleX(-1); 
+}
+
+#text-overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 700px;
+    height: 100%;
+    /* Fundo semi-transparente para legibilidade */
+    background-color: rgba(0, 0, 0, 0.4); 
+    color: white;
+    font-size: 2.5rem; /* Tamanho de fonte grande para leitura à distância */
+    font-weight: bold;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+#scrolling-text {
+    /* Posição inicial fora da tela (embaixo) */
+    transform: translateY(100vh); 
+    text-align: center;
+    padding: 50vh 0; /* Padding para que o texto comece e termine no centro */
+}
+
+/* Animação de rolagem */
+@keyframes scroll {
+    to {
+        /* Posição final fora da tela (emcima) */
+        transform: translateY(-100%);
+    }
+}
+
+#scrolling-text.is-scrolling {
+    animation-name: scroll;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#teleprompter-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 1rem;
+}

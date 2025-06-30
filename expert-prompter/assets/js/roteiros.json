@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "tema": "CFOP ERRADO = IMPOSTO A MAIS! Cuidado com isso",
+        "problema": "Você já pagou imposto a mais sem perceber? Pois é, eu também já vi isso acontecer. E o motivo? UM CFOP ERRADO!",
+        "solucao": "Se você usar o CFOP errado, pode acabar pagando ICMS indevido, PIS/Cofins errado ou até gerando uma multa absurda!",
+        "promessa": "Mas calma! Existe um método para nunca mais errar. Se você seguir essa regra de ouro, nunca mais vai ter dor de cabeça com CFOPs! Antes de lançar um CFOP, verifique: ✔ A operação (venda, remessa, devolução...) ✔ O estado do destinatário ✔ Se há ICMS-ST ou benefícios fiscais",
+        "prova_cta": "Um aluno meu aplicou essa técnica e evitou um erro de R$ 2.500,00 em impostos! Quer aprender isso? Comenta 'CFOP' que eu te mando um guia gratuito!",
+        "isRecorded": false
+    },
+    {
+        "id": 2,
+        "tema": "ERRO NO CST? Sua EMPRESA PODE TOMAR MULTA!",
+        "problema": "Sabe aquele número de CST que você coloca sem pensar? Pois é, pode estar te ferrando!",
+        "solucao": "Se você errar o CST do PIS/Cofins, pode gerar tributação errada e o cliente pagar imposto indevido! E pior: se a Receita Federal pegar o erro, a multa pode ser enorme!",
+        "promessa": "Mas calma, existe um jeito simples de conferir isso ANTES de emitir a nota! Antes de definir o CST, verifique se o produto tem alíquota diferenciada e se a empresa tem isenção.",
+        "prova_cta": "Já ajudei contadores a evitarem prejuízos sérios por causa desse detalhe. Quer aprender como não errar mais CSTs? Comenta 'CST' e eu te mando um guia!",
+        "isRecorded": false
+    },
+    {
+        "id": 3,
+        "tema": "RECEITA FEDERAL PODE TE PEGAR POR ISSO!",
+        "problema": "Você sabia que existem impostos que você tem que reter na nota, mas muita gente esquece?",
+        "solucao": "Se você esquecer de reter IR, CSLL, PIS, Cofins, a empresa pode ser penalizada! E pior: a Receita pode autuar seu cliente, e ele vai jogar a culpa em você!",
+        "promessa": "Mas não se preocupa! Aqui vai um checklist simples para nunca mais errar retenções na NF-e! ✔ IR e CSLL – Retenção obrigatória para serviços específicos ✔ PIS/Cofins – Veja se a empresa está no lucro real ou presumido ✔ ISS – Verifique se o serviço exige retenção no município",
+        "prova_cta": "Já ajudei contadores a regularizarem essa situação antes que virasse uma multa gigantesca. Quer aprender a aplicar isso? Comenta 'RETENÇÃO' que eu te mando um guia!",
+        "isRecorded": false
+    },
+    {
+        "id": 4,
+        "tema": "CANCELAR NOTA ERRADO PODE TE COLOCAR EM ENCRENCA!",
+        "problema": "Cancelamento de NF tem PRAZO e REGRAS. Se você perder o tempo, pode ser um problemão!",
+        "solucao": "Se você cancelar depois do prazo, a empresa pode ter que pagar multa ou emitir uma nota complementar para corrigir o erro!",
+        "promessa": "Aqui estão as 3 regras de ouro para cancelar notas fiscais do jeito certo: ✔ Prazo: 24 horas na maioria dos estados! ✔ Correção: Antes de cancelar, veja se uma carta de correção já resolve. ✔ Validação: Consulte a SEFAZ antes de emitir uma nota substitutiva.",
+        "prova_cta": "Já vi contador perder dinheiro por não saber disso. Quer aprender esse passo a passo? Comenta 'CANCELAMENTO' que eu te envio um guia gratuito!",
+        "isRecorded": false
+    }
+]
