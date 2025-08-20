@@ -123,6 +123,17 @@ const phoneMask = (value) => {
   return value
 }
 
+// function enviando_cadastro(){
+
+//   const btn = document.getElementById("btn_cadastro");
+//   btn.innerHTML = "<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Enviando Cadastro...";
+//   btn.disabled = true;
+  
+//   const form_inscricao = document.getElementById("form-inscricao");
+//   form_inscricao.submit();
+
+// }
+
 /* Google-Sheet */
 const form = document.getElementById('form-inscricao');
 const responseMessage = document.getElementById('response-message');
