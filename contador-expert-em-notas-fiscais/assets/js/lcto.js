@@ -1,11 +1,11 @@
 const month_name = ["","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const lcto = {
-  dt_cpl1: "09/06",
-  dt_cpl2: "11/06",
-  dt_cpl3: "13/06",
-  dt_cpl4: "15/06",
-  dt_abertura: "16/06",
+  dt_cpl1: "01/09",
+  dt_cpl2: "03/09",
+  dt_cpl3: "05/09",
+  dt_cpl4: "07/09",
+  dt_abertura: "08/09",
   lnk_cpl1: "https://www.youtube.com/embed/cHruTahJ4Sw",
   lnk_cpl2: "https://www.youtube.com/embed/ICTn7FGjmS0",
   lnk_cpl3: "https://www.youtube.com/embed/bzfyzBh4Hsk",
@@ -18,12 +18,12 @@ const lcto = {
   tit_cpl2: "O Método simplificado das Notas Fiscais para navegar nas Ondas da Reforma Tributária sem Erro",
   tit_cpl3: "Como Dominar Notas Fiscais e ficar um passo à Frente na Reforma Tributária",
   tit_cpl4: "Acesse o método avançado e torne-se Expert em Notas Fiscais atualizado com a Reforma Tributária",
-  lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/expert-fiscal-3k-mais/matriculas-abertas/vip/';" 
+  //lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/expert-fiscal-3k-mais/matriculas-abertas/vip/';" 
 };
 
 const dt_ev = document.getElementById("datas_evento")
 // Datas do Evento - Ex.: 29 de Abril ao dia 05 de Maio
-//dt_ev ? dt_ev.innerHTML = lcto.dt_cpl1.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl1.split("/")[1])] + " à " +  lcto.dt_cpl4.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] ; : "";
+//dt_ev ? dt_ev.innerHTML = lcto.dt_cpl1.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl1.split("/")[1])] + " à " +  lcto.dt_cpl4.split("/")[0] + " de " + month_name[parseInt(lcto.dt_cpl4.split("/")[1])] :  "";
 
 // Dias 24, 26 e 28 de Junho
 dt_ev ? dt_ev.innerHTML = 'Dias ' + lcto.dt_cpl1.split('/')[0] + ', ' + lcto.dt_cpl2.split('/')[0] + ', ' + lcto.dt_cpl3.split('/')[0] + ' e ' +  lcto.dt_cpl4.split('/')[0] + ' de ' + month_name[parseInt(lcto.dt_cpl3.split('/')[1])] : "" ;
@@ -144,14 +144,23 @@ const responseMessage = document.getElementById('response-message');
         });
 
         if (response.ok) {
-          if (formData.tag === '202506-VIP') {
-            window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/vip/";
-          }else {
-            window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/org/";
+          switch(formData.tag) {
+            case '202509-VIP':
+              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/vip/";
+              break;
+            case '202509-FRI':
+              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/fri/";
+              break;
+            case '202509-QNT':
+              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/qnt/";
+              break;
+            default:
+              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/org/";
           }
         } else {
           responseMessage.textContent = 'Erro ao enviar a mensagem. Por favor, tente novamente.';
         }
+
       } catch (error) {
         responseMessage.textContent = 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.';
       }
