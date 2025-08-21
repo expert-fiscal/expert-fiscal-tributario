@@ -134,6 +134,21 @@ const phoneMask = (value) => {
 
 // }
 
+
+/** 
+ Disable the submit button after form submission to prevent multiple submissions
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('form-inscricao');
+  var btn = form.querySelector('button._submit');
+
+  form.addEventListener('submit', function() {
+    btn.classList.add('processing');
+    btn.disabled = true;
+  });
+  
+});
+
 /* Google-Sheet */
 const form = document.getElementById('form-inscricao');
 const responseMessage = document.getElementById('response-message');
