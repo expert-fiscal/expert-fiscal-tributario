@@ -134,11 +134,8 @@ const phoneMask = (value) => {
 
 // }
 
-
-/** 
- Disable the submit button after form submission to prevent multiple submissions
- */
 document.addEventListener('DOMContentLoaded', function() {
+  // Disable the submit button after form submission
   var form = document.getElementById('form-inscricao');
   var btn = form.querySelector('button._submit');
 
