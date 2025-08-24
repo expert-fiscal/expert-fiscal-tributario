@@ -10,7 +10,7 @@ const lcto = {
   lnk_cpl2: "https://www.youtube.com/embed/wb6xxpkuwh0",
   lnk_cpl3: "https://www.youtube.com/embed/p_CBK1Lc6aE",
   lnk_cpl4: "https://www.youtube.com/embed/X9Mvr57P7aE", 
-  lnk_whts: "https://chat.whatsapp.com/Ccm9tahnQXqAeFtFbbCYB2",
+  lnk_whts: "https://chat.whatsapp.com/ChIOWEZDJvu1tD5aCMB1Ra",
   lnk_tabela_pilares: "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-02/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx",
   lnk_detalhes_curso_pdf:"../assets/files/Detalhes do Curso Expert Fiscal 3K+.pdf",
   tit_roma: "Ensino Contadores a <span style='color: #A9F62A;'>Dominarem </span> as <span style='color: #A9F62A;'>Notas Fiscais </span> com <span style='color: #A9F62A;'>Segurança </span> e estarem  <span style='color: #A9F62A;'>Prontos </span> para a <span style='color: #A9F62A;'>Reforma Tributária </span>",
