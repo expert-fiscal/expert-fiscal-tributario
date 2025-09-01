@@ -18,7 +18,9 @@ const lcto = {
   tit_cpl2: "O Método simplificado das Notas Fiscais para navegar nas Ondas da Reforma Tributária sem Erro",
   tit_cpl3: "Como Dominar Notas Fiscais e ficar um passo à Frente na Reforma Tributária",
   tit_cpl4: "Acesse o método avançado e torne-se Expert em Notas Fiscais atualizado com a Reforma Tributária",
-  //lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/expert-fiscal-3k-mais/matriculas-abertas/vip/';" 
+  lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-01/';",
+  lnk_redirect_aula: "window.location.href = 'https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-01/';",
+  //lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/expert-fiscal-3k-mais/matriculas-abertas/vip/';"
 };
 
 const dt_ev = document.getElementById("datas_evento")
@@ -96,6 +98,10 @@ tema_cpl4 ? tema_cpl4.innerHTML = lcto.tit_cpl4: "";
 //Link Redirect
 const lnk_redirect =  document.getElementById("lnk-redirect")
 lnk_redirect? lnk_redirect.innerHTML= lcto.lnk_redirect : "";
+
+//Link Redirect
+const lnk_redirect_aula =  document.getElementById("lnk-redirect-aula")
+lnk_redirect_aula? lnk_redirect_aula.innerHTML= lcto.lnk_redirect_aula : "";
 
 /* 
 function onSignIn(googleUser) {
