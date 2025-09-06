@@ -11,12 +11,13 @@ const lcto = {
   lnk_cpl3: "https://www.youtube.com/embed/p_CBK1Lc6aE",
   lnk_cpl4: "https://www.youtube.com/embed/X9Mvr57P7aE", 
   lnk_whts: "https://chat.whatsapp.com/HR7VODbyNhz6XotnIjj8eZ",
-  lnk_tabela_pilares: "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-02/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx",
+  lnk_tabela_pilares: "../assets/files/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx",
   lnk_detalhes_curso_pdf:"../assets/files/Detalhes do Curso Expert Fiscal 3K+.pdf",
   lnk_apostila_aula_01:"../assets/files/Apostila Aula 01 - Contador Expert em Notas Fiscais.pdf",
   lnk_apostila_aula_02:"../assets/files/Apostila Aula 02 - Contador Expert em Notas Fiscais.pdf",
   lnk_apostila_aula_03:"../assets/files/Apostila Aula 03 - Contador Expert em Notas Fiscais.pdf",
   lnk_apostila_aula_04:"../assets/files/Apostila Aula 04 - Contador Expert em Notas Fiscais.pdf",
+  lnk_passoapasso_certificado:"../assets/files/Passo-a-Passo_Emissão Certificado de Participação.pdf",
   tit_roma: "Ensino Contadores a <span style='color: #A9F62A;'>Dominarem </span> as <span style='color: #A9F62A;'>Notas Fiscais </span> com <span style='color: #A9F62A;'>Segurança </span> e estarem  <span style='color: #A9F62A;'>Prontos </span> para a <span style='color: #A9F62A;'>Reforma Tributária </span>",
   tit_cpl1: "Como a Reforma Tributária está Transformando a Profissão Contábil/Fiscal",
   tit_cpl2: "O Método simplificado das Notas Fiscais para navegar nas Ondas da Reforma Tributária sem Erro",
@@ -93,6 +94,10 @@ lnk_apostila_aula_03 ? lnk_apostila_aula_03.href = lcto.lnk_apostila_aula_03 : n
 //Link dApostila da Aula 04
 const lnk_apostila_aula_04 = document.getElementById("lnk_apostila_aula_04")
 lnk_apostila_aula_04 ? lnk_apostila_aula_04.href = lcto.lnk_apostila_aula_04 : null;
+
+//Link do Passo a Passo para Emissão do Certificado de Participação
+const lnk_passoapasso_certificado = document.getElementById("lnk_passoapasso_certificado")
+lnk_passoapasso_certificado ? lnk_passoapasso_certificado.href = lcto.lnk_passoapasso_certificado : null;
 
 //Roma / Promessa do Evento
 const roma = document.getElementById("roma_promessa")
