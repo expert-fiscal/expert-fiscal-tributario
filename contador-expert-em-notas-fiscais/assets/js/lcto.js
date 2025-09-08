@@ -24,6 +24,7 @@ const lcto = {
   tit_cpl3: "Como Dominar Notas Fiscais e ficar um passo à Frente na Reforma Tributária",
   tit_cpl4: "Acesse o método avançado e torne-se Expert em Notas Fiscais atualizado com a Reforma Tributária",  
   //lnk_redirect_aula: "window.location.href = 'https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/aula-01/';",
+  lnk_redirect_aula: "window.location.href = 'https://www.expertfiscaltributario.com.br/expert-fiscal-3k-mais/matriculas-abertas/vip/';",
   lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/expert-fiscal-3k-mais/matriculas-abertas/vip/';"
 };
 
