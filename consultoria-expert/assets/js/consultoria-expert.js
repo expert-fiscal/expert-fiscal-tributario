@@ -3,12 +3,12 @@
     const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
 
     const AREAS = [
-      { key:'cnae', label:'CNAE', selector:'.area-cnae' },
+      { key:'cnae', label:'NÚCLEO TRIB.', selector:'.area-cnae' },
       { key:'cfop', label:'CFOP', selector:'.area-cfop' },
       { key:'ncm',  label:'NCM',  selector:'.area-ncm'  },
       { key:'cst',  label:'CST',  selector:'.area-cst'  },
-      { key:'imp',  label:'IMPOSTOS', selector:'.area-imp' },
-      { key:'ref',  label:'REFORMA TRIBUTÁRIA', selector:'.area-ref' },
+      { key:'imp',  label:'TRIBUTOS', selector:'.area-imp' },
+      { key:'ref',  label:'REF. TRIB.', selector:'.area-ref' },
     ];
 
     function updateRangeBadges(){
@@ -21,20 +21,20 @@
 
     // Card thresholds (percentual médio 0–100)
     function statusClass(percent){
-      if(percent >= 71) return 'success';
-      if(percent >= 45) return 'warning';
+      if(percent >= 75) return 'success';
+      if(percent >= 41 && percent <= 74) return 'warning';
       return 'danger';
     }
     function statusLabel(percent){
-      if(percent > 71) return 'Domina o Assunto';
-      if(percent >= 40 && percent <= 70) return 'Precisa Melhorar';
+      if(percent > 75) return 'Domina o Assunto';
+      if(percent >= 41 && percent <= 74) return 'Precisa Melhorar';
       return 'Prioridade de Estudo';
     }
 
-    // Bar thresholds (total 0–30)
+    // Bar thresholds
     function barClass(total){
-      if(total >= 21) return 'success';
-      if(total >= 11) return 'warning';
+      if(total >= 75) return 'success';
+      if(total >= 41 && total <= 74) return 'warning';
       return 'danger';
     }
 
@@ -69,8 +69,7 @@
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-between mb-2">
                 <div>
-                  <div class="percent">${percent}%</div>
-                  <div class="text-muted small">Média dos 3 itens</div>
+                  <div class="percent">${percent}%</div>                  
                 </div>
                 <span class="badge ${badgeClass}">${tag}</span>
               </div>
@@ -89,7 +88,7 @@
       AREAS.forEach(area=>{
         const { label, total } = results[area.key]; // 0–30
         const klass = barClass(total); // success|warning|danger
-        const widthPct = Math.max(0, Math.min(100, Math.round((total/30)*100)));
+        const widthPct = Math.max(0, Math.min(100, Math.round((total/50)*100)));
         const fillClass = {
           success:'bg-success',
           warning:'bg-warning',
@@ -103,7 +102,7 @@
           <div class="chart-bar" aria-label="Total ${label}" role="img">
             <div class="chart-fill ${fillClass}" style="width:${widthPct}%"></div>
           </div>
-          <div class="chart-value">${total}/30</div>
+          <div class="chart-value">${(total*100)/100}%</div>
         `;
         body.appendChild(row);
       });
@@ -129,7 +128,7 @@
         data: {
           labels,
           datasets: [{
-            label: 'Percentual Médio',
+            // label: 'Percentual Médio',
             data: dataPct,
             fill: true,
             backgroundColor: 'rgba(0,90,52,0.15)',
@@ -168,18 +167,18 @@
 
     function renderAlerts(results){
       // Categorias específicas para os alerts:
-      // Sucesso: >71%
-      // Aviso: 40%–70% (inclusive)
-      // Perigo: <40%
+      // Sucesso: >75%
+      // Aviso: 26%–74% (inclusive)
+      // Perigo: <25%
       const successAreas = [];
       const warningAreas = [];
       const dangerAreas  = [];
 
       AREAS.forEach(a=>{
         const p = results[a.key].percent;
-        if(p > 71){ successAreas.push(results[a.key].label); }
-        else if(p >= 40 && p <= 70){ warningAreas.push(results[a.key].label); }
-        else if(p < 40){ dangerAreas.push(results[a.key].label); }
+        if(p > 75){ successAreas.push(results[a.key].label); }
+        else if(p >= 26 && p <= 74){ warningAreas.push(results[a.key].label); }
+        else if(p < 26){ dangerAreas.push(results[a.key].label); }
       });
 
       const successRecom = 'Aproveite essas áreas fortes para liderar projetos, treinar a equipe e posicionar-se como referência em Notas Fiscais e Reforma Tributária.';
@@ -188,21 +187,21 @@
 
       $('#alertsSection').innerHTML = `
         <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading mb-2">✅ Domina o Assunto [Pontuação acima de 71%]</h4>
+          <h4 class="alert-heading mb-2">✅ Domina o Assunto [Pontuação acima de 75%]</h4>
           <p class="mb-1"><strong>Áreas:</strong></p>
           ${listAreas(successAreas)}
           <p class="mb-0 mt-2"><strong>Recomendação:</strong> ${successRecom}</p>
         </div>
 
         <div class="alert alert-warning" role="alert">
-          <h4 class="alert-heading mb-2">⚠️ Precisa Melhorar [Pontuação entre 40% e 70%]</h4>
+          <h4 class="alert-heading mb-2">⚠️ Precisa Melhorar [Pontuação entre 26% e 74%]</h4>
           <p class="mb-1"><strong>Áreas:</strong></p>
           ${listAreas(warningAreas)}
           <p class="mb-0 mt-2"><strong>Recomendação:</strong> ${warningRecom}</p>
         </div>
 
         <div class="alert alert-danger" role="alert">
-          <h4 class="alert-heading mb-2">🚨 Prioridade de Estudo [Pontuação abaixo de 40%]</h4>
+          <h4 class="alert-heading mb-2">🚨 Prioridade de Estudo [Pontuação abaixo de 25%]</h4>
           <p class="mb-1"><strong>Áreas:</strong></p>
           ${listAreas(dangerAreas)}
           <p class="mb-0 mt-2"><strong>Recomendação:</strong> ${dangerRecom}</p>
