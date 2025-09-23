@@ -1,0 +1,53 @@
+    :root{ --accent:#005a34; }
+    body{ background:#f8f9fa; }
+    .section-title{
+      border-left:6px solid var(--accent);
+      padding-left:.75rem;
+      margin-top:2rem;margin-bottom:1rem;
+    }
+    .range-row .form-label{ font-weight:600; margin-bottom:.25rem; }
+    .range-value{ font-variant-numeric:tabular-nums; min-width:3ch; display:inline-block; }
+    .sticky-actions{
+      position:sticky; bottom:0; z-index:1020;
+      background:rgba(248,249,250,.85); backdrop-filter:blur(6px);
+      border-top:1px solid #dee2e6; padding:.75rem;
+    }
+    .result-card .percent{ font-size:clamp(1.75rem, 3vw, 2.5rem); font-weight:800; line-height:1; }
+    .result-card .badge{ font-size:.9rem; }
+    .result-card.success{ border-left:8px solid #198754; }
+    .result-card.warning{ border-left:8px solid #ffc107; }
+    .result-card.danger{  border-left:8px solid #dc3545; }
+
+    /* Gráfico de barras (totais 0–30) */
+    .chart-container{
+      margin-top:1rem;
+      border:1px solid #dee2e6;
+      border-radius:.75rem;
+      background:#fff;
+      padding:1rem;
+    }
+    .chart-row{
+      display:grid;
+      grid-template-columns: 180px 1fr 72px;
+      align-items:center;
+      gap:.75rem;
+      padding:.35rem .25rem;
+    }
+    .chart-row + .chart-row{ border-top:1px dashed #e9ecef; }
+    .chart-label{ font-weight:600; }
+    .chart-bar{
+      height:28px;
+      background:#e9ecef;
+      border-radius:.5rem;
+      overflow:hidden;
+      position:relative;
+    }
+    .chart-fill{
+      height:100%;
+      transition:width .35s ease;
+    }
+    .chart-value{
+      text-align:right;
+      font-variant-numeric:tabular-nums;
+      min-width:72px;
+    }
