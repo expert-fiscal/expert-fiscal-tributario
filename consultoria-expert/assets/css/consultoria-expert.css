@@ -51,3 +51,55 @@
       font-variant-numeric:tabular-nums;
       min-width:72px;
     }
+    /* =========================
+   ESTILOS PARA IMPRESSÃO
+   ========================= */
+@media print {
+  /* Tamanho e margens do PDF */
+  @page {
+    size: A4 portrait;     /* mude para 'landscape' se quiser deitado */
+    margin: 12mm;
+  }
+
+  /* Preservar cores (cards, badges, progress, barras) */
+  html, body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Esconder elementos de navegação/ação */
+  .sticky-actions,
+  #autoUpdate,
+  .form-check { display: none !important; }
+
+  /* Evitar que cards e gráficos quebrem no meio da página */
+  .card,
+  .result-card,
+  .chart-container,
+  #chartsRow > [class^="col-"] {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Garantir que as grids mantenham espaçamento legível */
+  .row { gap: .75rem !important; }
+
+  /* Sliders: mostrar o valor ao lado (você escolhe se quer ocultar os sliders) */
+  input[type="range"] { opacity: .7; }
+
+  /* Canvas (Chart.js): manter proporção sem esticar */
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important; /* evita achatamento */
+  }
+
+  /* Títulos mais compactos no PDF */
+  h1, h2, h3 { margin-top: .5rem; margin-bottom: .5rem; }
+}
+
+/* Utilitário: forçar quebra de página quando quiser
+   <div class="page-break"></div>
+*/
+.page-break { break-after: page; }

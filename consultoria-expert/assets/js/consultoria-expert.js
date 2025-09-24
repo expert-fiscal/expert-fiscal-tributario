@@ -237,7 +237,8 @@
       });
 
       // Botões
-      $('#calcBtn').addEventListener('click', calculateAndShow);
+      // $('#calcBtn').addEventListener('click', calculateAndShow);
+      
       // $('#resetBtn').addEventListener('click', ()=>{
       //   $$('input[type="range"]').forEach(r=> r.value = 5);
       //   updateRangeBadges();
