@@ -25,16 +25,17 @@
       if(percent >= 41 && percent <= 74) return 'warning';
       return 'danger';
     }
+
     function statusLabel(percent){
       if(percent > 75) return 'Domina o Assunto';
       if(percent >= 41 && percent <= 74) return 'Precisa Melhorar';
       return 'Prioridade de Estudo';
     }
 
-    // Bar thresholds
+    // Bar thresholds (total 0–50)
     function barClass(total){
-      if(total >= 75) return 'success';
-      if(total >= 41 && total <= 74) return 'warning';
+      if(total >= 41) return 'success';
+      if(total >= 21 && total <= 40) return 'warning';
       return 'danger';
     }
 
@@ -57,11 +58,10 @@
         const { label, percent } = results[area.key];
         const klass = statusClass(percent);
         const tag   = statusLabel(percent);
-
         const bgMap = { success:'bg-success text-white', warning:'bg-warning', danger:'bg-danger text-white' };
         const badgeClass = { success:'text-bg-success', warning:'text-bg-warning', danger:'text-bg-danger' }[klass];
-
         const col = document.createElement('div');
+
         col.className = 'col-12 col-md-6 col-xl-4';
         col.innerHTML = `
           <div class="card shadow-sm result-card ${klass}">
@@ -86,8 +86,8 @@
       const body = $('#chartBody');
       body.innerHTML = '';
       AREAS.forEach(area=>{
-        const { label, total } = results[area.key]; // 0–30
-        const klass = barClass(total); // success|warning|danger
+        const { label, total } = results[area.key];
+        const klass = barClass(total);
         const widthPct = Math.max(0, Math.min(100, Math.round((total/50)*100)));
         const fillClass = {
           success:'bg-success',
@@ -102,7 +102,7 @@
           <div class="chart-bar" aria-label="Total ${label}" role="img">
             <div class="chart-fill ${fillClass}" style="width:${widthPct}%"></div>
           </div>
-          <div class="chart-value">${(total*100)/100}%</div>
+          <div class="chart-value">${(total*100)/50}%</div>
         `;
         body.appendChild(row);
       });
