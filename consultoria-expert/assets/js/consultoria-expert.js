@@ -330,7 +330,7 @@ function validarCamposBasicos() {
 }
 
 async function enviarParaPlanilha() {
-  const GAS_URL = "https://script.google.com/macros/s/AKfycbxEsrWQZrmaaZ4BHYYtlAEcb0usQDaRyusJLXRYjNVtru97IkChrSmdWkTFDFVDJEq-ew/exec";
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbyNKf7b0fxLntl6101qEnXidcmDpU6iuozRxocuRLZ1C_uaxwGecrXQHz2Z7OCGVz0CZA/exec";
 
   if (!validarCamposBasicos()) return;
 
@@ -361,12 +361,12 @@ async function enviarParaPlanilha() {
       console.error('Falha na resposta', json);
       alert('Não foi possível registrar. Tente novamente em instantes.');
     }
-    
+
   } catch (err) {
     console.error(err);
     alert('Erro de rede ao enviar. Verifique sua conexão e tente novamente.');
   } finally {
     btn.disabled = false;
-    btn.innerHTML = original;
+    btn.innerHTML = original;    
   }
 }
