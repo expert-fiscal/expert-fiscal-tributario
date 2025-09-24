@@ -20,6 +20,18 @@
   <main class="container pb-5">
     <!-- FORM -->
     <form id="surveyForm" class="needs-validation" novalidate>
+      <!-- DADOS PESSOAIS -->
+      <div class="row g-3 mb-2">
+        <div class="col-12 col-md-6">
+          <label for="alunoNome" class="form-label">Nome</label>
+          <input type="text" id="alunoNome" class="form-control" placeholder="Seu nome completo" required>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="alunoEmail" class="form-label">E-mail</label>
+          <input type="email" id="alunoEmail" class="form-control" placeholder="voce@exemplo.com" required>
+        </div>
+      </div>
+
       <!-- 1. CNAE -->
       <h2 class="h5 section-title">1. Núcleo da Tributação</h2>
       <div class="row gy-3">
@@ -264,11 +276,13 @@
     <!-- Sticky actions -->
     <div class="sticky-actions d-flex flex-wrap align-items-center gap-2">
       <div class="form-check me-auto">
-        <input class="form-check-input" type="checkbox" id="autoUpdate">
+        <input class="form-check-input" type="checkbox" id="autoUpdate" checked>
         <label class="form-check-label" for="autoUpdate">Atualizar resultados automaticamente</label>
       </div>
-      <button class="btn btn-outline-secondary" id="resetBtn" type="button">Resetar para 5/10</button>
+      <!-- <button class="btn btn-outline-secondary" id="resetBtn" type="button">Resetar para 5/10</button> -->
       <button class="btn btn-success" id="calcBtn" type="button">Calcular Resultados</button>
+      <button class="btn btn-primary" id="sendBtn" type="button">Registrar Respostas</button>
+
     </div>
 
     <!-- RESULTS -->

@@ -238,18 +238,30 @@
 
       // Botões
       $('#calcBtn').addEventListener('click', calculateAndShow);
-      $('#resetBtn').addEventListener('click', ()=>{
-        $$('input[type="range"]').forEach(r=> r.value = 5);
-        updateRangeBadges();
-        if($('#autoUpdate').checked){
-          const results = computeResults();
-          renderCards(results);
-          renderBarChart(results);
-          renderRadarChart(results);
-          renderAlerts(results);
-        }
-      });
+      // $('#resetBtn').addEventListener('click', ()=>{
+      //   $$('input[type="range"]').forEach(r=> r.value = 5);
+      //   updateRangeBadges();
+      //   if($('#autoUpdate').checked){
+      //     const results = computeResults();
+      //     renderCards(results);
+      //     renderBarChart(results);
+      //     renderRadarChart(results);
+      //     renderAlerts(results);
+      //   }
+      // });
 
+      $('#sendBtn').addEventListener('click', async () => {
+        // Opcional: atualiza os gráficos/cards antes de enviar
+        const results = computeResults();
+        renderCards(results);
+        renderBarChart(results);
+        renderRadarChart(results);
+        renderAlerts(results);
+
+        // Envia para Google Sheets
+        await enviarParaPlanilha();
+      });
+      
       // Render inicial
       const initial = computeResults();
       renderCards(initial);
@@ -257,3 +269,104 @@
       renderRadarChart(initial);
       renderAlerts(initial);
     });
+
+    
+    function coletarRespostas30() {
+  // Retorna array com 30 valores na ordem fixa: CNAE(5), CFOP(5), NCM(5), CST(5), IMP(5), REF(5)
+  const ordem = [
+    { selector: '.area-cnae' },
+    { selector: '.area-cfop' },
+    { selector: '.area-ncm'  },
+    { selector: '.area-cst'  },
+    { selector: '.area-imp'  },
+    { selector: '.area-ref'  },
+  ];
+  const valores = [];
+  ordem.forEach(grupo => {
+    const sliders = Array.from(document.querySelectorAll(grupo.selector));
+    sliders.forEach(s => valores.push(Number(s.value)));
+  });
+  return valores;
+}
+
+// Monta payload completo com nome, email, 30 respostas, totais (0–50) e percentuais (0–100)
+function montarPayloadParaSheet() {
+  const nome  = document.getElementById('alunoNome')?.value?.trim() || '';
+  const email = document.getElementById('alunoEmail')?.value?.trim() || '';
+
+  const respostas30 = coletarRespostas30();
+  const results = computeResults(); 
+
+  const totais = {
+    cnae: results.cnae.total,
+    cfop: results.cfop.total,
+    ncm:  results.ncm.total,
+    cst:  results.cst.total,
+    imp:  results.imp.total,
+    ref:  results.ref.total
+  };
+
+  const percentuais = {
+    cnae: results.cnae.percent,
+    cfop: results.cfop.percent,
+    ncm:  results.ncm.percent,
+    cst:  results.cst.percent,
+    imp:  results.imp.percent,
+    ref:  results.ref.percent
+  };
+
+  return { nome, email, respostas: respostas30, totais, percentuais };
+}
+
+function validarCamposBasicos() {
+  const nome  = document.getElementById('alunoNome')?.value?.trim();
+  const email = document.getElementById('alunoEmail')?.value?.trim();
+  if (!nome)  { alert('Por favor, informe seu nome.'); return false; }
+  if (!email) { alert('Por favor, informe seu e-mail.'); return false; }
+  // Validação simples de e-mail
+  const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!okEmail) { alert('E-mail inválido.'); return false; }
+  return true;
+}
+
+async function enviarParaPlanilha() {
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbxEsrWQZrmaaZ4BHYYtlAEcb0usQDaRyusJLXRYjNVtru97IkChrSmdWkTFDFVDJEq-ew/exec";
+
+  if (!validarCamposBasicos()) return;
+
+  if (!GAS_URL) {
+    alert('Configure a URL do Web App (GAS_URL) antes de enviar.');
+    return;
+  }
+
+  const btn = document.getElementById('sendBtn');
+  const original = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = 'Enviando…';
+
+  try {
+    const payload = montarPayloadParaSheet();
+
+    const resp = await fetch(GAS_URL, {
+      method: 'POST',
+      //headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const json = await resp.json().catch(() => ({}));
+
+    if (resp.ok) {
+      alert('Respostas enviadas com sucesso! ✅');
+    } else {
+      console.error('Falha na resposta', json);
+      alert('Não foi possível registrar. Tente novamente em instantes.');
+    }
+    
+  } catch (err) {
+    console.error(err);
+    alert('Erro de rede ao enviar. Verifique sua conexão e tente novamente.');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = original;
+  }
+}
