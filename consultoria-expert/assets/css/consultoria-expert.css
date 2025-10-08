@@ -1,0 +1,105 @@
+    :root{ --accent:#005a34; }
+    body{ background:#f8f9fa; }
+    .section-title{
+      border-left:6px solid var(--accent);
+      padding-left:.75rem;
+      margin-top:2rem;margin-bottom:1rem;
+    }
+    .range-row .form-label{ font-weight:600; margin-bottom:.25rem; }
+    .range-value{ font-variant-numeric:tabular-nums; min-width:3ch; display:inline-block; }
+    .sticky-actions{
+      position:sticky; bottom:0; z-index:1020;
+      background:rgba(248,249,250,.85); backdrop-filter:blur(6px);
+      border-top:1px solid #dee2e6; padding:.75rem;
+    }
+    .result-card .percent{ font-size:clamp(1.75rem, 3vw, 2.5rem); font-weight:800; line-height:1; }
+    .result-card .badge{ font-size:.9rem; }
+    .result-card.success{ border-left:8px solid #198754; }
+    .result-card.warning{ border-left:8px solid #ffc107; }
+    .result-card.danger{  border-left:8px solid #dc3545; }
+
+    /* Gráfico de barras (totais 0–30) */
+    .chart-container{
+      margin-top:1rem;
+      border:1px solid #dee2e6;
+      border-radius:.75rem;
+      background:#fff;
+      padding:1rem;
+    }
+    .chart-row{
+      display:grid;
+      grid-template-columns: 180px 1fr 72px;
+      align-items:center;
+      gap:.75rem;
+      padding:.35rem .25rem;
+    }
+    .chart-row + .chart-row{ border-top:1px dashed #e9ecef; }
+    .chart-label{ font-weight:600; }
+    .chart-bar{
+      height:28px;
+      background:#e9ecef;
+      border-radius:.5rem;
+      overflow:hidden;
+      position:relative;
+    }
+    .chart-fill{
+      height:100%;
+      transition:width .35s ease;
+    }
+    .chart-value{
+      text-align:right;
+      font-variant-numeric:tabular-nums;
+      min-width:72px;
+    }
+    /* =========================
+   ESTILOS PARA IMPRESSÃO
+   ========================= */
+@media print {
+  /* Tamanho e margens do PDF */
+  @page {
+    size: A4 portrait;     /* mude para 'landscape' se quiser deitado */
+    margin: 12mm;
+  }
+
+  /* Preservar cores (cards, badges, progress, barras) */
+  html, body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Esconder elementos de navegação/ação */
+  .sticky-actions,
+  #autoUpdate,
+  .form-check { display: none !important; }
+
+  /* Evitar que cards e gráficos quebrem no meio da página */
+  .card,
+  .result-card,
+  .chart-container,
+  #chartsRow > [class^="col-"] {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Garantir que as grids mantenham espaçamento legível */
+  .row { gap: .75rem !important; }
+
+  /* Sliders: mostrar o valor ao lado (você escolhe se quer ocultar os sliders) */
+  input[type="range"] { opacity: .7; }
+
+  /* Canvas (Chart.js): manter proporção sem esticar */
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important; /* evita achatamento */
+  }
+
+  /* Títulos mais compactos no PDF */
+  h1, h2, h3 { margin-top: .5rem; margin-bottom: .5rem; }
+}
+
+/* Utilitário: forçar quebra de página quando quiser
+   <div class="page-break"></div>
+*/
+.page-break { break-after: page; }
