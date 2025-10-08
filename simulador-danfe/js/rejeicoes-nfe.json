@@ -1,0 +1,847 @@
+[
+  {
+    "Msg": "1154",
+    "Descrição Erro": "Rejeição: Data de previsão de entrega posterior ao permitido"
+  },
+  {
+    "Msg": "1155",
+    "Descrição Erro": "Rejeição: Data de previsão de entrega anterior ao permitido"
+  },
+  {
+    "Msg": "1156",
+    "Descrição Erro": "Rejeição: Data de previsão de entrega não permitida para a finalidade de emissão informada"
+  },
+  {
+    "Msg": "1157",
+    "Descrição Erro": "Rejeição: Data de previsão de entrega não permitida para a modalidade de frete informada"
+  },
+  {
+    "Msg": "254",
+    "Descrição Erro": "Rejeição: NF-e complementar não possui NF referenciada"
+  },
+  {
+    "Msg": "255",
+    "Descrição Erro": "Rejeição: NF-e complementar possui mais de uma NF referenciada"
+  },
+  {
+    "Msg": "269",
+    "Descrição Erro": "Rejeição: CNPJ/CPF Emitente da NF-e Complementar difere do CNPJ/CPF da NF Referenciada"
+  },
+  {
+    "Msg": "678",
+    "Descrição Erro": "Rejeição: NF referenciada com UF diferente desta NF-e complementar"
+  },
+  {
+    "Msg": "1027",
+    "Descrição Erro": "Rejeição: NF referenciada informada indevidamente"
+  },
+  {
+    "Msg": "321",
+    "Descrição Erro": "Rejeição: NF-e de devolução de mercadoria não possui documento fiscal referenciado"
+  },
+  {
+    "Msg": "1001",
+    "Descrição Erro": "Rejeição: NF-e com finalidade de débito ou crédito somente para IBS/CBS"
+  },
+  {
+    "Msg": "1002",
+    "Descrição Erro": "Rejeição: NF-e sem informação de ICMS / ISSQN"
+  },
+  {
+    "Msg": "1003",
+    "Descrição Erro": "Rejeição: NF-e de crédito faz referência a documento fiscal diferente de NF-e modelo 55"
+  },
+  {
+    "Msg": "1102",
+    "Descrição Erro": "Rejeição: NF-e de devolução de mercadoria exige referenciamento do item da NF-e original"
+  },
+  {
+    "Msg": "1161",
+    "Descrição Erro": "Rejeição: Tipo de Operação incompatível com NF-e de Crédito"
+  },
+  {
+    "Msg": "1162",
+    "Descrição Erro": "Rejeição: Tipo de Operação incompatível com NF-e de Débito"
+  },
+  {
+    "Msg": "1139",
+    "Descrição Erro": "Rejeição: Tipo de nota de crédito/débito informado indevidamente"
+  },
+  {
+    "Msg": "1009",
+    "Descrição Erro": "Rejeição: Não informado tipo de nota de crédito/débito"
+  },
+  {
+    "Msg": "1163",
+    "Descrição Erro": "Rejeição: Tipo de nota de crédito informado indevidamente"
+  },
+  {
+    "Msg": "1164",
+    "Descrição Erro": "Rejeição: Não informado tipo de nota de crédito"
+  },
+  {
+    "Msg": "1145",
+    "Descrição Erro": "Rejeição: Tipo de nota de crédito só pode ser usado a partir de janeiro/2029."
+  },
+  {
+    "Msg": "1152",
+    "Descrição Erro": "Rejeição: Tipo de Operação incompatível com NF-e de Crédito do tipo Retorno"
+  },
+  {
+    "Msg": "1004",
+    "Descrição Erro": "Rejeição: NFC-e de entrega em domicílio e não informado endereço do destinatário"
+  },
+  {
+    "Msg": "1000",
+    "Descrição Erro": "Rejeição: Município do fato gerador do IBS informado indevidamente"
+  },
+  {
+    "Msg": "1005",
+    "Descrição Erro": "Rejeição: Operação presencial fora do estabelecimento sem informação do município do fato gerador do IBS"
+  },
+  {
+    "Msg": "1006",
+    "Descrição Erro": "Rejeição: NFCe com grupo de compra governamental"
+  },
+  {
+    "Msg": "1008",
+    "Descrição Erro": "Rejeição: Nota de compra governamental e alíquota dos outros entes informada incorretamente"
+  },
+  {
+    "Msg": "1140",
+    "Descrição Erro": "Rejeição: NF-e de recebimento de pagamento do ente governamental sem nota de fornecimento referenciada"
+  },
+  {
+    "Msg": "1165",
+    "Descrição Erro": "Rejeição: Não é permitido informar a classificação para subapuração do IBS na ZFM na NFC-e modelo 65 \n[nItem: 999]"
+  },
+  {
+    "Msg": "1166",
+    "Descrição Erro": "Rejeição: Classificação para subapuração do IBS na ZFM \ninformado indevidamente.\n[nItem: 999]"
+  },
+  {
+    "Msg": "1167",
+    "Descrição Erro": "Rejeição: Classificação para subapuração do IBS na ZFM \nnão informada [nItem: 999]"
+  },
+  {
+    "Msg": "1106",
+    "Descrição Erro": "Rejeição: Não informado grupo de combustível para \ncClassTrib de Combustível [nItem: 999]"
+  },
+  {
+    "Msg": "966",
+    "Descrição Erro": "Rejeição: Obrigatório o preenchimento da origem da \nmercadoria [nItem:nnn]"
+  },
+  {
+    "Msg": "960",
+    "Descrição Erro": "Rejeição: Obrigatório o preenchimento de Grupo de \nTributação do ICMS monofásica sobre combustíveis. \n[nItem:999]"
+  },
+  {
+    "Msg": "694",
+    "Descrição Erro": "Rejeição: Não informado o grupo de ICMS para a UF \nde destino [nItem: 999]"
+  },
+  {
+    "Msg": "745",
+    "Descrição Erro": "Rejeição: NF-e sem grupo do PIS [nItem:nnn]"
+  },
+  {
+    "Msg": "748",
+    "Descrição Erro": "Rejeição: NF-e sem grupo da COFINS [nItem:nnn]"
+  },
+  {
+    "Msg": "1011",
+    "Descrição Erro": "Rejeição: Não é permitido uso do Imposto Seletivo \npara esta classificação da operação [nItem: 999]"
+  },
+  {
+    "Msg": "1012",
+    "Descrição Erro": "Rejeição: É exigido o uso do Imposto Seletivo para \nesta classificação da operação [nItem: 999]"
+  },
+  {
+    "Msg": "1013",
+    "Descrição Erro": "Rejeição: É exigido o uso do Imposto Seletivo para \nesta classificação da operação para este NCM [nItem: \n999]"
+  },
+  {
+    "Msg": "1014",
+    "Descrição Erro": "Rejeição: CST do Imposto Seletivo informado \ninexistente [nItem: 999]"
+  },
+  {
+    "Msg": "1015",
+    "Descrição Erro": "Rejeição: Classificação Tributária do Imposto Seletivo \ninformada inexistente [nItem: 999]"
+  },
+  {
+    "Msg": "1103",
+    "Descrição Erro": "Rejeição: Valor da Base de cálculo do Imposto \nSeletivo difere do somatório dos valores que a \ncompõem [nItem: 999]"
+  },
+  {
+    "Msg": "1016",
+    "Descrição Erro": "Rejeição: CST do Imposto Seletivo obriga informação \nde alíquota de Imposto Seletivo [nItem: 999]"
+  },
+  {
+    "Msg": "1017",
+    "Descrição Erro": "Rejeição: Obrigatório informação de alíquota \nespecífica de Imposto Seletivo [nItem: 999]"
+  },
+  {
+    "Msg": "1018",
+    "Descrição Erro": "Rejeição: Unidade tributável (uTrib) e Quantidade \ntributável (qTrib) do imposto seletivo não informados\n[nItem: 999]"
+  },
+  {
+    "Msg": "1019",
+    "Descrição Erro": "Rejeição: Valor do Imposto Seletivo difere do \ncalculado [nItem: 999]"
+  },
+  {
+    "Msg": "1115",
+    "Descrição Erro": "Rejeição: IBS/CBS não informado [nItem: 999]"
+  },
+  {
+    "Msg": "1020",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado inexistente\n[nItem: 999]"
+  },
+  {
+    "Msg": "1025",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS não permitido neste \nmodelo de DFe [nItem: 999]"
+  },
+  {
+    "Msg": "1021",
+    "Descrição Erro": "Rejeição: Grupo IBS/CBS não deve ser preenchido \npara o CST informado [nItem: 999]"
+  },
+  {
+    "Msg": "1021",
+    "Descrição Erro": "Rejeição: Grupo IBS/CBS informado indevidamente\n[nItem: 999]"
+  },
+  {
+    "Msg": "1022",
+    "Descrição Erro": "Rejeição: Grupo IBS/CBS não informado [nItem: 999]"
+  },
+  {
+    "Msg": "1151",
+    "Descrição Erro": "Rejeição: Grupo IBS/CBS Monofásico informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1116",
+    "Descrição Erro": "Rejeição: Grupo IBS/CBS Monofásico não informado \n[nItem: 999]"
+  },
+  {
+    "Msg": "1131",
+    "Descrição Erro": "Rejeição: Grupo de transferência de crédito informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1132",
+    "Descrição Erro": "Rejeição: Grupo de transferência de crédito não\ninformado [nItem: 999]"
+  },
+  {
+    "Msg": "1025",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS não permitido neste \nmodelo de DFe [nItem: 999]"
+  },
+  {
+    "Msg": "1023",
+    "Descrição Erro": "Rejeição: Classificação Tributária do IBS/CBS \ninformada inexistente [nItem: 999]"
+  },
+  {
+    "Msg": "1024",
+    "Descrição Erro": "Rejeição: Rejeição: Classificação Tributária do IBS e \nda CBS incompatível com o CST informado [nItem: \n999]"
+  },
+  {
+    "Msg": "1025",
+    "Descrição Erro": "Rejeição: CST cClassTrib do IBS/CBS não permitido \nneste modelo de DFe [nItem: 999]"
+  },
+  {
+    "Msg": "1043",
+    "Descrição Erro": "Rejeição: Índice de mistura do Biocombustível \ninformado indevidamente inferior ao obrigatório para \nesta Classificação Tributária do IBS e CBS [nItem: \n999]"
+  },
+  {
+    "Msg": "1057",
+    "Descrição Erro": "Rejeição: Finalidade da NFe informada incorretamente \npara esta Classificação Tributária do IBS e da CBS \n[nItem: 999]"
+  },
+  {
+    "Msg": "1059",
+    "Descrição Erro": "Rejeição: Índice de mistura do Biocombustível \ninformado indevidamente superior ao obrigatório para \nesta Classificação Tributária do IBS e CBS [nItem: \n999]"
+  },
+  {
+    "Msg": "1104",
+    "Descrição Erro": "Rejeição: Valor da Base de cálculo do IBS e CBS \ndifere do somatório dos valores que a compõem \n[nItem: 999]"
+  },
+  {
+    "Msg": "1026",
+    "Descrição Erro": "Rejeição: Alíquota do IBS da UF deve ser igual a 0,1% \npara documento emitido em 2026 [nItem: 999]"
+  },
+  {
+    "Msg": "1027",
+    "Descrição Erro": "Rejeição: Alíquota do IBS da UF deve ser igual a \n0,05% para documento emitido em 2027 e 2028 \n[nItem: 999]"
+  },
+  {
+    "Msg": "1026",
+    "Descrição Erro": "Rejeição: Alíquota do IBS da UF inválida [nItem: 999]"
+  },
+  {
+    "Msg": "1029",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado não permite \ninformação de diferimento Estadual [nItem: 999]"
+  },
+  {
+    "Msg": "1030",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado obriga \ninformação de diferimento Estadual [nItem: 999]"
+  },
+  {
+    "Msg": "1031",
+    "Descrição Erro": "Rejeição: Valor do Diferimento da UF difere do \ncalculado [nItem: 999]"
+  },
+  {
+    "Msg": "1032",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado não permite \ninformação de redução de alíquota Estadual [nItem: \n999]"
+  },
+  {
+    "Msg": "1033",
+    "Descrição Erro": "Rejeição: Não informado o grupo de redução de \nalíquota Estadual [nItem: 999]"
+  },
+  {
+    "Msg": "1034",
+    "Descrição Erro": "Rejeição: Percentual de redução de alíquota da UF \nnão é válido para este cClassTrib [nItem: 999]"
+  },
+  {
+    "Msg": "1035",
+    "Descrição Erro": "Rejeição: Valor da Alíquota Efetiva do IBS da UF \ncalculado incorretamente [nItem: 999]"
+  },
+  {
+    "Msg": "1041",
+    "Descrição Erro": "Rejeição: Valor do IBS da UF difere do calculado \n[nItem: 999]"
+  },
+  {
+    "Msg": "1036",
+    "Descrição Erro": "Rejeição: Alíquota do IBS do Município deve ser igual \na 0 para documento emitido em 2026 [nItem: 999]"
+  },
+  {
+    "Msg": "1042",
+    "Descrição Erro": "Rejeição: Alíquota do IBS da Município deve ser igual \na 0,05% para documento emitido em 2027 e 2028 \n[nItem: 999]"
+  },
+  {
+    "Msg": "1036",
+    "Descrição Erro": "Rejeição: Alíquota do IBS do Município inválida [nItem: \n999]"
+  },
+  {
+    "Msg": "1044",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado obriga \ninformação de diferimento Municipal [nItem: 999]"
+  },
+  {
+    "Msg": "1083",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado não permite \ninformação de diferimento Municipal [nItem: 999]"
+  },
+  {
+    "Msg": "1045",
+    "Descrição Erro": "Rejeição: Valor do Diferimento do Município difere do \ncalculado [nItem: 999]"
+  },
+  {
+    "Msg": "1007",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado não permite \ninformação de redução de alíquota municipal [nItem: \n999]"
+  },
+  {
+    "Msg": "1074",
+    "Descrição Erro": "Rejeição: Não informado o grupo de redução de \nalíquota Municipal [nItem: 999]"
+  },
+  {
+    "Msg": "1046",
+    "Descrição Erro": "Rejeição: Percentual de redução de alíquota do \nMunicípio não é válido para este cClassTrib [nItem: \n999]"
+  },
+  {
+    "Msg": "1047",
+    "Descrição Erro": "Rejeição: Valor da Alíquota Efetiva do IBS do \nMunicípio calculado incorretamente [nItem: 999]"
+  },
+  {
+    "Msg": "1052",
+    "Descrição Erro": "Rejeição: Valor do IBS Municipal difere do calculado \n[nItem: 999]"
+  },
+  {
+    "Msg": "1150",
+    "Descrição Erro": "Rejeição: Valor do IBS do Item (vIBS) difere do \ncalculado [nItem: 999]"
+  },
+  {
+    "Msg": "1037",
+    "Descrição Erro": "Rejeição: Alíquota da CBS inválida deve ser igual a \n0,9% para documento emitido em 2026 [nItem: 999]"
+  },
+  {
+    "Msg": "1061",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado obriga \ninformação de diferimento da CBS [nItem: 999]"
+  },
+  {
+    "Msg": "1090",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado não permite \ninformação de diferimento da CBS [nItem: 999]"
+  },
+  {
+    "Msg": "1062",
+    "Descrição Erro": "Rejeição: Valor do Diferimento da CBS difere do \ncalculado [nItem: 999]"
+  },
+  {
+    "Msg": "1028",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado não permite \ninformação de redução de alíquota da CBS [nItem: \n999]"
+  },
+  {
+    "Msg": "1079",
+    "Descrição Erro": "Rejeição: Não informado o grupo de redução de \nalíquota da CBS [nItem: 999]"
+  },
+  {
+    "Msg": "1063",
+    "Descrição Erro": "Rejeição: Percentual de redução de alíquota da CBS \nnão é válido para este cClassTrib [nItem: 999]"
+  },
+  {
+    "Msg": "1064",
+    "Descrição Erro": "Rejeição: Valor da Alíquota Efetiva da CBS calculado \nincorretamente [nItem: 999]"
+  },
+  {
+    "Msg": "1069",
+    "Descrição Erro": "Rejeição: Valor da CBS difere do calculado [nItem: \n999]"
+  },
+  {
+    "Msg": "1065",
+    "Descrição Erro": "Rejeição: Classificação Tributária do IBS e da CBS \ninformada obriga informação da tributação regular \n[nItem: 999]"
+  },
+  {
+    "Msg": "1114",
+    "Descrição Erro": "Rejeição: Classificação Tributária do IBS e da CBS \ninformada não permite informação da tributação \nregular [nItem: 999]"
+  },
+  {
+    "Msg": "1066",
+    "Descrição Erro": "Rejeição: CST do IBS e da CBS informado no grupo \nde tributação regular inexistente [nItem: 999]"
+  },
+  {
+    "Msg": "1067",
+    "Descrição Erro": "Rejeição: Classificação Tributária do IBS e da CBS \ninformada no grupo de tributação regular inexistente \n[nItem: 999]"
+  },
+  {
+    "Msg": "1040",
+    "Descrição Erro": "Rejeição: Valor do Tributo Regular da UF difere do \ncalculado [nItem: 999]"
+  },
+  {
+    "Msg": "1051",
+    "Descrição Erro": "Rejeição: Valor do Tributo Regular do Município difere \ndo calculado [nItem: 999]"
+  },
+  {
+    "Msg": "1068",
+    "Descrição Erro": "Rejeição: Valor do Tributo Regular da CBS difere do \ncalculado [nItem: 999]"
+  },
+  {
+    "Msg": "1049",
+    "Descrição Erro": "Rejeição: Não é permitido o uso de Crédito Presumido \nna NFC-e modelo 65 [nItem: 999]"
+  },
+  {
+    "Msg": "1053",
+    "Descrição Erro": "Rejeição: Crédito Presumido para o IBS informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1054",
+    "Descrição Erro": "Rejeição: Crédito presumido para o IBS não informado"
+  },
+  {
+    "Msg": "1055",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido do IBS diferente \ndo calculado [nItem: 999]"
+  },
+  {
+    "Msg": "1107",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido do IBS não \npode ser superior a vProd [nItem: 999]"
+  },
+  {
+    "Msg": "1056",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido em condição \nsuspensiva do IBS informado indevidamente [nItem: \n999]"
+  },
+  {
+    "Msg": "1049",
+    "Descrição Erro": "Rejeição: Não é permitido o uso de Crédito Presumido \nna NFC-e modelo 65 [nItem: 999]"
+  },
+  {
+    "Msg": "1050",
+    "Descrição Erro": "Rejeição: Crédito Presumido para a CBS informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1058",
+    "Descrição Erro": "Rejeição: Crédito presumido para a CBS não \ninformado"
+  },
+  {
+    "Msg": "1059",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido da CBS difere \ndo calculado \n[nItem: 999]"
+  },
+  {
+    "Msg": "1124",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido da CBS não \npode ser superior a vProd [nItem: 999]"
+  },
+  {
+    "Msg": "1060",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido da CBS \ninformado indevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1141",
+    "Descrição Erro": "Rejeição: Grupo de informações da composição do \nvalor do IBS e da CBS em compras governamentais \nnão informado [nItem: 999]"
+  },
+  {
+    "Msg": "1142",
+    "Descrição Erro": "Rejeição: Soma dos valores de IBS e CBS em \ncompras governamentais divergente [nItem: 999]"
+  },
+  {
+    "Msg": "1144",
+    "Descrição Erro": "Rejeição: Grupo de informações da composição do \nvalor do IBS e da CBS em compras governamentais \ninformado indevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1125",
+    "Descrição Erro": "Rejeição: Não informada a Tributação Monofásica de \nCombustível [nItem: 999]"
+  },
+  {
+    "Msg": "1126",
+    "Descrição Erro": "Rejeição: Informada Tributação Monofásica de \nCombustível indevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1127",
+    "Descrição Erro": "Rejeição: Não informada a Tributação Monofásica de \nCombustível com Retenção [nItem: 999]"
+  },
+  {
+    "Msg": "1128",
+    "Descrição Erro": "Rejeição: Informada indevidamente a Tributação \nMonofásica de Combustível com Retenção [nItem: \n999]"
+  },
+  {
+    "Msg": "1108",
+    "Descrição Erro": "Rejeição: Não informada a Tributação Monofásica \nRetida Anteriormente [nItem: 999]"
+  },
+  {
+    "Msg": "1109",
+    "Descrição Erro": "Rejeição: Informada indevidamente a Tributação \nMonofásica Retida anteriormente [nItem: 999]"
+  },
+  {
+    "Msg": "1148",
+    "Descrição Erro": "Rejeição: Não informada a Tributação Monofásica de \nCombustível com diferimento [nItem: 999]"
+  },
+  {
+    "Msg": "1149",
+    "Descrição Erro": "Rejeição: Informada Tributação Monofásica de \nCombustível com diferimento indevidamente [nItem: \n999]"
+  },
+  {
+    "Msg": "1070",
+    "Descrição Erro": "Rejeição: Valor do IBS monofásico difere do calculado \n[nItem: 999]"
+  },
+  {
+    "Msg": "1071",
+    "Descrição Erro": "Rejeição: Valor da CBS monofásico difere do \ncalculado [nItem: 999]"
+  },
+  {
+    "Msg": "1131",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado não permite \ninformação de transferência de crédito [nItem: 999]"
+  },
+  {
+    "Msg": "1132",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado obriga \ninformação de transferência de crédito [nItem: 999]"
+  },
+  {
+    "Msg": "1133",
+    "Descrição Erro": "Rejeição: Grupo de transferência de crédito não \ninformado [nItem: 999]"
+  },
+  {
+    "Msg": "1133",
+    "Descrição Erro": "Rejeição: Finalidade de Emissão da Nota Fiscal \nincompatível com o CST [nItem: 999]"
+  },
+  {
+    "Msg": "1168",
+    "Descrição Erro": "Rejeição: Tipo de Nota de Débito incompatível com o \nCST [nItem: 999]"
+  },
+  {
+    "Msg": "1129",
+    "Descrição Erro": "Rejeição: Valor do IBS ou da CBS deve ser maior que \nzero na transferência de crédito.\n[nItem: 999]"
+  },
+  {
+    "Msg": "1134",
+    "Descrição Erro": "Rejeição: Grupo do IBS para fornecimentos a partir da \nZFM somente pode ser informado por emitente da UF \nAmazonas.\n[nItem: 999]"
+  },
+  {
+    "Msg": "1135",
+    "Descrição Erro": "Rejeição: Grupo do IBS para fornecimentos a partir da \nZFM não informado [nItem: 999]"
+  },
+  {
+    "Msg": "1136",
+    "Descrição Erro": "Rejeição: Não é possível repetir o Tipo de \nClassificação para o cálculo do crédito presumido na \nZFM neste DFe [nItem: 999]"
+  },
+  {
+    "Msg": "1137",
+    "Descrição Erro": "Rejeição: Valor do crédito presumido calculado sobre \no saldo devedor apurado não informado [nItem: 999]"
+  },
+  {
+    "Msg": "1138",
+    "Descrição Erro": "Rejeição: Valor do crédito presumido calculado sobre \no saldo devedor apurado informado indevidamente \n[nItem: 999]"
+  },
+  {
+    "Msg": "1169",
+    "Descrição Erro": "Rejeição: Grupo de Ajuste de Competência informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1170",
+    "Descrição Erro": "Rejeição: Grupo de Ajuste de Competência não \ninformado [nItem: 999]"
+  },
+  {
+    "Msg": "1171",
+    "Descrição Erro": "Rejeição: Valor do IBS ou da CBS deve ser maior que \nzero no ajuste de competência [nItem: 999]"
+  },
+  {
+    "Msg": "1172",
+    "Descrição Erro": "Rejeição: Grupo de Estorno de Crédito informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1173",
+    "Descrição Erro": "Rejeição: Grupo de Estorno de Crédito não informado \n[nItem: 999]"
+  },
+  {
+    "Msg": "1174",
+    "Descrição Erro": "Rejeição: Valor do IBS ou da CBS deve ser maior que \nzero no estorno de crédito [nItem: 999]"
+  },
+  {
+    "Msg": "1049",
+    "Descrição Erro": "Rejeição: Não é permitido o uso de Crédito Presumido \nna NFC-e modelo 65 [nItem: 999]"
+  },
+  {
+    "Msg": "1175",
+    "Descrição Erro": "Rejeição: Grupo de Crédito Presumido na Operação \ninformado indevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1055",
+    "Descrição Erro": "Rejeição: Código de Crédito Presumido (cCredPres) \nda Operação inexistente [nItem: 999]"
+  },
+  {
+    "Msg": "1053",
+    "Descrição Erro": "Rejeição: Crédito Presumido para o IBS informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1054",
+    "Descrição Erro": "Rejeição: Crédito Presumido para o IBS não\ninformado [nItem: 999]"
+  },
+  {
+    "Msg": "1107",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido do IBS não \npode ser superior a vProd [nItem: 999]"
+  },
+  {
+    "Msg": "1056",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido em condição \nsuspensiva do IBS informado indevidamente [nItem: \n999]"
+  },
+  {
+    "Msg": "1050",
+    "Descrição Erro": "Rejeição: Crédito Presumido para a CBS informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1058",
+    "Descrição Erro": "Rejeição: Crédito Presumido para a CBS não \ninformado [nItem: 999]"
+  },
+  {
+    "Msg": "1124",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido da CBS não \npode ser superior a vProd [nItem: 999]"
+  },
+  {
+    "Msg": "1060",
+    "Descrição Erro": "Rejeição: Valor do Crédito Presumido da CBS \ninformado indevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1138",
+    "Descrição Erro": "Rejeição: Não é permitido o uso de Crédito Presumido\nZFM \nna NFC-e modelo 65 [nItem: 999]"
+  },
+  {
+    "Msg": "1134",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado não permite \ninformação do grupo para apropriação de crédito \npresumido de IBS sobre o saldo devedor na ZFM\n[nItem: 999]"
+  },
+  {
+    "Msg": "1135",
+    "Descrição Erro": "Rejeição: CST do IBS/CBS informado exige a\ninformação do grupo para apropriação de crédito \npresumido de IBS sobre o saldo devedor na ZFM\n[nItem: 999]"
+  },
+  {
+    "Msg": "1158",
+    "Descrição Erro": "Rejeição: Tipo de Nota de Crédito não permite o grupo\npara apropriação de crédito presumido de IBS sobre o \nsaldo devedor na ZFM [nItem: 999]"
+  },
+  {
+    "Msg": "1159",
+    "Descrição Erro": "Rejeição: Tipo de Nota de Crédito exige o grupo para \napropriação de crédito presumido de IBS sobre o \nsaldo devedor na ZFM [nItem: 999]"
+  },
+  {
+    "Msg": "1160",
+    "Descrição Erro": "Rejeição: Ano e mês referência do período de \napuração superior ao ano e mês atual [nItem: 999]"
+  },
+  {
+    "Msg": "1136",
+    "Descrição Erro": "Rejeição: Não é possível repetir o Tipo de \nClassificação para o cálculo do crédito presumido na \nZFM \nneste DFe"
+  },
+  {
+    "Msg": "1137",
+    "Descrição Erro": "Rejeição: Valor total do Item (vItem) não informado"
+  },
+  {
+    "Msg": "1105",
+    "Descrição Erro": "Rejeição: Valor total do Item (vItem) difere do \nsomatório dos valores que o compõem"
+  },
+  {
+    "Msg": "1105",
+    "Descrição Erro": "Rejeição: Valor total do Item (vItem) difere do \nsomatório dos valores que o compõem"
+  },
+  {
+    "Msg": "708",
+    "Descrição Erro": "Rejeição: NFC-e não pode referenciar documento fiscal\n[nItem: 999]"
+  },
+  {
+    "Msg": "1010",
+    "Descrição Erro": "Rejeição: NF-e com referenciamento de documento a \nnível de nota e a nível de item [nItem: 999]"
+  },
+  {
+    "Msg": "1042",
+    "Descrição Erro": "Rejeição: NF-e com referenciamento a nível de item \ninformado indevidamente"
+  },
+  {
+    "Msg": "1038",
+    "Descrição Erro": "Rejeição: DFeReferenciado não informado [nItem: 999]"
+  },
+  {
+    "Msg": "321",
+    "Descrição Erro": "Rejeição: NF-e de devolução de mercadoria não possui \ndocumento fiscal referenciado [nItem: 999]"
+  },
+  {
+    "Msg": "1102",
+    "Descrição Erro": "Rejeição: NF-e de devolução de mercadoria com \nreferenciamento a nível de item exige referenciamento \ndo item da NF-e original [nItem: 999]"
+  },
+  {
+    "Msg": "1072",
+    "Descrição Erro": "Rejeição: DFe/Item referenciado em duplicidade [nItem: \n999]"
+  },
+  {
+    "Msg": "1130",
+    "Descrição Erro": "Rejeição: Mais de um documento fiscal referenciado\n[nItem: 999]"
+  },
+  {
+    "Msg": "1039",
+    "Descrição Erro": "Rejeição: nItem do DFeReferenciado informado \nindevidamente [nItem: 999]"
+  },
+  {
+    "Msg": "1048",
+    "Descrição Erro": "Rejeição: nItem do DFeReferenciado não informado\n[nItem: 999]"
+  },
+  {
+    "Msg": "564",
+    "Descrição Erro": "Rejeição: Total do Produto / Serviço difere do somatório \ndos itens"
+  },
+  {
+    "Msg": "1073",
+    "Descrição Erro": "Rejeição: Total de IS só deve ser informado se existir IS \ndeclarado nos itens do DFe\nRejeição: Total de IS informado indevidamente"
+  },
+  {
+    "Msg": "1117",
+    "Descrição Erro": "Rejeição: Total de IS deve ser informado se existir IS \ndeclarado nos itens do DFe\nRejeição: Total de IS não informado"
+  },
+  {
+    "Msg": "1075",
+    "Descrição Erro": "Rejeição: Total do Imposto Seletivo difere da soma dos \nitens"
+  },
+  {
+    "Msg": "1118",
+    "Descrição Erro": "Rejeição: Total de IBS e CBS só devem ser informados \nse existir IBS/CBS declarado nos itens do DFe\nRejeição: Total de IBS e CBS informado indevidamente"
+  },
+  {
+    "Msg": "1119",
+    "Descrição Erro": "Rejeição: Total de IBS e CBS devem ser informados se \nexistir IBS/CBS declarado nos itens do DFe\nRejeição: Total de IBS e CBS não informado"
+  },
+  {
+    "Msg": "1076",
+    "Descrição Erro": "Rejeição: Total da BC do IBS e da CBS difere da soma \ndos itens"
+  },
+  {
+    "Msg": "1077",
+    "Descrição Erro": "Rejeição: Total de Diferimento do IBS UF difere da \nsoma dos itens"
+  },
+  {
+    "Msg": "1078",
+    "Descrição Erro": "Rejeição: Total Devolvido do IBS UF difere da soma \ndos itens"
+  },
+  {
+    "Msg": "1080",
+    "Descrição Erro": "Rejeição: Total de IBS UF difere da soma dos itens"
+  },
+  {
+    "Msg": "1081",
+    "Descrição Erro": "Rejeição: Total de Diferimento do IBS Municipal difere \nda soma dos itens"
+  },
+  {
+    "Msg": "1082",
+    "Descrição Erro": "Rejeição: Total Devolvido do IBS Municipal difere da \nsoma dos itens"
+  },
+  {
+    "Msg": "1084",
+    "Descrição Erro": "Rejeição: Total de IBS Municipal difere da soma dos \nitens"
+  },
+  {
+    "Msg": "1085",
+    "Descrição Erro": "Rejeição: Total do IBS difere da soma do vIBS dos itens"
+  },
+  {
+    "Msg": "1086",
+    "Descrição Erro": "Rejeição: Total de Crédito Presumido do IBS UF difere \nda soma dos itens"
+  },
+  {
+    "Msg": "1088",
+    "Descrição Erro": "Rejeição: Total de Diferimento da CBS difere da soma \ndos itens"
+  },
+  {
+    "Msg": "1089",
+    "Descrição Erro": "Rejeição: Total Devolvido da CBS difere da soma dos \nitens"
+  },
+  {
+    "Msg": "1091",
+    "Descrição Erro": "Rejeição: Total de CBS difere da soma dos itens"
+  },
+  {
+    "Msg": "1087",
+    "Descrição Erro": "Rejeição: Total de Crédito Presumido da CBS difere da \nsoma dos itens"
+  },
+  {
+    "Msg": "1092",
+    "Descrição Erro": "Rejeição: Total do IBS monofásico difere da soma dos \nitens"
+  },
+  {
+    "Msg": "1093",
+    "Descrição Erro": "Rejeição: Total da CBS monofásica difere da soma dos \nitens"
+  },
+  {
+    "Msg": "1120",
+    "Descrição Erro": "Rejeição: Total do IBS monofásico sujeito a retenção \ndifere da soma dos itens"
+  },
+  {
+    "Msg": "1121",
+    "Descrição Erro": "Rejeição: Total da CBS monofásica sujeita a retenção \ndifere da soma dos itens"
+  },
+  {
+    "Msg": "1122",
+    "Descrição Erro": "Rejeição: Total do IBS monofásico retido anteriormente \ndifere da soma dos itens"
+  },
+  {
+    "Msg": "1123",
+    "Descrição Erro": "Rejeição: Total da CBS monofásica retida \nanteriormente difere da soma dos itens"
+  },
+  {
+    "Msg": "1176",
+    "Descrição Erro": "Rejeição: Total do IBS estornado difere da soma dos \nitens"
+  },
+  {
+    "Msg": "1177",
+    "Descrição Erro": "Rejeição: Total da CBS estornada difere da soma dos \nitens"
+  },
+  {
+    "Msg": "1004",
+    "Descrição Erro": "Rejeição: Valor total da NF-e com IBS / CBS / IS\n(vNFTot) não informado"
+  },
+  {
+    "Msg": "1094",
+    "Descrição Erro": "Rejeição: Total da NFe difere da soma do total dos \nitens da Nota"
+  },
+  {
+    "Msg": "267",
+    "Descrição Erro": "Rejeição: Chave de Acesso referenciada inexistente \n[nRef: xxx]"
+  },
+  {
+    "Msg": "1095",
+    "Descrição Erro": "Rejeição: Nota de crédito de multa/juros deve \nreferenciar uma NF-e autorizada"
+  },
+  {
+    "Msg": "1146",
+    "Descrição Erro": "Rejeição: NF-e referenciada de pagamento \nantecipado informada indevidamente"
+  },
+  {
+    "Msg": "1147",
+    "Descrição Erro": "Rejeição: NF-e referenciada de pagamento \nantecipado inexistente"
+  },
+  {
+    "Msg": "1143",
+    "Descrição Erro": "Rejeição: NF-e referenciada de pagamento \nantecipado deve ser do tipo débito, pagamento \nantecipado"
+  }
+]
+

@@ -166,6 +166,21 @@
     <div class="card card-default">
       <div class="card-header">
         <h2>LAYOUT - DANFE</h2>
+		
+		<div>	
+			<div class="card text-center border-danger">
+				<div class="card-body">
+					<h5 class="card-title">Pesquisar Código de Erro da NF-e</h5>
+					<p class="card-text">Digite o código para encontrar a "Descrição do Erro" correspondente.</p>
+					<input type="text" id="codigoMsgInput" placeholder="Digite o Código do Erro" />
+					<button id="pesquisarBtn" class="btn btn-primary">Pesquisar</button>
+				</div>
+				<div id="resultado" class="card-footer text-danger">
+					Mensagem de Erro
+				</div>
+			</div>		
+		</div>
+		
 		<button class="btn btn-sm btn-secondary" onclick="window.print();return false;">
 			<i class="mdi mdi-printer"></i> Print
 		</button>
@@ -197,11 +212,12 @@
 .danfe_item_cabecalho{ border:1px solid #000;text-align:left;font-size:7pt }
 .danfe_item_cabecalho_tabela{ border-collapse:collapse;width:100%;margin:0;padding:0;border:1px solid #000 }
 </style>
+
 <div class="danfe_pagina">
-<div class="danfe_pagina2">
-<table class="danfe_tabelas">
-<tr>
-<td>
+	<div class="danfe_pagina2">
+		<table class="danfe_tabelas">
+			<tr>
+				<td>
 <table class="danfe_tabelas" style="min-height:60px;">
 	<tr>
 		<td class="danfe_celula_bordas" colspan="2">
@@ -918,7 +934,7 @@
                     <script src="js/map.js"></script>
                     <script src="js/custom.js"></script>
 
-                    
+                    <script src="js/pesquisa-rejeicoes-nfe.js"></script>
 
 
                     <!--  -->
