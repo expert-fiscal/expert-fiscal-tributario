@@ -5,6 +5,7 @@ let dadosErros = [];
 const inputCodigo = document.getElementById('codigoMsgInput');
 const botaoPesquisar = document.getElementById('pesquisarBtn');
 const divResultado = document.getElementById('resultado');
+const divCodPesquisado = document.getElementById('cod-pesquisado');
 
 // --- MUDANÇA PRINCIPAL ---
 // Usamos fetch para carregar o arquivo JSON.
@@ -46,11 +47,13 @@ const realizarPesquisa = () => {
     const erroEncontrado = dadosErros.find(erro => erro.Msg === codigoParaBuscar);
 
     if (erroEncontrado) {
-        divResultado.textContent = erroEncontrado['Descrição Erro'];
-        divResultado.className = 'card-footer text-danger';
+        divCodPesquisado.textContent = inputCodigo.value.trim();
+        divResultado.textContent = "🚫 " + erroEncontrado['Descrição Erro'];
+        divResultado.className = 'alert alert-secondary';
     } else {
+        divCodPesquisado.textContent = inputCodigo.value.trim();
         divResultado.textContent = `Nenhuma descrição encontrada para o código "${codigoParaBuscar}".`;
-        divResultado.className = 'card-footer text-success';
+        divResultado.className = 'alert alert-warning';
     }
 };
 

@@ -5105,9 +5105,9 @@ a.badge-smoke:focus, a.badge-smoke.focus {
 }
 
 .alert-secondary {
-  color: #ffdce9;
-  background-color: #fd5190;
-  border-color: #fd5190;
+  color: black;
+  background-color: lightgray;
+  border-color: var(--gray);
 }
 .alert-secondary hr {
   border-top-color: #fd3880;
