@@ -842,6 +842,85 @@
   {
     "Msg": "1143",
     "Descrição Erro": "Rejeição: NF-e referenciada de pagamento \nantecipado deve ser do tipo débito, pagamento \nantecipado"
+  },
+  {
+    "Msg": "575",
+    "Descrição Erro": "Rejeição: Autor do evento diverge do destinatário da NF-e"
+  },
+  {
+    "Msg": "1096",
+    "Descrição Erro": "Rejeição: Número de item não existe na NFe"
+  },
+  {
+    "Msg": "1110",
+    "Descrição Erro": "Rejeição: NF-e de Aquisição inexistente"
+  },
+  {
+    "Msg": "466",
+    "Descrição Erro": "Rejeição: Evento com Tipo de Autor incompatível:"
+  },
+  {
+    "Msg": "574",
+    "Descrição Erro": "Rejeição: O autor do evento diverge do emissor da NF-e"
+  },
+  {
+    "Msg": "1097",
+    "Descrição Erro": "Rejeição: O valor do IBS do item não pode ser maior que o valor do IBS do respectivo item na NFe"
+  },
+  {
+    "Msg": "1099",
+    "Descrição Erro": "Rejeição: O valor da CBS do item não pode ser maior que o valor da CBS do respectivo item na NFe."
+  },
+  {
+    "Msg": "494",
+    "Descrição Erro": "Rejeição: Chave de Acesso inexistente [chNFe:99999999999999999999999999999999999999999999]"
+  },
+  {
+    "Msg": "1111",
+    "Descrição Erro": "Rejeição: Nota Fiscal referenciada não é de Saída"
+  },
+  {
+    "Msg": "1112",
+    "Descrição Erro": "Rejeição: cClassTrib da Nota Fiscal referenciada inválido"
+  },
+  {
+    "Msg": "1098",
+    "Descrição Erro": " Rejeição: O valor da CBS do item não pode ser maior que o valor da CBS do respectivo item na NFe."
+  },
+  {
+    "Msg": "1100",
+    "Descrição Erro": "Rejeição: A quantidade de consumo não pode ser maior que a quantidade do respectivo item na NFe (qCom)"
+  },
+  {
+    "Msg": "1101",
+    "Descrição Erro": "Rejeição: A quantidade do item a ser imobilizado não pode ser maior que a quantidade do respectivo item na NFe (qCom)"
+  },
+  {
+    "Msg": "459",
+    "Descrição Erro": "Rejeição: Cancelamento de Evento inexistente"
+  },
+  {
+    "Msg": "1113",
+    "Descrição Erro": "Rejeição: Autor do Evento de Cancelamento diverge do Autor do Evento a ser cancelado"
+  },
+  {
+    "Msg": "1178",
+    "Descrição Erro": "Rejeição: Órgão do Autor do Evento de Cancelamento diverge do órgão do Autor do Evento a ser cancelado"
+  },
+  {
+    "Msg": "460",
+    "Descrição Erro": "Rejeição: Protocolo do Evento difere do cadastrado"
+  },
+  {
+    "Msg": "",
+    "Descrição Erro": ""
+  },
+  {
+    "Msg": "",
+    "Descrição Erro": ""
+  },
+  {
+    "Msg": "",
+    "Descrição Erro": ""
   }
 ]
-
