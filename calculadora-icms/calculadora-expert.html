@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Tributos NFe - Reforma Tributária</title>
+    <title>Calculadora de Tributos NFe v2 - Reforma Tributária</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
     <style>
         body {
@@ -79,8 +81,6 @@
                     <div id="display-reform" class="d-none">
                         <div class="tax-item"><span>CBS (Federal):</span> <span id="display_cbs">R$ 0,00</span></div>
                         <div class="tax-item"><span>IBS (Estadual/Mun.):</span> <span id="display_ibs">R$ 0,00</span></div>
-                        <hr class="my-1 border-secondary">
-                        <div class="tax-item"><strong>IVA (Total):</strong> <strong id="display_iva">R$ 0,00</strong></div>
                     </div>
                     <hr class="my-2 border-dark">
                     <h4>Total Tributos: <span id="display_total_tributos">R$ 0,00</span></h4>
@@ -93,15 +93,15 @@
                         <input type="number" class="form-control" id="valorProdutos" placeholder="Ex: 1000.00" step="0.01">
                     </div>
                     <fieldset class="mb-3">
-                        <legend class="fs-6">Selecione o Regime de Tributação</legend>
+                        <legend class="fs-6">Selecione o(s) Regime(s) de Tributação</legend>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="regimeTributario" id="regimeAtual" value="atual" checked>
+                            <input class="form-check-input" type="checkbox" id="regimeAtual" value="atual" checked>
                             <label class="form-check-label" for="regimeAtual">
                                 Tributos Atuais
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="regimeTributario" id="regimeReforma" value="reforma">
+                            <input class="form-check-input" type="checkbox" id="regimeReforma" value="reforma">
                             <label class="form-check-label" for="regimeReforma">
                                 Reforma Tributária (IBS/CBS)
                             </label>
@@ -127,15 +127,18 @@
                 </div>
             </div>
         </section>
-
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Registrar o plugin de datalabels globalmente
+            Chart.register(ChartDataLabels);
+
             // --- ELEMENTOS DO DOM ---
             const valorProdutosInput = document.getElementById('valorProdutos');
             const calculateBtn = document.getElementById('calculateBtn');
-            const regimeRadios = document.querySelectorAll('input[name="regimeTributario"]');
+            const regimeAtualCheck = document.getElementById('regimeAtual');
+            const regimeReformaCheck = document.getElementById('regimeReforma');
             
             // Displays de valores
             const displays = {
@@ -145,20 +148,18 @@
                 ipi: document.getElementById('display_ipi'),
                 cbs: document.getElementById('display_cbs'),
                 ibs: document.getElementById('display_ibs'),
-                iva: document.getElementById('display_iva'),
                 totalTributos: document.getElementById('display_total_tributos'),
                 totalNFe: document.getElementById('display_total_nfe'),
                 standardGroup: document.getElementById('display-standard'),
                 reformGroup: document.getElementById('display-reform')
             };
             
-            // Seção de gráficos
             const graficosSection = document.getElementById('graficos');
 
             // --- ALÍQUOTAS (Valores didáticos e simplificados) ---
             const aliquotas = {
                 atuais: { icms: 0.18, pis: 0.0165, cofins: 0.076, ipi: 0.05 },
-                reforma: { cbs: 0.088, ibs: 0.177 } // Alíquotas de referência (podem variar)
+                reforma: { cbs: 0.088, ibs: 0.177 }
             };
 
             // --- INSTÂNCIAS DOS GRÁFICOS ---
@@ -169,38 +170,29 @@
             
             // --- FUNÇÕES ---
 
-            /**
-             * Formata um número para o padrão monetário brasileiro.
-             * @param {number} value - O valor a ser formatado.
-             * @returns {string} - O valor formatado como "R$ X.XXX,XX".
-             */
-            const formatCurrency = (value) => {
-                return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-            };
+            const formatCurrency = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
             /**
-             * Alterna a visibilidade dos displays de tributos.
+             * Alterna a visibilidade dos displays de tributos com base nos checkboxes.
              */
             const toggleDisplay = () => {
-                const selectedRegime = document.querySelector('input[name="regimeTributario"]:checked').value;
-                if (selectedRegime === 'atual') {
-                    displays.standardGroup.classList.remove('d-none');
-                    displays.reformGroup.classList.add('d-none');
-                } else {
-                    displays.standardGroup.classList.add('d-none');
-                    displays.reformGroup.classList.remove('d-none');
+                displays.standardGroup.classList.toggle('d-none', !regimeAtualCheck.checked);
+                displays.reformGroup.classList.toggle('d-none', !regimeReformaCheck.checked);
+            };
+            
+            /**
+             * Reseta todos os campos do display para R$ 0,00.
+             */
+            const resetDisplayFields = () => {
+                for (const key in displays) {
+                    if (displays[key].tagName === 'SPAN') {
+                        displays[key].textContent = formatCurrency(0);
+                    }
                 }
             };
             
             /**
              * Cria ou atualiza um gráfico Chart.js.
-             * @param {Chart} instance - A instância existente do gráfico.
-             * @param {CanvasRenderingContext2D} context - O contexto do canvas.
-             * @param {string} chartType - O tipo de gráfico ('doughnut' ou 'pie').
-             * @param {string[]} labels - Os rótulos para os dados.
-             * @param {number[]} data - Os dados do gráfico.
-             * @param {string} title - O título do tooltip.
-             * @returns {Chart} - A nova instância do gráfico.
              */
             const createOrUpdateChart = (instance, context, chartType, labels, data, title) => {
                 if (instance) {
@@ -213,12 +205,6 @@
                     'rgba(153, 102, 255, 0.8)', 'rgba(255, 159, 64, 0.8)'
                 ];
                 
-                const borderColors = [
-                    'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'
-                ];
-
                 return new Chart(context, {
                     type: chartType,
                     data: {
@@ -227,33 +213,43 @@
                             label: title,
                             data: data,
                             backgroundColor: backgroundColors.slice(0, data.length),
-                            borderColor: borderColors.slice(0, data.length),
-                            borderWidth: 1
                         }]
                     },
                     options: {
+                        indexAxis: chartType === 'bar' ? 'y' : 'x',
+                        scales: chartType === 'bar' ? {
+                            x: { beginAtZero: true }
+                        } : {},
                         responsive: true,
                         maintainAspectRatio: true,
                         plugins: {
                             legend: {
-                                position: 'top',
+                                display: false
                             },
                             tooltip: {
                                 callbacks: {
-                                    label: function(context) {
+                                    label: (context) => {
                                         let label = context.label || '';
-                                        if (label) {
-                                            label += ': ';
-                                        }
-                                        if (context.parsed !== null) {
-                                            if (chartType === 'doughnut') {
-                                                label += context.parsed.toFixed(2) + '%';
-                                            } else {
-                                                label += formatCurrency(context.parsed);
-                                            }
+                                        if (label) { label += ': '; }
+                                        if (context.parsed.x !== null || context.parsed !== null) {
+                                            const value = chartType === 'bar' ? context.parsed.x : context.parsed;
+                                            label += chartType === 'doughnut' ? value.toFixed(2) + '%' : formatCurrency(value);
                                         }
                                         return label;
                                     }
+                                }
+                            },
+                            datalabels: {
+                                color: '#fff',
+                                anchor: 'end',
+                                align: 'start',
+                                offset: chartType === 'bar' ? 10 : 0,
+                                font: {
+                                    weight: 'bold'
+                                },
+                                formatter: (value) => {
+                                    if (value === 0) return '';
+                                    return chartType === 'doughnut' ? value.toFixed(1) + '%' : formatCurrency(value);
                                 }
                             }
                         }
@@ -266,75 +262,74 @@
              */
             const calcularTributos = () => {
                 const valorProdutos = parseFloat(valorProdutosInput.value) || 0;
+                
                 if (valorProdutos <= 0) {
                     alert('Por favor, insira um valor de produtos válido.');
                     return;
                 }
                 
-                const selectedRegime = document.querySelector('input[name="regimeTributario"]:checked').value;
-                let calculos = {};
-                let totalTributos = 0;
-                let totalNFe = 0;
+                if (!regimeAtualCheck.checked && !regimeReformaCheck.checked) {
+                    alert('Selecione ao menos um regime de tributação para calcular.');
+                    return;
+                }
 
+                resetDisplayFields();
+
+                let totalTributos = 0;
                 let chartLabels = [];
                 let chartValues = [];
-                let chartPercentages = [];
-
-                if (selectedRegime === 'atual') {
-                    // Base de cálculo para ICMS, PIS, COFINS (simplificado como valor dos produtos)
-                    const baseCalculo = valorProdutos;
+                
+                // Calcula tributos atuais se selecionado
+                if (regimeAtualCheck.checked) {
+                    const icms = valorProdutos * aliquotas.atuais.icms;
+                    const pis = valorProdutos * aliquotas.atuais.pis;
+                    const cofins = valorProdutos * aliquotas.atuais.cofins;
+                    const ipi = valorProdutos * aliquotas.atuais.ipi;
                     
-                    calculos.icms = baseCalculo * aliquotas.atuais.icms;
-                    calculos.pis = baseCalculo * aliquotas.atuais.pis;
-                    calculos.cofins = baseCalculo * aliquotas.atuais.cofins;
-                    calculos.ipi = valorProdutos * aliquotas.atuais.ipi;
+                    totalTributos += icms + pis + cofins + ipi;
                     
-                    // Em uma NFe real, PIS/COFINS e ICMS compõem o próprio preço. IPI é somado por fora.
-                    // Para simplificar a visualização do impacto, somamos todos.
-                    totalTributos = calculos.icms + calculos.pis + calculos.cofins + calculos.ipi;
-                    totalNFe = valorProdutos + totalTributos;
+                    displays.icms.textContent = formatCurrency(icms);
+                    displays.pis.textContent = formatCurrency(pis);
+                    displays.cofins.textContent = formatCurrency(cofins);
+                    displays.ipi.textContent = formatCurrency(ipi);
 
-                    displays.icms.textContent = formatCurrency(calculos.icms);
-                    displays.pis.textContent = formatCurrency(calculos.pis);
-                    displays.cofins.textContent = formatCurrency(calculos.cofins);
-                    displays.ipi.textContent = formatCurrency(calculos.ipi);
-
-                    chartLabels = ['Produtos', 'ICMS', 'PIS', 'COFINS', 'IPI'];
-                    chartValues = [valorProdutos, calculos.icms, calculos.pis, calculos.cofins, calculos.ipi];
-                } else { // Regime da Reforma
-                    calculos.cbs = valorProdutos * aliquotas.reforma.cbs;
-                    calculos.ibs = valorProdutos * aliquotas.reforma.ibs;
-                    calculos.iva = calculos.cbs + calculos.ibs;
-
-                    totalTributos = calculos.iva;
-                    totalNFe = valorProdutos + totalTributos;
-
-                    displays.cbs.textContent = formatCurrency(calculos.cbs);
-                    displays.ibs.textContent = formatCurrency(calculos.ibs);
-                    displays.iva.textContent = formatCurrency(calculos.iva);
-
-                    chartLabels = ['Produtos', 'CBS', 'IBS'];
-                    chartValues = [valorProdutos, calculos.cbs, calculos.ibs];
+                    chartLabels.push('ICMS', 'PIS', 'COFINS', 'IPI');
+                    chartValues.push(icms, pis, cofins, ipi);
                 }
+
+                // Calcula tributos da reforma se selecionado
+                if (regimeReformaCheck.checked) {
+                    const cbs = valorProdutos * aliquotas.reforma.cbs;
+                    const ibs = valorProdutos * aliquotas.reforma.ibs;
+                    
+                    totalTributos += cbs + ibs;
+
+                    displays.cbs.textContent = formatCurrency(cbs);
+                    displays.ibs.textContent = formatCurrency(ibs);
+                    
+                    chartLabels.push('CBS', 'IBS');
+                    chartValues.push(cbs, ibs);
+                }
+
+                const totalNFe = valorProdutos + totalTributos;
 
                 // Atualiza totais
                 displays.totalTributos.textContent = formatCurrency(totalTributos);
                 displays.totalNFe.textContent = formatCurrency(totalNFe);
                 
                 // Prepara dados para os gráficos
-                const taxLabels = chartLabels.slice(1);
-                const taxValues = chartValues.slice(1);
-                chartPercentages = taxValues.map(tax => (tax / totalNFe) * 100);
+                const chartPercentages = chartValues.map(tax => (tax / totalNFe) * 100);
 
                 // Atualiza os gráficos
                 graficosSection.classList.remove('d-none');
-                percentageChartInstance = createOrUpdateChart(percentageChartInstance, percentageChartCtx, 'doughnut', taxLabels, chartPercentages, '% do Total da NFe');
-                valueChartInstance = createOrUpdateChart(valueChartInstance, valueChartCtx, 'pie', taxLabels, taxValues, 'Valor (R$)');
+                percentageChartInstance = createOrUpdateChart(percentageChartInstance, percentageChartCtx, 'doughnut', chartLabels, chartPercentages, '% do Total da NFe');
+                valueChartInstance = createOrUpdateChart(valueChartInstance, valueChartCtx, 'bar', chartLabels, chartValues, 'Valor (R$)');
             };
 
             // --- EVENT LISTENERS ---
             calculateBtn.addEventListener('click', calcularTributos);
-            regimeRadios.forEach(radio => radio.addEventListener('change', toggleDisplay));
+            regimeAtualCheck.addEventListener('change', toggleDisplay);
+            regimeReformaCheck.addEventListener('change', toggleDisplay);
 
             // Inicia o display correto
             toggleDisplay();
