@@ -162,3 +162,58 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Disable the submit button after form submission
+  var form = document.getElementById('form-inscricao');
+  var btn = form.querySelector('button._submit');
+
+  form.addEventListener('submit', function() {
+    btn.classList.add('processing');
+    btn.disabled = true;
+  });
+  
+});
+
+/* Google-Sheet */
+const form = document.getElementById('form-inscricao');
+const responseMessage = document.getElementById('response-message');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        whatsapp: document.getElementById('whatsapp').value,
+        tag: document.getElementById('tag').value
+      };
+
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzuUyiU8XVzxPBqrjnQCrrOxrV_AH8URcU80L4oziaTm_ywMIb4-BMybosEhd6uvxk8/exec', {
+          method: 'POST',
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          switch(formData.tag) {
+            case '202509-VIP':
+              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/vip/";
+              break;
+            case '202509-FRI':
+              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/fri/";
+              break;
+            case '202509-QNT':
+              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/qnt/";
+              break;
+            default:
+              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/org/";
+          }
+        } else {
+          responseMessage.textContent = 'Erro ao enviar a mensagem. Por favor, tente novamente.';
+        }
+
+      } catch (error) {
+        responseMessage.textContent = 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.';
+      }
+    });
