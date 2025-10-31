@@ -22,20 +22,23 @@
     // Card thresholds (percentual médio 0–100)
     function statusClass(percent){
       if(percent >= 75) return 'success';
-      if(percent >= 41 && percent <= 74) return 'warning';
+      if(percent > 25 && percent <= 74) return 'warning';
+      if(percent <= 25) return 'danger';
       return 'danger';
     }
 
     function statusLabel(percent){
-      if(percent > 75) return 'Domina o Assunto';
-      if(percent >= 41 && percent <= 74) return 'Precisa Melhorar';
+      if(percent >= 75) return 'Domina o Assunto';
+      if(percent > 25 && percent <= 74) return 'Precisa Melhorar';
+      if(percent <= 25) return 'Prioridade de Estudo';
       return 'Prioridade de Estudo';
     }
 
     // Bar thresholds (total 0–50)
     function barClass(total){
       if(total >= 41) return 'success';
-      if(total >= 21 && total <= 40) return 'warning';
+      if(total > 12 && total <= 40) return 'warning';
+      if(total <= 12) return 'danger';
       return 'danger';
     }
 
