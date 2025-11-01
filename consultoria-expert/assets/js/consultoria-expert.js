@@ -164,8 +164,8 @@
 
     // ALERTS (dinâmicos)
     function listAreas(arr){
-      if(arr.length === 0) return '<em>Nenhuma</em>';
-      return '<ul class="mb-0">' + arr.map(a => `<li>${a}</li>`).join('') + '</ul>';
+      if(arr.length === 0) return 'Nenhuma';
+      return arr.map(a => `${a}`).join(', ');
     }
 
     function renderAlerts(results){
@@ -184,32 +184,58 @@
         else if(p < 26){ dangerAreas.push(results[a.key].label); }
       });
 
-      const successRecom = 'Aproveite essas áreas fortes para liderar projetos, treinar a equipe e posicionar-se como referência em Notas Fiscais e Reforma Tributária.';
-      const warningRecom = 'Defina um plano de estudo de 3 a 6 meses com metas semanais e prática em casos reais para elevar essas competências ao nível avançado.';
-      const dangerRecom  = 'Aja agora: priorize capacitação imediata nessas áreas, pois a Reforma Tributária inicia em outubro/2025 e a falta de domínio pode afetar sua atuação profissional.';
+      const successRecom = `<br/>Aproveite para liderar projetos, treinar a equipe e posicionar-se como referência em ${listAreas(successAreas)}.`;
+      const warningRecom = `<br/>Defina um plano de estudo de 1 a 3 meses com metas semanais e prática em casos reais, utilize os problemas que você enfrenta no dia a dia  com ${listAreas(warningAreas)}, para elevar essas competências ao nível avançado.`;
+      const dangerRecom  = `<br/>Aja agora: priorize uma capacitação imediata em ${listAreas(dangerAreas)}, a Reforma Tributária já começou e não dominar os temas da Reforma Tributária referente a essas áreas, vai impactar de forma negativa sua atuação profissional.`;
 
-      $('#alertsSection').innerHTML = `
+      $('#alertsSection').innerHTML = `<h2 class="h5 mb-3">Recomendações</h2>` 
+        + (listAreas(successAreas) != 'Nenhuma' ? `
         <div class="alert alert-success" role="alert">
           <h4 class="alert-heading mb-2">✅ Domina o Assunto [Pontuação acima de 75%]</h4>
           <p class="mb-1"><strong>Áreas:</strong></p>
           ${listAreas(successAreas)}
           <p class="mb-0 mt-2"><strong>Recomendação:</strong> ${successRecom}</p>
         </div>
-
+        ` : '') 
+        + (listAreas(warningAreas) != 'Nenhuma' ? `
         <div class="alert alert-warning" role="alert">
           <h4 class="alert-heading mb-2">⚠️ Precisa Melhorar [Pontuação entre 26% e 74%]</h4>
           <p class="mb-1"><strong>Áreas:</strong></p>
           ${listAreas(warningAreas)}
           <p class="mb-0 mt-2"><strong>Recomendação:</strong> ${warningRecom}</p>
         </div>
-
+        ` : '') 
+        + (listAreas(dangerAreas) != 'Nenhuma' ? `
         <div class="alert alert-danger" role="alert">
           <h4 class="alert-heading mb-2">🚨 Prioridade de Estudo [Pontuação abaixo de 25%]</h4>
           <p class="mb-1"><strong>Áreas:</strong></p>
           ${listAreas(dangerAreas)}
           <p class="mb-0 mt-2"><strong>Recomendação:</strong> ${dangerRecom}</p>
         </div>
-      `;
+        ` : '');
+
+      const plan30dEl = document.getElementById('plan30d');
+      plan30dEl.innerHTML = `Nos próximos 30 dias foque em ${listAreas(dangerAreas)} essas são as áreas de conhecimento onde seu desempenho ficou abaixo de 25%, você precisa desenvolver essas habilidades imediatamente.<br/><br/>Seu objetivo principal aqui será eliminar a insegurança e a dependência de processos mecânicos "faço assim porque alguém me disse". <br/><br/>Com essa avaliação identificamos que a deficiência nas áreas ${listAreas(dangerAreas)} tem sido a raiz de sua insegurança, medo e erros.<br/><br/>Caso você siga esse plano à risca, no final você vai perceber que passou a assumir o protagonismo do seu aprendizado e seu desempenho profissional vai passar a refletir competência e segurança.`      
+      const cardsRowDangerEl = document.getElementById('cardsRowDanger');
+      if (cardsRowDangerEl) { cardsRowDangerEl.style.display = dangerAreas.length === 0 ? 'none':'block'; }    
+
+      const plan60dEl = document.getElementById('plan60d');
+      plan60dEl.innerHTML = `Nos próximos 60 dias dedique um tempo a ${listAreas(warningAreas)}, aqui seu desempenho ficou na faixa intermediária (entre 26% e 74%), mantenha o seu foco em consolidar e aprofundar esse conhecimento.<br/><br/>Esses próximos 60 dias tem o objetivo de transformar esse conhecimento parcial em domínio.<br/><br/>O objetivo aqui é claro: Não basta "saber fazer"; é preciso entender o porquê de cada processo para aplicar o conhecimento com maior segurança e em cenários mais complexos.<br/><br/>Sempre que possível revisite os pilares básicos e explore aplicações avançadas, transformando as zonas de "talvez" em zonas de domínio, isso vai garantir um salto expressivo em seu desempenho profissional.`
+      const cardsRowWarningEl = document.getElementById('cardsRowWarning');
+      if (cardsRowWarningEl) { cardsRowWarningEl.style.display = warningAreas.length === 0 ? 'none':'block'; }
+
+      const plan90dEl = document.getElementById('plan90d');
+      plan90dEl.innerHTML = `Nos próximos 90 dias crie uma rotina para revisar  ${listAreas(successAreas)} , pelo menos uma vez por mês, como você demonstrou um desempenho superior a 75%, o objetivo a partir daqui passa a ser "se tornar EXPERT". 
+                            <br/><br/>Aqui o foco não é na urgência, mas na excelência contínua e atualização. 
+                            <br/><br/>Seu plano deve ser espaçado e estratégico, focado em:
+                            <ul>
+                              <li>Lapidação Final: Busque o domínio dos detalhes mais técnicos e as exceções da regra, transformando a proficiência em expertise inquestionável.</li>
+                              <li>Atualização Periódica: Mantenha um ciclo de revisão e atualização para acompanhar novas legislações, tecnologias ou melhores práticas do mercado, garantindo que seu conhecimento não se torne obsoleto.</li>
+                              <li>Mentoria/Compartilhamento: Utilize este conhecimento sólido para ajudar colegas ou simular cenários de alta complexidade, o que consolida o aprendizado e reforça sua posição como referência técnica.</li>
+                            </ul>
+                            Mantenha a excelência e utilize ${listAreas(successAreas)}, como sua base de segurança profissional!`
+      const cardsRowSuccessEl = document.getElementById('cardsRowSuccess');
+      if (cardsRowSuccessEl) { cardsRowSuccessEl.style.display = successAreas.length === 0 ? 'none':'block'; }
     }
 
     function calculateAndShow(){
@@ -242,17 +268,17 @@
       // Botões
       // $('#calcBtn').addEventListener('click', calculateAndShow);
       
-      // $('#resetBtn').addEventListener('click', ()=>{
-      //   $$('input[type="range"]').forEach(r=> r.value = 5);
-      //   updateRangeBadges();
-      //   if($('#autoUpdate').checked){
-      //     const results = computeResults();
-      //     renderCards(results);
-      //     renderBarChart(results);
-      //     renderRadarChart(results);
-      //     renderAlerts(results);
-      //   }
-      // });
+      $('#resetBtn').addEventListener('click', ()=>{
+        $$('input[type="range"]').forEach(r=> r.value = 0);
+        updateRangeBadges();
+        if($('#autoUpdate').checked){
+          const results = computeResults();
+          renderCards(results);
+          renderBarChart(results);
+          renderRadarChart(results);
+          renderAlerts(results);
+        }
+      });
 
       $('#sendBtn').addEventListener('click', async () => {
         // Opcional: atualiza os gráficos/cards antes de enviar
@@ -325,8 +351,8 @@ function montarPayloadParaSheet() {
 function validarCamposBasicos() {
   const nome  = document.getElementById('alunoNome')?.value?.trim();
   const email = document.getElementById('alunoEmail')?.value?.trim();
-  if (!nome)  { alert('Por favor, informe seu nome.'); return false; }
-  if (!email) { alert('Por favor, informe seu e-mail.'); return false; }
+  if (!nome)  { alert('Por favor, informe o nome.'); return false; }
+  if (!email) { alert('Por favor, informe o e-mail.'); return false; }
   // Validação simples de e-mail
   const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   if (!okEmail) { alert('E-mail inválido.'); return false; }
