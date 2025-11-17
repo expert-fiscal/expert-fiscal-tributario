@@ -197,17 +197,14 @@ const responseMessage = document.getElementById('response-message');
 
         if (response.ok) {
           switch(formData.tag) {
-            case '202509-VIP':
-              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/vip/";
+            case '202511-FRI':
+              window.location.href = "https://www.expertfiscaltributario.com.br/descomplicando-cst-cclasstrib-notas-fiscais/obrigado/fri/";
               break;
-            case '202509-FRI':
-              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/fri/";
-              break;
-            case '202509-QNT':
-              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/qnt/";
+            case '202511-QNT':
+              window.location.href = "https://www.expertfiscaltributario.com.br/descomplicando-cst-cclasstrib-notas-fiscais/obrigado/qnt/";
               break;
             default:
-              window.location.href = "https://www.expertfiscaltributario.com.br/contador-expert-em-notas-fiscais/obrigado/org/";
+              window.location.href = "https://www.expertfiscaltributario.com.br/descomplicando-cst-cclasstrib-notas-fiscais/obrigado/org/";
           }
         } else {
           responseMessage.textContent = 'Erro ao enviar a mensagem. Por favor, tente novamente.';
