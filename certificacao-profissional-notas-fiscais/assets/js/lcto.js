@@ -10,7 +10,7 @@ const lcto = {
   ,lnk_cpl2: "https://www.youtube.com/embed/wb6xxpkuwh0"
   ,lnk_cpl3: "https://www.youtube.com/embed/p_CBK1Lc6aE"
   ,lnk_cpl4: "https://www.youtube.com/embed/fZkqchiHBOM" 
-  ,lnk_whts: "https://chat.whatsapp.com/HR7VODbyNhz6XotnIjj8eZ"
+  ,lnk_whts: "https://chat.whatsapp.com/ILRMWojqdfBDsTBWYfLQ08"
   ,lnk_tabela_pilares: "../assets/files/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx"
   ,lnk_detalhes_curso_pdf:"../assets/files/Detalhes do Curso Expert Fiscal 3K+.pdf"
   ,lnk_apostila_aula_01:"../assets/files/Apostila Aula 01 - Contador Expert em Notas Fiscais.pdf"
