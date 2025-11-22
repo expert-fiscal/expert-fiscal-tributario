@@ -10,7 +10,7 @@ const lcto = {
   ,lnk_cpl2: "https://www.youtube.com/embed/wb6xxpkuwh0"
   ,lnk_cpl3: "https://www.youtube.com/embed/p_CBK1Lc6aE"
   ,lnk_cpl4: "https://www.youtube.com/embed/fZkqchiHBOM" 
-  ,lnk_whts: "https://chat.whatsapp.com/ILRMWojqdfBDsTBWYfLQ08"
+  ,lnk_whts: "https://chat.whatsapp.com/LnSNnDozhZNIuwanWbuIez"
   ,lnk_tabela_pilares: "../assets/files/Tabela de CFOPs_CSTs_ICMS_IPI_PIS-COFINS.xlsx"
   ,lnk_detalhes_curso_pdf:"../assets/files/Detalhes do Curso Expert Fiscal 3K+.pdf"
   ,lnk_apostila_aula_01:"../assets/files/Apostila Aula 01 - Contador Expert em Notas Fiscais.pdf"
@@ -150,31 +150,22 @@ const phoneMask = (value) => {
   return value
 }
 
-// function enviando_cadastro(){
+const form = document.getElementById('form-inscricao');
+if (form) {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Disable the submit button after form submission    
+    var btn = form.querySelector('button._submit');
 
-//   const btn = document.getElementById("btn_cadastro");
-//   btn.innerHTML = "<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Enviando Cadastro...";
-//   btn.disabled = true;
-  
-//   const form_inscricao = document.getElementById("form-inscricao");
-//   form_inscricao.submit();
-
-// }
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Disable the submit button after form submission
-  var form = document.getElementById('form-inscricao');
-  var btn = form.querySelector('button._submit');
-
-  form.addEventListener('submit', function() {
-    btn.classList.add('processing');
-    btn.disabled = true;
+    form.addEventListener('submit', function() {
+      btn.classList.add('processing');
+      btn.disabled = true;
+    });
+    
   });
-  
-});
+}
 
 /* Google-Sheet */
-const form = document.getElementById('form-inscricao');
+if (form) {
 const responseMessage = document.getElementById('response-message');
 
     form.addEventListener('submit', async (event) => {
@@ -212,3 +203,18 @@ const responseMessage = document.getElementById('response-message');
         responseMessage.textContent = 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.';
       }
     });
+  }
+
+
+const formMc = document.getElementById('mc-embedded-subscribe-form');
+if (formMc) {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Disable the submit button after form submission    
+    var btn = formMc.querySelector('button._submit');
+    formMc.addEventListener('submit', function() {
+      btn.classList.add('processing');
+      btn.disabled = true;
+    });
+    
+  });
+}
