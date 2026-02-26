@@ -23,8 +23,8 @@ const lcto = {
   ,tit_cpl2: "O Método simplificado das Notas Fiscais para navegar nas Ondas da Reforma Tributária sem Erro"
   ,tit_cpl3: "Como Dominar Notas Fiscais e ficar um passo à Frente na Reforma Tributária"
   ,tit_cpl4: "Acesse o método avançado e torne-se Expert em Notas Fiscais atualizado com a Reforma Tributária"
-  ,lnk_redirect_aula: "window.location.href = 'https://www.expertfiscaltributario.com.br/descomplicando-cst-cclasstrib-notas-fiscais/oferta/';"
-  //,lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/descomplicando-cst-cclasstrib-notas-fiscais/oferta/';"
+  ,lnk_redirect_aula: "window.location.href = 'https://www.expertfiscaltributario.com.br/descomplicando-cst-cclasstrib-notas-fiscais/extensao-universitaria-em-conformidade-fiscal/';"
+  //,lnk_redirect: "window.location.href = 'https://www.expertfiscaltributario.com.br/descomplicando-cst-cclasstrib-notas-fiscais/extensao-universitaria-em-conformidade-fiscal/';"
 };
 
 const dt_ev = document.getElementById("datas_evento")
