@@ -213,4 +213,4 @@ const responseMessage = document.getElementById('response-message');
       } catch (error) {
         responseMessage.textContent = 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.';
       }
-    });
+    });    
