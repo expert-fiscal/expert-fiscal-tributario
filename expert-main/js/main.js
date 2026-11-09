@@ -115,7 +115,7 @@
 
 // Reforma Tributaria CountDown
 // Set the date we're counting down to
-var countDownDate = new Date("May 1, 2026 00:00:01").getTime();
+var countDownDate = new Date("January 1, 2027 00:00:01").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -133,7 +133,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("dia-d-reforma").innerHTML = "<h2 style='text-align:center; color:white'>Sua emissão de notas fiscais vai parar em 1º de maio de 2026?</h2>"
+  document.getElementById("dia-d-reforma").innerHTML = "<h2 style='text-align:center; color:white'>Sua emissão de notas fiscais vai parar em 1º de janeiro de 2027?</h2>"
   + "<div class='col-sm-6 col-lg-3 text-center wow ' data-wow-delay='0.1s'>"
   + "   <h1 class='display-4 text-white' data-toggle='counter-up'>" + days + "</h1>"
   + "   <span class='fs-5 text-white'>Dias</span>"
